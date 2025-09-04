@@ -1,0 +1,39 @@
+/*Section - Hero _______________________________________________________________*/
+.section-hero-container {
+    display: grid;
+    /*Auto-fit försöker lägga till så många element på en rad som får plats
+    baserat på skärmstorleken, elementens storlek och antar element. Elementens 
+    storlek styrs av minmax(). Som minst är */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: var(--padding-xs);
+}
+
+.section-hero-container img {
+    /*Bilden fyller hela bredden av sin behållare (parent element)*/
+    width: 100%;
+    /*Bilden fyller hela höjden av sin behållare*/
+    height: 100%;
+    /*Bilden skalas för att täcka hela området samtidigt som dess proportioner 
+    bevaras. Om bildens proportioner inte matchar behållarens proportioner 
+    kommer delar av bilden att beskäras bort, men bilden blir aldrig förvräng 
+    eller sträckt*/
+    object-fit: cover;
+}
+
+.section-hero-container>:nth-child(1) {
+    overflow: hidden;
+}
+
+.section-hero-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--backgroundColor);
+    padding: var(--padding-xs);
+}
+
+/*Section - senaste nytt ____________________________________________________________*/
+.section-senaste-nytt {
+    background-color: var(--backgroundColor);
+    padding: var(--padding-xs);
+}

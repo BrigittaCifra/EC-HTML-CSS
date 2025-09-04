@@ -1,0 +1,116 @@
+/*Navigation - mobila enheter_________________________________________________________*/
+
+/*Laddar in navigationen för mobila enheter först. Följer mobile first konceptet*/
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    /*Flexbox behövs här eftersom ett av barn elementen använder sig av
+    margin-top: auto och då behövs både flexbox i kombination med height: 100vh
+    enligt flera källor*/
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    background-color: var(--backgroundColor);
+}
+
+.mobile-nav> :first-child {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav li {
+    padding: 2rem 0rem;
+    border-bottom: var(--border-bottom);
+}
+
+.mobile-nav-top {
+    border-bottom: var(--border-bottom);
+}
+
+.mobile-nav-top span {
+    padding: var(--padding-xs);
+}
+
+.mobile-nav-top span:active,
+.mobile-nav li:active,
+.mobile-nav a:active {
+    background-color: var(--activeElement);
+    color: var(--white);
+}
+
+.mobile-nav-top>span {
+    margin-right: auto;
+}
+
+.mobile-nav-links,
+.mobile-nav-btn {
+    padding: var(--padding-xs);
+}
+
+.mobile-nav-btn {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-xs);
+    margin-top: auto;
+}
+
+.mobile-nav.menu-open {
+    height: 100vh;
+}
+
+/* Dölja element */
+.mobile-nav-links.hidden,
+.mobile-nav-btn.hidden {
+    display: none;
+}
+
+/*Navigation - PC/Större enheter_________________________________________________________*/
+
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+        /*Döljer navigationen för mobila enhter*/
+        display: none;
+    }
+
+    .desktop-nav {
+        /* Gör desktop navigationen synlig för större enheter */
+        display: block;
+    }
+
+    .dekstop-nav-top {
+        display: flex;
+    }
+
+    .dekstop-nav-top>span {
+        padding: var(--padding-xs);
+        margin-right: auto;
+    }
+
+    .dekstop-nav-top>div {
+        display: flex;
+        gap: var(--gap-xs);
+        padding: var(--padding-xs);
+    }
+
+    .dekstop-nav-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--backgroundColor);
+    }
+
+    .dekstop-nav-bottom ul {
+        display: flex;
+    }
+
+    .dekstop-nav-bottom li {
+        padding: var(--padding-xs);
+    }
+
+    .dekstop-nav-bottom>span {
+        padding: var(--padding-xs);
+    }
+
+}

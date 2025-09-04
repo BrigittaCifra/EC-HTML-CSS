@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Typsnitt-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--Material icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!--CSS Stylesheets-->
+
+    <!--Generella stylar-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!--Navigation för mobiler och desktop-->
+    <link rel="stylesheet" href="navigation.css">
+    <!--Sections och main innehåll-->
+    <link rel="stylesheet" href="homepageMainContent.css">
+
+    <!--Javascript-->
+    <script src="javascript.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Nav för mobila enheter-->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-top">
+                <span><a href="">Logo</a></span>
+                <div>
+                    <span class="material-symbols-outlined">search</span>
+                    <span class="material-symbols-outlined" id="menu-toggle">menu</span>
+                </div>
+            </div>
+            <div class="mobile-nav-links hidden">
+                <!--Menu alternativ-->
+                <ul>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav-btn hidden">
+                <button class="secondary-btn">Logga in</button>
+                <button class="primary-btn">Prenumera</button>
+            </div>
+        </nav>
+
+        <!--Nav för PC och större skärmar (768px och större)-->
+        <nav class="desktop-nav">
+            <div class="dekstop-nav-top">
+                <span><a href="">Logo</a></span>
+                <div>
+                    <button class="secondary-btn">Logga in</button>
+                    <button class="primary-btn">Prenumera</button>
+                </div>
+            </div>
+            <div class="dekstop-nav-bottom">
+                <div class="desktop-nav-links">
+                    <!--Menu alternativ-->
+                    <ul>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <span class="material-symbols-outlined">search</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!--Hero section-->
+        <section>
+            <div class="section-hero-container">
+                <div>
+                    <img src="../Bilder/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                </div>
+                <div class="section-hero-card">
+                    <h1>Intressant titel</h1>
+                    <h3>15 min • Kategori</h3>
+                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut</b>
+                        labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Senaste nytt-->
+        <section>
+            <div class="section-senaste-nytt">
+                <h1>Senaste nytt</h1>
+                <div class="card-container">
+                    <div class="card">
+                        <div>
+                            <img src="../Bilder/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-bottom">
+                            <h2>Intressant titel</h2>
+                            <h3>15 min • Kategori</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="../Bilder/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-bottom">
+                            <h2>Intressant titel</h2>
+                            <h3>15 min • Kategori</h3>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <img src="../Bilder/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-bottom">
+                            <h2>Intressant titel</h2>
+                            <h3>15 min • Kategori</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

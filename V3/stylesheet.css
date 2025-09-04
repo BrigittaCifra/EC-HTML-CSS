@@ -1,0 +1,104 @@
+/*Globala variabler_________________________________________________________________*/
+:root {
+    --white: #ffffff;
+    --backgroundColor: #cccccc;
+    --bodyCopyColor: #1b1b1bdd;
+    --linkHover: #b5b5b5dd;
+    --activeElement: #7a7a7add;
+
+    --margin-xs: 2rem;
+
+    --padding-xs: 2rem;
+
+    --gap-xs: 1rem;
+
+    --border-radius-xs: 0.2rem;
+    --border-radius-s: 1rem;
+
+    --border-bottom: var(--white) solid 1px;
+}
+
+/*Element___________________________________________________________________________*/
+body {
+    /*margin: 0 behövs för att <body> elementets default margin är 8px, det vill säga
+    det kommer att finnas en liten glap mellan fönstrets kant och elementen såsom menyn*/
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--white);
+}
+
+a,
+p,
+ul,
+span,
+button {
+    color: var(--bodyCopyColor);
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--activeElement);
+}
+
+/*Återkommande element - knappar_________________________________________________________*/
+.primary-btn {
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius-s);
+    border: none;
+    background-color: rgb(225, 225, 225);
+    font-weight: lighter;
+}
+
+.secondary-btn {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: var(--border-radius-s);
+    background-color: transparent;
+}
+
+.secondary-btn:hover,
+.primary-btn:hover {
+    background-color: var(--linkHover);
+    color: var(--bodyCopyColor);
+}
+
+.secondary-btn:active,
+.primary-btn:active {
+    background-color: var(--activeElement);
+    color: var(--white);
+}
+
+/*Återkommande element - kort__________________________________________________________*/
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: var(--gap-xs);
+}
+
+.card {
+    background-color: var(--white);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(78, 78, 78, 0.2);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.card p {
+    margin-top: 2rem;
+}
+
+.card-bottom {
+    padding: var(--padding-xs);
+}
