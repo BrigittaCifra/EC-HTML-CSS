@@ -1,4 +1,18 @@
 /*Section - Hero _______________________________________________________________*/
+main {
+    /*Navbaren har fixed position vilket innebär att innehållet på sidan hamnar
+    under navbaren. Pga detta ställs in margin-top med en liten ofset*/
+    margin-top: 5.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 11.5em;
+    }
+}
+
+
+
 .section-hero-container {
     display: grid;
     /*Auto-fit försöker lägga till så många element på en rad som får plats
@@ -30,6 +44,7 @@
     justify-content: center;
     background-color: var(--backgroundColor);
     padding: var(--padding-xs);
+    /* grid-column: span 2; */
 }
 
 /*Section - senaste nytt ____________________________________________________________*/

@@ -13,6 +13,9 @@
     flex-direction: column;
     /* height: 100vh; */
     background-color: var(--backgroundColor);
+    position: fixed;
+    width: 100%;
+    top: 0%;
 }
 
 .mobile-nav> :first-child {
@@ -77,6 +80,10 @@
     .desktop-nav {
         /* Gör desktop navigationen synlig för större enheter */
         display: block;
+        position: fixed;
+        background-color: var(--white);
+        width: 100%;
+        top: 0%;
     }
 
     .dekstop-nav-top {
@@ -99,6 +106,7 @@
         justify-content: space-between;
         align-items: center;
         background-color: var(--backgroundColor);
+        border-bottom: var(--border-bottom);
     }
 
     .dekstop-nav-bottom ul {

@@ -1,0 +1,31 @@
+/*Footer_________________________________________________________________________________*/
+footer>div {
+    padding: var(--padding-xs);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap-s)
+}
+
+.footer-top>div {
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--gap-xs)
+}
+
+#footer-socialmedia-container {
+    /*ID för att skriva över stylingen som den hade fått annars från CSS:en ovan*/
+    display: grid;
+    gap: var(--gap-xs);
+    grid-auto-rows: max-content;
+    grid-auto-flow: row;
+}
+
+#footer-socialmedia-container>div {
+    display: flex;
+    gap: var(--gap-s);
+}
+
+footer span {
+    border-top: var(--linkHover) solid 1px;
+    padding-top: 1rem;
+}
