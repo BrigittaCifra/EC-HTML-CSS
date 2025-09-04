@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileNavBtn = document.querySelector('.mobile-nav-btn');
     const mobileNav = document.querySelector('.mobile-nav');
 
-    console.log('Menu button:', menuButton); // Debug
-    console.log('Nav links:', mobileNavLinks); // Debug
-    console.log('Nav btn:', mobileNavBtn); // Debug
+    console.log('Menu button:', menuButton);
+    console.log('Nav links:', mobileNavLinks);
+    console.log('Nav btn:', mobileNavBtn);
 
     if (menuButton) {
         menuButton.addEventListener('click', function () {
-            console.log('Menu clicked!'); // Debug
+            console.log('Menu clicked!');
 
             mobileNavLinks.classList.toggle('hidden');
             mobileNavBtn.classList.toggle('hidden');
