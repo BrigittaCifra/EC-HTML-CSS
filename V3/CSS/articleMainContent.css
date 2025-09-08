@@ -83,8 +83,10 @@ main>div {
 }
 
 /*PC/Större enheter_________________________________________________________*/
-
 @media screen and (min-width: 768px) {
+
+    /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
+    för att följa mobilefirst konceptet*/
     main {
         margin-top: 14rem;
         margin-bottom: 7rem;

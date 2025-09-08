@@ -117,6 +117,10 @@
         padding: var(--padding-xs);
     }
 
+    .dekstop-nav-bottom li:hover {
+        background-color: var(--linkHover);
+    }
+
     .dekstop-nav-bottom span {
         padding: var(--padding-xs);
     }

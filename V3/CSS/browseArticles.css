@@ -1,0 +1,57 @@
+/*mobila enheter__________________________________________________________________*/
+main {
+    /*Navbaren har fixed position vilket innebär att innehållet på sidan hamnar
+    under navbaren. Pga detta ställs in margin-top med en liten ofset*/
+    margin-top: 6rem;
+    padding: var(--padding-xs);
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+
+.kategori1-hero {
+    /* background-image: url("https://i.natgeofe.com/n/17f5caec-5854-4846-943c-d4a4c6b9d881/Animals_1_NationalGeographic_2764605.jpg?wp=1&amp;w=767&amp;h=511&quot"); */
+    background-color: rgb(189, 189, 189);
+    padding: 8rem 2rem;
+}
+
+details ul {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xs);
+}
+
+.browseArticles-filter>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+}
+
+.browseArticles-searchResult {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+}
+
+
+/*PC/Större enheter_________________________________________________________*/
+@media screen and (min-width: 768px) {
+
+    /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
+    för att följa mobilefirst konceptet*/
+    main {
+        margin-bottom: 7rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--gap-m);
+    }
+
+    /* main>div {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        gap: var(--gap-m);
+    } */
+
+    .kategori1-hero {
+        margin-top: 12.46rem;
+    }
+}
