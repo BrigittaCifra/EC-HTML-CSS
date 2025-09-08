@@ -1,0 +1,78 @@
+main {
+    /*Navbaren har fixed position vilket innebär att innehållet på sidan hamnar
+    under navbaren. Pga detta ställs in margin-top med en liten ofset*/
+    margin-top: 5.5rem;
+    padding: var(--padding-xs);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap-s);
+    grid-auto-columns: max-content;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 11.5rem;
+    }
+}
+
+.section-mainArticle {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+}
+
+.section-mainArticle>:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--gap-m);
+}
+
+/* section>div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+} */
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: var(--padding-xs);
+    margin-right: 5rem;
+}
+
+.author img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author>div {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.author h3 {
+    margin-top: 0;
+}
+
+.author h4 {
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: var(--gap-m);
+}
+
+.actions>div {
+    display: flex;
+    gap: var(--gap-xs);
+    align-items: center;
+}
+
+.summary {
+    background-color: var(--backgroundColor);
+    padding: var(--padding-xs);
+    border-left: 5px solid var(--activeElement);
+}

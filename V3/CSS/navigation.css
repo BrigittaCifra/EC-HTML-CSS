@@ -43,7 +43,7 @@
     color: var(--white);
 }
 
-.mobile-nav-top>span {
+.mobile-nav-top>a {
     margin-right: auto;
 }
 
@@ -90,7 +90,7 @@
         display: flex;
     }
 
-    .dekstop-nav-top>span {
+    .dekstop-nav-top>a {
         padding: var(--padding-xs);
         margin-right: auto;
     }
@@ -117,7 +117,11 @@
         padding: var(--padding-xs);
     }
 
-    .dekstop-nav-bottom>span {
+    .dekstop-nav-bottom span {
+        padding: var(--padding-xs);
+    }
+
+    .dekstop-nav-bottom>a {
         padding: var(--padding-xs);
     }
 

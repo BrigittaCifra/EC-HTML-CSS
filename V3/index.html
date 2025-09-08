@@ -39,7 +39,7 @@
         <!--Nav för mobila enheter-->
         <nav class="mobile-nav">
             <div class="mobile-nav-top">
-                <span><a href="index.html">Jordens Eko</a></span>
+                <a href="index.html"><span>Jordens Eko</span></a>
                 <div>
                     <span class="material-symbols-outlined">search</span>
                     <span class="material-symbols-outlined" id="menu-toggle">menu</span>
@@ -62,7 +62,7 @@
         <!--Nav för PC och större skärmar (768px och större)-->
         <nav class="desktop-nav">
             <div class="dekstop-nav-top">
-                <span><a href="">Jordens Eko</a></span>
+                <a href="index.html"><span>Jordens Eko</span></a>
                 <div>
                     <button class="secondary-btn">Logga in</button>
                     <button class="primary-btn">Prenumera</button>
@@ -82,30 +82,45 @@
         </nav>
     </header>
 
+    <!--Main content-->
     <main>
 
         <!--Hero section-->
         <section>
-            <div class="section-hero-container">
-                <div>
-                    <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+            <a href="article.html">
+                <div class="section-hero-container">
+                    <div>
+                        <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                    </div>
+                    <div class="section-hero-card">
+                        <h1>Intressant titel</h1>
+                        <h3>15 min • Kategori</h3>
+                        <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut</b>
+                            labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat</p>
+                    </div>
                 </div>
-                <div class="section-hero-card">
-                    <h1>Intressant titel</h1>
-                    <h3>15 min • Kategori</h3>
-                    <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut</b>
-                        labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat</p>
-                </div>
-            </div>
+            </a>
         </section>
 
         <!--Senaste nytt-->
         <section>
             <div class="section-senaste-nytt">
                 <h1>Senaste nytt</h1>
-                <div class="card-container">
+                <a href="article.html">
+                    <div class="card-container">
+                        <div class="card">
+                            <div>
+                                <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-bottom">
+                                <h2>Intressant titel</h2>
+                                <h3>15 min • Kategori</h3>
+                            </div>
+                        </div>
+                </a>
+                <a href="article.html">
                     <div class="card">
                         <div>
                             <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
@@ -115,6 +130,8 @@
                             <h3>15 min • Kategori</h3>
                         </div>
                     </div>
+                </a>
+                <a href="article.html">
                     <div class="card">
                         <div>
                             <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
@@ -124,21 +141,14 @@
                             <h3>15 min • Kategori</h3>
                         </div>
                     </div>
-                    <div class="card">
-                        <div>
-                            <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
-                        </div>
-                        <div class="card-bottom">
-                            <h2>Intressant titel</h2>
-                            <h3>15 min • Kategori</h3>
-                        </div>
-                    </div>
-                </div>
+                </a>
+            </div>
             </div>
         </section>
 
     </main>
 
+    <!--Footer-->
     <footer>
         <div class="footer-top">
             <div>
@@ -157,6 +167,7 @@
                 <a href="">Tipsa Jordens Eko</a>
                 <a href="">Jobba på Jordens Eko</a>
             </div>
+            <!--Social media ikoner-->
             <div id="footer-socialmedia-container">
                 <h3>Follow Us</h3>
                 <div>
