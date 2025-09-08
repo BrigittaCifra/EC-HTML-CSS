@@ -1,23 +1,22 @@
+/*mobila enheter__________________________________________________________________*/
 main {
     /*Navbaren har fixed position vilket innebär att innehållet på sidan hamnar
     under navbaren. Pga detta ställs in margin-top med en liten ofset*/
-    margin-top: 5.5rem;
+    margin-top: 6rem;
     padding: var(--padding-xs);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--gap-s);
-    grid-auto-columns: max-content;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
-@media screen and (min-width: 768px) {
-    main {
-        margin-top: 11.5rem;
-    }
+main>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
 }
 
 .section-mainArticle {
-    display: flex;
-    flex-direction: column;
+    /*Här behövs grid/flex för att man ska kunna använda egenskapen gap*/
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--gap-m);
 }
 
@@ -75,4 +74,25 @@ main {
     background-color: var(--backgroundColor);
     padding: var(--padding-xs);
     border-left: 5px solid var(--activeElement);
+}
+
+.section-relatedArticles>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/*PC/Större enheter_________________________________________________________*/
+
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 14rem;
+        margin-bottom: 7rem;
+    }
+
+    main>div {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        gap: var(--gap-m);
+    }
 }

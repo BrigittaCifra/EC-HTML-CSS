@@ -6,6 +6,10 @@ footer>div {
     gap: var(--gap-s)
 }
 
+.footer-dark {
+    background-color: var(--backgroundColor);
+}
+
 .footer-top>div {
     display: grid;
     grid-auto-flow: row;
