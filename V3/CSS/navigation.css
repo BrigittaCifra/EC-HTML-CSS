@@ -113,20 +113,54 @@
         display: flex;
     }
 
+    /*    .dekstop-nav-bottom span,
+    .dekstop-nav-bottom>a,
     .dekstop-nav-bottom li {
         padding: var(--padding-xs);
-    }
+    } */
 
-    .dekstop-nav-bottom li:hover {
-        background-color: var(--linkHover);
-    }
-
+    .desktop-nav-links a,
     .dekstop-nav-bottom span {
         padding: var(--padding-xs);
     }
 
-    .dekstop-nav-bottom>a {
-        padding: var(--padding-xs);
+    .desktop-nav-links a {
+        display: inline-block;
+    }
+
+    .dropdown>a:hover {
+        background-color: var(--linkHover);
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        /*Här göms klassen dropdown-content genom displa*/
+        display: none;
+        position: absolute;
+        min-width: 25rem;
+        background-color: var(--white);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 1rem
+            /* z-index: 1; */
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding-bottom: 1rem;
+    }
+
+    .dropdown-content a:hover {
+        color: rgb(138, 138, 138);
+    }
+
+    .dropdown:hover .dropdown-content {
+        /*Om man hovrar över contanern som heter "dropdown" då kommer 
+        klassen dropdown visas genom display:block*/
+        display: block;
     }
 
 }

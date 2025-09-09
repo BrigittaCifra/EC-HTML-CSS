@@ -8,7 +8,6 @@ main {
 }
 
 .kategori1-hero {
-    /* background-image: url("https://i.natgeofe.com/n/17f5caec-5854-4846-943c-d4a4c6b9d881/Animals_1_NationalGeographic_2764605.jpg?wp=1&amp;w=767&amp;h=511&quot"); */
     background-color: rgb(189, 189, 189);
     padding: 8rem 2rem;
 }
@@ -41,17 +40,17 @@ details ul {
     main {
         margin-bottom: 7rem;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "filter searchResult searchResult searchResult";
         gap: var(--gap-m);
     }
 
-    /* main>div {
-        display: grid;
-        grid-template-columns: 1fr 0.5fr;
-        gap: var(--gap-m);
-    } */
-
     .kategori1-hero {
         margin-top: 12.46rem;
+    }
+
+    .browseArticles-searchResult {
+        grid-area: searchResult;
     }
 }
