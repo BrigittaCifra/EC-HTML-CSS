@@ -33,7 +33,7 @@
 }
 
 .mobile-nav-top span {
-    padding: var(--padding-xs);
+    padding: 1.7rem;
 }
 
 .mobile-nav-top span:active,

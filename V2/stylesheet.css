@@ -1,0 +1,143 @@
+/*Globala variabler_________________________________________________________________*/
+:root {
+    --white: #ffffff;
+    --backgroundColor: #cccccc;
+    --bodyCopyColor: #1b1b1bdd;
+    --linkHover: #828282dd;
+
+    --margin-xs: 2rem;
+
+    --padding-xs: 2rem;
+
+    --gap-xs: 1rem;
+
+    --border-radius: 1rem;
+}
+
+
+/*Element___________________________________________________________________________*/
+body {
+    /*margin: 0 behövs för att <body> elementets default margin är 8px, det vill säga
+    det kommer att finnas en liten glap mellan fönstrets kant och elementen såsom menyn*/
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--white);
+}
+
+a,
+p {
+    color: var(--bodyCopyColor);
+}
+
+nav {
+    background-color: var(--backgroundColor);
+}
+
+/*Återkommande element_______________________________________________________________*/
+.primary-btn {
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: rgb(225, 225, 225);
+    font-weight: lighter;
+}
+
+
+
+/*Navigation_________________________________________________________________________*/
+.top-nav {
+    overflow: hidden;
+    display: flex;
+    border-bottom: var(--white) solid 1px;
+}
+
+#top-nav-item {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-xs);
+}
+
+#top-nav-item a {
+    text-decoration: none;
+}
+
+#top-nav-item>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#top-nav-item li {
+    padding: 2rem 0rem;
+    border-bottom: var(--white) solid 1px;
+}
+
+.top-nav-btn {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: baseline;
+    gap: var(--padding-xs);
+    margin-top: 30rem;
+}
+
+.logo {
+    margin-right: auto;
+    padding: var(--padding-xs);
+    text-decoration: none;
+}
+
+.ham {
+    padding: var(--padding-xs);
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    /*Lägger meny elementen på en led*/
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search {
+        display: none;
+    }
+
+    /*Gömmer hamburgar menyn*/
+    .ham {
+        display: none;
+    }
+
+    #top-nav-item {
+        padding: 0;
+    }
+
+    /*Lägger meny kategorierna på en led*/
+    #top-nav-item>ul {
+        padding: 0;
+        display: flex;
+        gap: var(--gap-xs);
+    }
+
+    #top-nav-item li {
+        padding: var(--padding-xs);
+        border-bottom: none;
+    }
+
+    /*Byter färg på meny elementen när man hovrar över de.
+    Detta är bara aktiv på PC eftersom man kan inte hovra
+    med fingret på mobila enheter*/
+    #top-nav-item li:hover {
+        background-color: var(--linkHover);
+    }
+
+    .logo:hover {
+        background-color: var(--linkHover);
+    }
+
+    .top-nav-btn {
+        display: none;
+    }
+}

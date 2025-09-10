@@ -41,6 +41,7 @@ body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     background-color: var(--white);
+    min-width: 320px;
 }
 
 a,
@@ -54,6 +55,8 @@ button {
     margin: 0;
     padding: 0;
     line-height: 1.7rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 h1,
