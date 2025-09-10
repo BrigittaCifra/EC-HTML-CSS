@@ -1,35 +1,60 @@
 /*Footer_________________________________________________________________________________*/
-footer>div {
+footer {
     padding: var(--padding-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s)
+}
+
+footer span {
+    /*Display:block för att elementet ska ta upp hela skärmen på brädden*/
+    display: block;
+    border-top: var(--linkHover) solid 1px;
+    padding-top: 1rem;
+}
+
+.footer-subscribe-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-m);
+    /*Den här sektionen har extra padding på toppen och botten för att skapa mer
+    whitespace runt omkring sig och därmed dra till sig ögat mer*/
+    padding: var(--padding-xs) 0;
+
+}
+
+.footer-links-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--gap-s)
+    border-top: var(--linkHover) solid 1px;
+    padding-top: 1rem;
+    gap: var(--gap-s);
+}
+
+.footer-links-wrapper>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs)
+}
+
+#footer-socialmedia-container>div {
+    /*Kontrollerar hur ikonerna ska sitta på x axeln*/
+    display: flex;
+    gap: var(--gap-s);
 }
 
 .footer-dark {
     background-color: var(--backgroundColor);
 }
 
-.footer-top>div {
-    display: grid;
-    grid-auto-flow: row;
-    gap: var(--gap-xs)
-}
+@media screen and (min-width: 768px) {
 
-#footer-socialmedia-container {
-    /*ID för att skriva över stylingen som den hade fått annars från CSS:en ovan*/
-    display: grid;
-    gap: var(--gap-xs);
-    grid-auto-rows: max-content;
-    grid-auto-flow: row;
-}
+    .footer-subscribe-wrapper {
+        align-items: center;
+    }
 
-#footer-socialmedia-container>div {
-    display: flex;
-    gap: var(--gap-s);
-}
-
-footer span {
-    border-top: var(--linkHover) solid 1px;
-    padding-top: 1rem;
+    .footer-subscribe-wrapper>div {
+        text-align: center;
+    }
 }
