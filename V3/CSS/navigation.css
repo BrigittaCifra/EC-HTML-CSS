@@ -24,8 +24,7 @@
 }
 
 .mobile-nav li {
-    padding: 2rem 0rem;
-    border-bottom: var(--border-bottom);
+    padding: 1rem 0rem;
 }
 
 .mobile-nav-top {
@@ -36,12 +35,12 @@
     padding: 1.7rem;
 }
 
-.mobile-nav-top span:active,
+/* .mobile-nav-top span:active,
 .mobile-nav li:active,
 .mobile-nav a:active {
     background-color: var(--activeElement);
     color: var(--white);
-}
+} */
 
 .mobile-nav-top>a {
     margin-right: auto;
@@ -57,6 +56,16 @@
     justify-content: center;
     gap: var(--gap-xs);
     margin-top: auto;
+}
+
+.mobile-nav-links summary {
+    /*Här skrivs över stylingen som sätts i filen generalStyles.CSS*/
+    border-bottom: 1px solid var(--white);
+}
+
+.mobile-nav-links details[open] {
+    /*Här skrivs över stylingen som sätts i filen generalStyles.CSS*/
+    border-bottom: 1px solid var(--white);
 }
 
 .mobile-nav.menu-open {

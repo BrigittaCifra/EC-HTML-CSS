@@ -90,12 +90,16 @@ summary {
     justify-content: space-between;
 }
 
+details[open] {
+    border-bottom: 1px solid rgb(213, 213, 213);
+}
+
 details[open] summary {
     border-bottom: none;
 }
 
-details[open] {
-    border-bottom: 1px solid rgb(213, 213, 213);
+details[open] span {
+    transform: rotate(180deg);
 }
 
 
