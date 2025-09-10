@@ -11,6 +11,8 @@ footer span {
     display: block;
     border-top: var(--linkHover) solid 1px;
     padding-top: 1rem;
+    padding-left: calc(50vw - 720px);
+    padding-right: calc(50vw - 720px);
 }
 
 .footer-subscribe-wrapper {
@@ -29,13 +31,15 @@ footer span {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     border-top: var(--linkHover) solid 1px;
     padding-top: 1rem;
+    padding-left: calc(50vw - 720px);
+    padding-right: calc(50vw - 720px);
     gap: var(--gap-s);
 }
 
 .footer-links-wrapper>div {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-xs)
+    gap: var(--gap-xs);
 }
 
 #footer-socialmedia-container>div {

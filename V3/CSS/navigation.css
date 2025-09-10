@@ -97,6 +97,8 @@
 
     .dekstop-nav-top {
         display: flex;
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
     }
 
     .dekstop-nav-top>a {
@@ -116,6 +118,8 @@
         align-items: center;
         background-color: var(--backgroundColor);
         border-bottom: var(--border-bottom);
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
     }
 
     .dekstop-nav-bottom ul {
@@ -128,8 +132,7 @@
         padding: var(--padding-xs);
     } */
 
-    .desktop-nav-links a,
-    .dekstop-nav-bottom span {
+    .desktop-nav-links a {
         padding: var(--padding-xs);
     }
 

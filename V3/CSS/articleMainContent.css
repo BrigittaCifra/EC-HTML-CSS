@@ -83,7 +83,9 @@ main>div {
     gap: 2rem;
 }
 
-/*PC/Större enheter_________________________________________________________*/
+
+
+/*Laptops and Desktops_________________________________________________________*/
 @media screen and (min-width: 768px) {
 
     /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
@@ -97,5 +99,13 @@ main>div {
         display: grid;
         grid-template-columns: 1fr 0.5fr;
         gap: var(--gap-m);
+    }
+}
+
+/*Monitors, Desktops_________________________________________________________*/
+@media screen and (min-width: 1200px) {
+    main {
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
     }
 }

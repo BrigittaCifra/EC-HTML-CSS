@@ -31,8 +31,23 @@ details ul {
     gap: var(--gap-s);
 }
 
+.pagination {
+    padding-top: var(--padding-xs);
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-xs)
+}
 
-/*PC/Större enheter_________________________________________________________*/
+.pagination a {
+    padding: 1rem var(--padding-xs);
+}
+
+.pagination a:hover {
+    background-color: var(--grey-300);
+}
+
+
+/*Laptops and Desktops_________________________________________________________*/
 @media screen and (min-width: 768px) {
 
     /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
@@ -52,5 +67,19 @@ details ul {
 
     .browseArticles-searchResult {
         grid-area: searchResult;
+    }
+}
+
+/*Monitors, Desktops_________________________________________________________*/
+@media screen and (min-width: 1200px) {
+
+    .kategori1-hero {
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
+    }
+
+    main {
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
     }
 }
