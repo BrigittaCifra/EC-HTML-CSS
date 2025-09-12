@@ -20,6 +20,8 @@
 
     <!--Generella stylar-->
     <link rel="stylesheet" href="CSS/generalStyles.css">
+    <!--Återkommande element-->
+    <link rel="stylesheet" href="CSS/components.css">
     <!--Navigation för mobiler och desktop-->
     <link rel="stylesheet" href="CSS/navigation.css">
     <!--Sections och main innehåll-->
@@ -150,15 +152,22 @@
         </nav>
     </header>
 
-    <!--Main content-->
-    <main>
+    <div class="mainContent">
 
-        <div>
+        <!--Main content-->
+        <main>
 
-            <!--Titel/Meta information-->
-            <section class="section-mainArticle">
-                <h1>User-Ecosystem Thinking: An Anthropologic Approach to Design</h1>
+            <!--Sektion 1. Titel/Meta information-->
+            <section class="section-gap" id="article-section-1">
+
                 <div>
+                    <!-- <div class="chip-container">
+                        <div class="chip">Test</div>
+                        <div class="chip">Test</div>
+                    </div> -->
+                    <h1>User-Ecosystem Thinking: An Anthropologic Approach to Design</h1>
+                </div>
+                <div class="section-mainArticle-metaInfo">
                     <div class="author">
                         <img src="../img/jonathan-borba-n1B6ftPB5Eg-unsplash.jpg" alt="">
                         <div>
@@ -198,7 +207,23 @@
                     tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada
                     lacinia integer nunc posuere
                 </p>
-                <h2>Rubrik</h2>
+            </section>
+
+            <div class="mobile-table-of-content">
+                <h2 class="text-caption-lg">On this page</h2>
+                <div>
+                    <a href="#article-section-1">Rubrik 1</a>
+                    <a href="#article-section-2">Rubrik 2</a>
+                    <a href="#article-section-3">Rubrik 3</a>
+                    <a href="#article-section-4">Rubrik 4</a>
+                    <a href="#article-section-5">Rubrik 5</a>
+                    <a href="#article-section-6">Rubrik 6</a>
+                </div>
+            </div>
+
+            <!--Sektion 2-->
+            <section class="section-gap" id="article-section-2">
+                <h2>Rubrik 2</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
                     sem
                     placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
@@ -224,42 +249,105 @@
                     integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
                     conubia nostra inceptos himenaeos.
                 </p>
+                <div class="article-img-container">
+                    <div class="article-img-wrapper">
+                        <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                    </div>
+                    <span>These over-50 champs—and a growing body of research—show what we gain by staying active later
+                        in life.</span>
+                </div>
             </section>
 
-            <!--Relaterade artiklar-->
-            <section class="section-relatedArticles">
-                <h2>Relaterade artiklar</h2>
+            <!--Sektion 3-->
+            <section class="section-gap" id="article-section-3">
+                <h2>Rubrik 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
+                    sem
+                    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
+                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
+                    conubia nostra inceptos himenaeos.
+                </p>
+            </section>
 
-                <div class="card-container">
-                    <div class="card-V2 card-outlined">
-                        <div>
-                            <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
-                        </div>
-                        <div class="card-bottom">
-                            <h2>Intressant titel</h2>
-                            <h3>15 min • Kategori</h3>
-                        </div>
+            <!--Sektion 4-->
+            <section class="section-gap" id="article-section-4">
+                <h2>Rubrik 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
+                    sem
+                    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
+                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
+                    conubia nostra inceptos himenaeos.
+                </p>
+            </section>
+
+            <!--Sektion 5-->
+            <section class="section-gap" id="article-section-5">
+                <h2>Rubrik 5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
+                    sem
+                    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
+                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
+                    conubia nostra inceptos himenaeos.
+                </p>
+            </section>
+
+            <!--Sektion 6-->
+            <section class="section-gap" id="article-section-6">
+                <h2>Rubrik 6</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque
+                    sem
+                    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
+                    Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia
+                    integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per
+                    conubia nostra inceptos himenaeos.
+                </p>
+            </section>
+
+        </main>
+
+        <!--sidebar-->
+        <aside>
+            <div class="desktop-table-of-content">
+                <h2 class="text-caption-lg">On this page</h2>
+                <div>
+                    <a href="#article-section-1">Rubrik 1</a>
+                    <a href="#article-section-2">Rubrik 2</a>
+                    <a href="#article-section-3">Rubrik 3</a>
+                    <a href="#article-section-4">Rubrik 4</a>
+                    <a href="#article-section-5">Rubrik 5</a>
+                    <a href="#article-section-6">Rubrik 6</a>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-caption-lg">Relaterade artiklar</h2>
+                <div class="card-V2 card-outlined">
+                    <div class="card-V2-img-wrapper">
+                        <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                    </div>
+                    <div class="card-V2-content ">
+                        <h3>Intressant titel</h3>
+                        <h4>15 min • Kategori</h4>
                     </div>
                 </div>
 
-
-                <div class="card-container">
-                    <div class="card-V2 card-outlined">
-                        <div>
-                            <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
-                        </div>
-                        <div class="card-bottom">
-                            <h2>Intressant titel</h2>
-                            <h3>15 min • Kategori</h3>
-                        </div>
+                <div class="card-V2 card-outlined">
+                    <div class="card-V2-img-wrapper">
+                        <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                    </div>
+                    <div class="card-V2-content ">
+                        <h3>Intressant titel</h3>
+                        <h4>15 min • Kategori</h4>
                     </div>
                 </div>
+            </div>
 
-            </section>
+        </aside>
 
-
-        </div>
-    </main>
+    </div>
 
     <!--Footer-->
     <footer class="footer-dark">

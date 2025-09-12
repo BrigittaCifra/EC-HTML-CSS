@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--beskrivning av sidan när användaren från fram sidan som sökresultat i sin webbläsare-->
+    <meta name="description" content="">
+    <!--Vilken som är huvudsidan-->
+    <link rel="canonical" href="">
 
     <!--Typsnitt-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +24,8 @@
 
     <!--Generella stylar-->
     <link rel="stylesheet" href="CSS/generalStyles.css">
+    <!--Återkommande element-->
+    <link rel="stylesheet" href="CSS/components.css">
     <!--Navigation för mobiler och desktop-->
     <link rel="stylesheet" href="CSS/navigation.css">
     <!--Sections och main innehåll-->
@@ -156,17 +162,15 @@
         <!--Hero section-->
         <section>
             <a href="article.html">
-                <div class="section-hero-container">
-                    <div>
+                <div class="section-hero-wrapper">
+                    <div class="section-hero-img-wrapper">
                         <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
                     </div>
                     <div class="section-hero-card">
-                        <h1>Intressant titel</h1>
+                        <h1 class="text-heading-md">Intressant titel</h1>
                         <h3>15 min • Kategori</h3>
-                        <p><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut</b>
-                            labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
                     </div>
                 </div>
             </a>
@@ -175,42 +179,38 @@
         <!--Senaste nytt-->
         <section>
             <div class="section-senaste-nytt">
-                <h1>Senaste nytt</h1>
-                <a href="article.html">
-                    <div class="card-container">
-                        <div class="card-V1">
-                            <div>
-                                <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
-                            </div>
-                            <div class="card-bottom">
-                                <h2>Intressant titel</h2>
-                                <h3>15 min • Kategori</h3>
-                            </div>
-                        </div>
-                </a>
-                <a href="article.html">
+                <h1 class="text-heading-md">Senaste nytt</h1>
+
+                <div class="cards-container">
                     <div class="card-V1">
-                        <div>
+                        <div class="card-V1-img-wrapper">
                             <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
                         </div>
-                        <div class="card-bottom">
-                            <h2>Intressant titel</h2>
-                            <h3>15 min • Kategori</h3>
+                        <div class="card-V1-content">
+                            <h3>Intressant titel</h3>
+                            <p>15 min • Kategori</p>
                         </div>
                     </div>
-                </a>
-                <a href="article.html">
                     <div class="card-V1">
-                        <div>
+                        <div class="card-V1-img-wrapper">
                             <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
                         </div>
-                        <div class="card-bottom">
-                            <h2>Intressant titel</h2>
-                            <h3>15 min • Kategori</h3>
+                        <div class="card-V1-content">
+                            <h3>Intressant titel</h3>
+                            <p>15 min • Kategori</p>
                         </div>
                     </div>
-                </a>
-            </div>
+                    <div class="card-V1">
+                        <div class="card-V1-img-wrapper">
+                            <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-V1-content">
+                            <h3>Intressant titel</h3>
+                            <p>15 min • Kategori</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

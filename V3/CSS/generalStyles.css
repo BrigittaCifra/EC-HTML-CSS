@@ -1,7 +1,7 @@
 /*Globala variabler_________________________________________________________________*/
 :root {
 
-    /*Gråskala______________________________________________________________________*/
+    /*Färger - Gråskala_____________________________________________________________*/
     --grey-50: #FAFAFA;
     --grey-100: ##F5F5F5;
     --grey-200: #EEEEEE;
@@ -13,14 +13,14 @@
     --grey-800: #424242;
     --grey-900: #212121;
 
-
     --white: #ffffff;
     --backgroundColor: #cccccc;
     --bodyCopyColor: #1b1b1bdd;
     --linkHover: #b5b5b5dd;
     --activeElement: #7a7a7add;
 
-    --margin-xs: 2rem;
+    --margin-xs: 1rem;
+    --margin-s: 2rem;
 
     --padding-xs: 2rem;
     --padding-s: 4rem;
@@ -37,63 +37,18 @@
     --icon-size: 1.5rem;
 }
 
-/*Dekorativa element________________________________________________________________*/
-.decoration-container {
-    display: flex;
-    justify-content: center;
-
-}
-
-.decoration-container span {
-    color: var(--backgroundColor);
-}
-
 /*Element___________________________________________________________________________*/
 body {
     /*margin: 0 behövs för att <body> elementets default margin är 8px, det vill säga
     det kommer att finnas en liten glap mellan fönstrets kant och elementen såsom menyn*/
     margin: 0;
+    /*"sans-serif" är fallback värdet*/
     font-family: "Montserrat", sans-serif;
+    color: var(--grey-900);
+
     background-color: var(--white);
     min-width: 320px;
 }
-
-a,
-p,
-ul,
-span,
-button,
-::placeholder {
-    color: var(--bodyCopyColor);
-    text-decoration: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    line-height: 1.7rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
-
-h1,
-h2 {
-    color: var(--bodyCopyColor);
-    margin: 0 0 2rem 0;
-}
-
-h3 {
-    text-transform: uppercase;
-    color: var(--activeElement);
-}
-
-/* input[type="search"] {
-    padding: 1rem;
-    border-radius: 2rem;
-    border: none;
-}
-
-input[type="search"]::before {
-    content: "Read this -";
-} */
 
 summary {
     list-style: none;
@@ -118,122 +73,231 @@ details[open] span {
     transform: rotate(180deg);
 }
 
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
 ::placeholder {
     color: var(--grey-500);
 }
 
-
-/*Återkommande element - knappar_________________________________________________________*/
-.primary-btn {
-    padding: 0.5rem 2rem;
-    border-radius: var(--border-radius-s);
-    border: none;
-    background-color: rgb(225, 225, 225);
-    font-weight: lighter;
+a,
+p {
+    color: var(--grey-900);
 }
 
-.secondary-btn {
-    padding: 0.5rem 2rem;
-    border: none;
-    border-radius: var(--border-radius-s);
-    background-color: transparent;
+/*Typografy_________________________________________________________________________*/
+
+/* Tailwind CSS Typography Scale - Consolidated Classes */
+/* Based on official Tailwind CSS font-size utilities */
+
+
+/* Heading Styles - For section headings */
+h1 {
+    font-size: 3rem;
+    /* 48px - text-5xl */
+    line-height: 1.3;
+    font-weight: 700;
+    /* font-bold */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0 0 var(--margin-s) 0;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
-.secondary-btn:hover,
-.primary-btn:hover {
-    background-color: var(--linkHover);
-    color: var(--bodyCopyColor);
+h1.text-heading-lg {
+    font-size: 2.25rem;
+    /* 36px - text-4xl */
+    line-height: 2.5rem;
+    /* leading-10 */
+    font-weight: 600;
+    /* font-semibold */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0 0 var(--margin-s) 0;
 }
 
-.secondary-btn:active,
-.primary-btn:active {
-    background-color: var(--activeElement);
-    color: var(--white);
+h1.text-heading-md {
+    font-size: 1.875rem;
+    /* 30px - text-3xl */
+    line-height: 2.25rem;
+    /* leading-9 */
+    font-weight: 600;
+    /* font-semibold */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0 0 var(--margin-s) 0;
 }
 
-/*Återkommande element - kort__________________________________________________________*/
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--gap-xs);
+h1.text-heading-sm {
+    font-size: 1.5rem;
+    /* 24px - text-2xl */
+    line-height: 2rem;
+    /* leading-8 */
+    font-weight: 600;
+    /* font-semibold */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0 0 var(--margin-s) 0;
 }
 
-.card-V1 {
-    background-color: var(--white);
+/* Title Styles - For subsections */
+h2 {
+    font-size: 1.25rem;
+    /* 20px - text-xl */
+    line-height: 1.75rem;
+    /* leading-7 */
+    font-weight: 600;
+    /* font-semibold */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0;
 }
 
-.card-V2 {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr
+h3 {
+    font-size: 1.125rem;
+    /* 18px - text-lg */
+    line-height: 1.75rem;
+    /* leading-7 */
+    font-weight: 500;
+    /* font-medium */
+    letter-spacing: 0.03rem;
+    /* tracking-normal */
+    margin: 0 0 var(--margin-xs) 0;
 }
 
-.card-outlined {
-    background-color: var(--white);
-    border: 1px solid var(--backgroundColor);
+h4 {
+    font-size: 1rem;
+    /* 16px - text-base */
+    line-height: 1.5rem;
+    /* leading-6 */
+    font-weight: 500;
+    /* font-medium */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0 0 var(--margin-xs) 0;
 }
 
-.card:hover,
-.card-outlined:hover {
-    box-shadow: 0 8px 16px 0 rgba(78, 78, 78, 0.2);
-    transition: 0.3s;
+h5 {
+    font-size: 0.875rem;
+    /* 14px - text-sm */
+    line-height: 1.25rem;
+    /* leading-5 */
+    font-weight: 500;
+    /* font-medium */
+    letter-spacing: 0.03rem;
+    /* tracking-wide */
+    margin: 0 0 var(--margin-xs) 0;
 }
 
-.card-V1 img,
-.card-V2 img,
-.card-outlined img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Body Styles - For main content */
+a,
+p,
+ul,
+span,
+button,
+::placeholder {
+    font-size: 1rem;
+    /* 18px - text-lg */
+    line-height: 1.75rem;
+    /* leading-7 */
+    font-weight: 400;
+    /* font-normal */
+    letter-spacing: 0.03rem;
+    /* tracking-normal */
+    margin: 0;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    text-decoration: none;
+    list-style: none;
 }
 
-.card p,
-.card-outlined p {
-    margin-top: var(--padding-xs);
+.text-body-lg {
+    font-size: 1rem;
+    /* 16px - text-base */
+    line-height: 1.5rem;
+    /* leading-6 */
+    font-weight: 400;
+    /* font-normal */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0;
 }
 
-.card-bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: var(--padding-xs);
+.text-body-md {
+    font-size: 0.875rem;
+    /* 14px - text-sm */
+    line-height: 1.25rem;
+    /* leading-5 */
+    font-weight: 400;
+    /* font-normal */
+    letter-spacing: 0;
+    /* tracking-normal */
+    margin: 0;
 }
 
-/*Återkommande element - input fields_______________________________________________*/
-.search {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    border-radius: 3rem;
-    padding: 0.5rem;
-    gap: 0.5rem;
-    background-color: var(--grey-50);
+.text-body-sm {
+    font-size: 0.75rem;
+    /* 12px - text-xs */
+    line-height: 1rem;
+    /* leading-4 */
+    font-weight: 400;
+    /* font-normal */
+    letter-spacing: 0.025em;
+    /* tracking-wide */
+    margin: 0;
 }
 
+/* Caption & Label Styles - For small text, captions, labels */
+.text-caption-lg {
+    font-size: 0.875rem;
+    /* 14px - text-sm */
+    line-height: 1.25rem;
+    /* leading-5 */
+    font-weight: 600;
+    /* font-medium */
+    letter-spacing: 0.025em;
+    /* tracking-wide */
+    margin: 0;
 
-.search:focus-within {
-    /*När någonting inom search får fokus*/
-    border: 1px solid var(--grey-900);
+    text-transform: uppercase;
+    color: var(--grey-600)
 }
 
-.search>span {
+.text-caption-md {
+    font-size: 0.75rem;
+    /* 12px - text-xs */
+    line-height: 1rem;
+    /* leading-4 */
+    font-weight: 500;
+    /* font-medium */
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+    margin: 0;
+}
+
+.text-caption-sm {
+    font-size: 0.625rem;
+    /* 10px - smaller than text-xs */
+    line-height: 0.875rem;
+    /* 14px */
+    font-weight: 500;
+    /* font-medium */
+    letter-spacing: 0.1em;
+    /* tracking-widest */
+    margin: 0;
+}
+
+/* .caption {
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
     color: var(--grey-500);
-}
-
-input[type="search"] {
-    outline: none;
-    border: none;
-    background: transparent;
-    width: 15rem;
-}
-
-/*Ikoner - sociala medier___________________________________________________________*/
-.socialMedia-icons {
-    font-size: var(--icon-size);
-    color: var(--bodyCopyColor);
-    width: fit-content;
-    height: fit-content;
-}
-
-.socialMedia-icons:hover {
-    color: var(--activeElement);
-}
+} */

@@ -5,18 +5,20 @@ main {
     margin-top: 5.5rem;
 }
 
-.section-hero-container {
-    display: grid;
+.section-hero-wrapper {
+    display: flex;
+    flex-direction: column;
     /*Auto-fit försöker lägga till så många element på en rad som får plats
     baserat på skärmstorleken, elementens storlek och antar element. Elementens 
     storlek styrs av minmax(). Som minst är */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: var(--padding-xs);
-    padding-left: calc(50vw - 720px);
-    padding-right: calc(50vw - 720px);
 }
 
-.section-hero-container img {
+.section-hero-img-wrapper {
+    flex: 1;
+}
+
+.section-hero-img-wrapper img {
     /*Bilden fyller hela bredden av sin behållare (parent element)*/
     width: 100%;
     /*Bilden fyller hela höjden av sin behållare*/
@@ -28,11 +30,12 @@ main {
     object-fit: cover;
 }
 
-.section-hero-container>:nth-child(1) {
-    overflow: hidden;
+.section-hero-wrapper p {
+    display: none;
 }
 
 .section-hero-card {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,8 +48,6 @@ main {
 .section-senaste-nytt {
     background-color: var(--backgroundColor);
     padding: var(--padding-xs);
-    padding-left: calc(50vw - 720px);
-    padding-right: calc(50vw - 720px);
 }
 
 
@@ -55,5 +56,26 @@ main {
 @media screen and (min-width: 768px) {
     main {
         margin-top: 11.5em;
+    }
+
+    .section-hero-wrapper {
+        flex-direction: row;
+    }
+
+    .section-hero-wrapper p {
+        display: block;
+    }
+}
+
+/*Monitors, Desktops_________________________________________________________*/
+@media screen and (min-width: 1200px) {
+    .section-hero-wrapper {
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
+    }
+
+    .section-senaste-nytt {
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
     }
 }

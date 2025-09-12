@@ -93,6 +93,8 @@
         background-color: var(--white);
         width: 100%;
         top: 0%;
+        /*här används z-index för att överlappa sticky sidebaren*/
+        z-index: 1;
     }
 
     .dekstop-nav-top {

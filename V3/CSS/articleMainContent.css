@@ -1,36 +1,31 @@
 /*mobila enheter__________________________________________________________________*/
 main {
-    /*Navbaren har fixed position vilket innebär att innehållet på sidan hamnar
-    under navbaren. Pga detta ställs in margin-top med en liten ofset*/
-    margin-top: 6rem;
-    padding: var(--padding-xs);
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-}
-
-main>div {
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
 }
 
-.section-mainArticle {
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+    margin-top: 6rem;
+    padding: var(--padding-xs);
+}
+
+.section-gap {
     /*Här behövs grid/flex för att man ska kunna använda egenskapen gap*/
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--gap-m);
 }
 
-.section-mainArticle>:nth-child(2) {
+.section-mainArticle-metaInfo {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: var(--gap-m);
 }
-
-/* section>div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-} */
 
 .author {
     display: flex;
@@ -77,12 +72,29 @@ main>div {
     border-left: 5px solid var(--activeElement);
 }
 
-.section-relatedArticles>div {
+.mobile-table-of-content,
+.mobile-table-of-content>div {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--gap-xs);
 }
 
+.article-img-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+}
+
+aside>:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+}
 
 
 /*Laptops and Desktops_________________________________________________________*/
@@ -90,21 +102,48 @@ main>div {
 
     /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
     för att följa mobilefirst konceptet*/
-    main {
+
+    .mobile-table-of-content {
+        display: none;
+    }
+
+    .mainContent {
         margin-top: 14rem;
         margin-bottom: 7rem;
     }
 
-    main>div {
-        display: grid;
-        grid-template-columns: 1fr 0.5fr;
-        gap: var(--gap-m);
+    main {
+        flex: 2;
     }
+
+    aside {
+        flex: 1;
+
+        position: sticky;
+        top: 15rem;
+        height: fit-content;
+    }
+
+    .desktop-table-of-content,
+    .desktop-table-of-content>div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-xs);
+    }
+
+    .desktop-table-of-content {
+        gap: var(--gap-s);
+    }
+
 }
 
 /*Monitors, Desktops_________________________________________________________*/
 @media screen and (min-width: 1200px) {
-    main {
+
+    .mainContent {
+        /*anledningen till att breakpointen är här för sidebaren, är för att öka 
+        läsbarheten genom att låta brödtexten ta upp mer plats på mindre skärmar*/
+        flex-direction: row;
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
     }
