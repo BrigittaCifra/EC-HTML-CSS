@@ -12,6 +12,12 @@
     border: none;
     border-radius: var(--border-radius-s);
     background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    gap: var(--gap-xs);
+
+    height: fit-content;
 }
 
 .secondary-btn:hover,
@@ -50,11 +56,16 @@
 
 .card-V1-img-wrapper {
     flex: 2;
+    overflow: hidden;
 }
 
 .card-V1-content {
     flex: 1;
     padding: var(--padding-xs);
+}
+
+.card-V1-content p {
+    padding-bottom: 1rem;
 }
 
 .card-V2 {
@@ -85,6 +96,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .3s;
+}
+
+.card-V1 img:hover {
+    transform: scale(1.2);
 }
 
 /*Återkommande element - input fields_______________________________________________*/

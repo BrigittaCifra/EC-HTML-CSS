@@ -28,7 +28,7 @@
     --gap-xs: 1rem;
     --gap-s: 2rem;
     --gap-m: 4rem;
-
+    --gap-l: 8rem;
     --border-radius-xs: 0.2rem;
     --border-radius-s: 2rem;
 
@@ -180,6 +180,8 @@ h4 {
     letter-spacing: 0;
     /* tracking-normal */
     margin: 0 0 var(--margin-xs) 0;
+
+    color: var(--grey-600);
 }
 
 h5 {

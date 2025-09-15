@@ -70,6 +70,7 @@
 
 .mobile-nav.menu-open {
     height: 100vh;
+    overflow: scroll;
 }
 
 /* Dölja element */
