@@ -3,7 +3,7 @@
 
     /*Färger - Gråskala_____________________________________________________________*/
     --grey-50: #FAFAFA;
-    --grey-100: ##F5F5F5;
+    --grey-100: #F5F5F5;
     --grey-200: #EEEEEE;
     --grey-300: #E0E0E0;
     --grey-400: #BDBDBD;
@@ -32,12 +32,20 @@
     --border-radius-xs: 0.2rem;
     --border-radius-s: 2rem;
 
-    --border-bottom: var(--white) solid 1px;
+    --border-bottom: var(--grey-50) solid 1px;
 
     --icon-size: 1.5rem;
+
+    --transition-fast: 0.2s;
+
+    /* --navigation-height: calc(100vh - var(--offsetHeight)); */
 }
 
 /*Element___________________________________________________________________________*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /*margin: 0 behövs för att <body> elementets default margin är 8px, det vill säga
     det kommer att finnas en liten glap mellan fönstrets kant och elementen såsom menyn*/
@@ -86,6 +94,11 @@ li {
 a,
 p {
     color: var(--grey-900);
+}
+
+a:active {
+    text-decoration: underline;
+    transition: var(--transition-fast);
 }
 
 /*Typografy_________________________________________________________________________*/
@@ -218,6 +231,8 @@ button,
 
     text-decoration: none;
     list-style: none;
+
+    transition: var(--transition-fast);
 }
 
 .text-body-lg {
@@ -303,3 +318,17 @@ button,
     letter-spacing: 0.2rem;
     color: var(--grey-500);
 } */
+
+/*Ikoner__________________________________________________________________*/
+.icon {
+    fill: var(--grey-500);
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        /*49 är fallback value*/
+        --offsetHeight: calc(100vh - var(--navbarHeight, 49px));
+    }
+}

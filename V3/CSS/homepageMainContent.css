@@ -8,9 +8,6 @@ main {
 .section-hero-wrapper {
     display: flex;
     flex-direction: column;
-    /*Auto-fit försöker lägga till så många element på en rad som får plats
-    baserat på skärmstorleken, elementens storlek och antar element. Elementens 
-    storlek styrs av minmax(). Som minst är */
     padding: var(--padding-xs);
 }
 
@@ -39,7 +36,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--backgroundColor);
+    background-color: var(--grey-300);
     padding: var(--padding-xs);
     /* grid-column: span 2; */
 }
@@ -70,6 +67,8 @@ main {
 /*Monitors, Desktops_________________________________________________________*/
 @media screen and (min-width: 1200px) {
     .section-hero-wrapper {
+        /*räknar ut skillnaden mellan halva fönstrets bredd och 720px och
+        läggertilldet som padding*/
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
     }

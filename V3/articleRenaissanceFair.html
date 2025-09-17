@@ -12,7 +12,7 @@
         rel="stylesheet">
 
     <!--Material icons-->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <!--Social Media icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
@@ -118,16 +118,51 @@
             </div>
         </nav>
 
-        <!--Nav för PC och större skärmar (768px och större)-->
+
+        <!--Nav för Desktop och PC (768px och större)-->
         <nav class="desktop-nav">
             <div class="dekstop-nav-top">
                 <a href="index.html"><span>Jordens Eko</span></a>
                 <div>
-                    <button class="secondary-btn">Logga in</button>
+                    <button id="modal-btn-open" class="secondary-btn">Logga in</button>
                     <button class="primary-btn">Prenumera</button>
                 </div>
             </div>
             <div class="dekstop-nav-bottom">
+                <div class="dekstop-nav-ham-menu">
+                    <input type="checkbox" id="desktop-nav-toggle" class="desktop-nav-toggle">
+                    <label for="desktop-nav-toggle" class="-desktop-nav-toggle-label">
+                        <span class="material-symbols-outlined" id="menu-toggle">menu</span>
+                    </label>
+                    <div>
+                        <ul>
+                            <li>
+                                <a id="#news">Djur</a>
+                                <a href="#">Djurupptäckter</a>
+                                <a href="#">Utrotningshotade arter</a>
+                            </li>
+                            <li>
+                                <a id="#contact">Historia och kultur</a>
+                                <a href="#">Arkeologi</a>
+                                <a href="#">Historiska platser</a>
+                                <a href="#">Högtider och traditioner</a>
+                            </li>
+                            <li class="dropdown">
+                                <a id="#contact">Vetenskap och natur</a>
+                                <a href="#">Rymd och astronomi</a>
+                                <a href="#">Dinosaurier och fossiler</a>
+                                <a href="#">Hav</a>
+                                <a href="">Teknologi och innovation</a>
+                            </li>
+                            <li class="dropdown">
+                                <a id="#about">Om Jordens Eko</a>
+                                <a href="#">Om oss</a>
+                                <a href="#">Författare</a>
+                                <a href="#">Kontakta oss</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="desktop-nav-links">
                     <!--Menu alternativ-->
                     <ul>
@@ -175,6 +210,32 @@
         </nav>
     </header>
 
+    <!--Login modal-->
+    <div class="modal-wrapper" id="modal-wrapper">
+        <div class="modal-content">
+            <div>
+                <h2>Logga in</h2>
+                <button id="modal-btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="input-field-container">
+                <div class="input-field-wrapper">
+                    <label for="">E-postadress</label>
+                    <input type="email" name="" id="">
+                </div>
+                <div class="input-field-wrapper">
+                    <label for="">Lösenord</label>
+                    <input type="password" name="" id="">
+                </div>
+            </div>
+            <button class="primary-btn">Logga in</button>
+        </div>
+    </div>
+
     <div class="mainContent">
 
         <!--Main content-->
@@ -182,7 +243,6 @@
 
             <!--Sektion 1. Titel/Meta information-->
             <section class="section-gap" id="article-section-1">
-
                 <h1>This is the story of the first Renaissance Fair</h1>
                 <div class="section-mainArticle-metaInfo">
                     <div class="author">
@@ -197,15 +257,29 @@
                     <div class="actions">
                         <button class="secondary-btn">
                             <p>Dela</p>
-                            <span class="material-symbols-outlined">
-                                share
-                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="secondary-btn-icon-default icon"
+                                height="24px" viewBox="0 -960 960 960">
+                                <path
+                                    d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-80q17 0 28.5-11.5T720-200q0-17-11.5-28.5T680-240q-17 0-28.5 11.5T640-200q0 17 11.5 28.5T680-160ZM200-440q17 0 28.5-11.5T240-480q0-17-11.5-28.5T200-520q-17 0-28.5 11.5T160-480q0 17 11.5 28.5T200-440Zm480-280q17 0 28.5-11.5T720-760q0-17-11.5-28.5T680-800q-17 0-28.5 11.5T640-760q0 17 11.5 28.5T680-720Zm0 520ZM200-480Zm480-280Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="secondary-btn-icon-hover icon"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M680-80q-50 0-85-35t-35-85q0-6 3-28L282-392q-16 15-37 23.5t-45 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q24 0 45 8.5t37 23.5l281-164q-2-7-2.5-13.5T560-760q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-24 0-45-8.5T598-672L317-508q2 7 2.5 13.5t.5 14.5q0 8-.5 14.5T317-452l281 164q16-15 37-23.5t45-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Z" />
+                            </svg>
                         </button>
                         <button class="secondary-btn">
                             <p>Spara</p>
-                            <span class="material-symbols-outlined">
-                                bookmark
-                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="secondary-btn-icon-default icon"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="secondary-btn-icon-hover icon"
+                                viewBox="0 -960 960 960">
+                                <path
+                                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -257,9 +331,9 @@
                         <img src="https://i.natgeofe.com/n/d3648f31-8d91-4abb-afab-9f6209a4f240/RPF1963AudiencePattersonFamilyArchives.jpeg"
                             alt="">
                     </div>
-                    <span>Crowd gathers at the 1963 Renaissance Faire. Ren fair has served as a space of community for
+                    <p>Crowd gathers at the 1963 Renaissance Faire. Ren fair has served as a space of community for
                         creative outcasts since the 1960s.
-                        Photograph Courtesy Kevin Patterson</span>
+                        Photograph Courtesy Kevin Patterson</p>
                 </div>
 
                 <p>Phyllis and her husband Ron Patterson launched the event as a fundraiser for the progressive radio
@@ -293,8 +367,8 @@
                         <img src="https://i.natgeofe.com/n/8864bf33-c5a5-4718-9474-b025cb806f61/Agfachrome1962RonAndEdMannpaint1stComediaCart0001.jpg"
                             alt="">
                     </div>
-                    <span>Ron and Ed Mann paint first Commedia cart at the 1963 Renaissance Faire.
-                        Photography Courtesy Kevin Patterson</span>
+                    <p>Ron and Ed Mann paint first Commedia cart at the 1963 Renaissance Faire.
+                        Photography Courtesy Kevin Patterson</p>
                 </div>
 
                 <p>“Those people volunteered to help make papier-mâché masks and banners” and other distinctive
@@ -339,9 +413,9 @@
                         <img src="https://i.natgeofe.com/n/da6457d9-4c2b-4751-be92-e340ea0c35bd/shutterstock_editorial_1124044859.jpg"
                             alt="">
                     </div>
-                    <span>Vendors sell food and trinkets at the Renaissance Faire in Annapolis, Maryland. The fair gave
+                    <p>Vendors sell food and trinkets at the Renaissance Faire in Annapolis, Maryland. The fair gave
                         a space for creatives and crafters to market their work.
-                        Photograph by Dora Ramirez, Shutterstock</span>
+                        Photograph by Dora Ramirez, Shutterstock</p>
                 </div>
 
                 <p>As the concept spread across America and the globe, many fairs loosened their attempts to recreate
@@ -398,9 +472,9 @@
                         <img src="https://i.natgeofe.com/n/9ba267d1-33a8-483f-bbbe-e0359ac617a6/shutterstock_607126379.jpg"
                             alt="">
                     </div>
-                    <span>Knights tournament at a Renaissance Faire. Historical reenactment is a main pillar of Ren
+                    <p>Knights tournament at a Renaissance Faire. Historical reenactment is a main pillar of Ren
                         Faire, allowing fairgoers to be transported to 16th-century England.
-                        Photograph by Photo Spirit, Shutterstock</span>
+                        Photograph by Photo Spirit, Shutterstock</p>
                 </div>
 
                 <p>“When you go to the Renaissance Fair, there’s so much play and involvement—you want to curtsy for the
@@ -420,6 +494,50 @@
                 </p>
             </section>
 
+            <section class="related-topics">
+                <h2>Related topics</h2>
+                <div class="chip-wrapper">
+                    <div class="chip">
+                        renaissance
+                    </div>
+                    <div class="chip">
+                        Middle ages
+                    </div>
+                    <div class="chip">
+                        Costumes
+                    </div>
+                    <div class="chip">
+                        Traditions
+                    </div>
+                    <div class="chip">
+                        Fairs and carnivals
+                    </div>
+                </div>
+            </section>
+
+            <section class="article-you-may-also-like">
+                <h2>You may also like</h2>
+                <div class="card-V2 card-outlined">
+                    <div class="card-V2-img-wrapper">
+                        <img src="https://i.natgeofe.com/n/db817102-99de-47b0-8b08-688e62ac03a6/CWard2021-18955.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-V2-content">
+                        <p>15 min • Djur</p>
+                        <h3>The unlikely comeback of America’s most endangered songbird</h3>
+                    </div>
+                </div>
+                <div class="card-V2 card-outlined">
+                    <div class="card-V2-img-wrapper">
+                        <img src="https://i.natgeofe.com/n/db817102-99de-47b0-8b08-688e62ac03a6/CWard2021-18955.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-V2-content">
+                        <p>15 min • Djur</p>
+                        <h3>The unlikely comeback of America’s most endangered songbird</h3>
+                    </div>
+                </div>
+            </section>
 
         </main>
 
@@ -438,23 +556,26 @@
                 <h2 class="text-caption-lg">Relaterade artiklar</h2>
                 <div class="card-V2 card-outlined">
                     <div class="card-V2-img-wrapper">
-                        <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                        <img src="https://i.natgeofe.com/n/4569c452-5f0c-4a28-a973-37846497e968/school-of-athens.jpg"
+                            alt="">
                     </div>
                     <div class="card-V2-content ">
-                        <h3>Intressant titel</h3>
                         <h4>15 min • Kategori</h4>
+                        <h3>The Renaissance 'Prince of Painters' made a big impact in his short life</h3>
                     </div>
                 </div>
 
                 <div class="card-V2 card-outlined">
                     <div class="card-V2-img-wrapper">
-                        <img src="../img/marek-piwnicki-Qoe1RbKPzMo-unsplash.jpg" alt="">
+                        <img src="https://i.natgeofe.com/n/995ed1ad-341a-411e-ac66-7ac4e87ba89f/ST_ukbreak_GettyImages-1445443560_ukHR.jpg"
+                            alt="">
                     </div>
                     <div class="card-V2-content ">
-                        <h3>Intressant titel</h3>
                         <h4>15 min • Kategori</h4>
+                        <h3>This ancient port in southern England is having a 21st-century renaissance</h3>
                     </div>
                 </div>
+
             </div>
 
         </aside>

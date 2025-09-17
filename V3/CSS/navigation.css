@@ -5,6 +5,14 @@
     display: none;
 }
 
+.desktop-nav-toggle {
+    display: none;
+}
+
+.desktop-nav-links {
+    display: none;
+}
+
 .mobile-nav {
     /*Flexbox behövs här eftersom ett av barn elementen använder sig av
     margin-top: auto och då behövs både flexbox i kombination med height: 100vh
@@ -79,8 +87,7 @@
     display: none;
 }
 
-/*Navigation - PC/Större enheter_________________________________________________________*/
-
+/*Navigation - Laptops_________________________________________________________*/
 @media screen and (min-width: 768px) {
     .mobile-nav {
         /*Döljer navigationen för mobila enhter*/
@@ -129,11 +136,70 @@
         display: flex;
     }
 
-    /*    .dekstop-nav-bottom span,
-    .dekstop-nav-bottom>a,
-    .dekstop-nav-bottom li {
+    .dekstop-nav-bottom>form {
+        padding-right: var(--padding-xs);
+    }
+
+    .dekstop-nav-ham-menu {
         padding: var(--padding-xs);
-    } */
+    }
+
+    .dekstop-nav-ham-menu ul {
+        position: absolute;
+        /*left 0 och right 0 gör så att container tar upp hela bredden*/
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+
+        background-color: var(--grey-50);
+        border-bottom: 1px solid var(--grey-400);
+    }
+
+    .dekstop-nav-ham-menu li {
+        /*Flex 1 gör så att alla li blir lika bredda*/
+        flex: 1;
+        gap: var(--gap-xs);
+
+        padding: var(--padding-xs);
+    }
+
+    .dekstop-nav-ham-menu a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desktop-nav-toggle {
+        /*Döljer checkboxen*/
+        display: none;
+    }
+
+    .desktop-nav-toggle~div {
+        /*Däljer meny länkarna*/
+        display: none;
+    }
+
+    .desktop-nav-toggle:checked~div {
+        /*Väljer alla div-element som är general siblings (syskon på samma nivå) som 
+        kommer efter checkboxen i HTML-strukturen när checkboxen är ikryssad*/
+        display: block;
+        /* transform: scale(1, 1); */
+    }
+
+    .desktop-nav-toggle:checked~div a {
+        transition: opacity 0.25s ease 0.15s;
+    }
+}
+
+/*Navigation - Desktop och större_________________________________________________________*/
+@media screen and (min-width: 1201px) {
+    .dekstop-nav-ham-menu {
+        display: none;
+    }
+
+    .desktop-nav-links {
+        display: block;
+    }
 
     .desktop-nav-links a {
         padding: var(--padding-xs);
@@ -160,7 +226,6 @@
         background-color: var(--white);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 1rem
-            /* z-index: 1; */
     }
 
     .dropdown-content a {
@@ -177,5 +242,4 @@
         klassen dropdown visas genom display:block*/
         display: block;
     }
-
 }

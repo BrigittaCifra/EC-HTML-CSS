@@ -28,6 +28,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
+    scroll-margin-top: 15rem;
+    transition: 0.6s;
+}
+
+.article-hero-img-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .author {
@@ -69,9 +77,9 @@ main {
 }
 
 .summary {
-    background-color: var(--backgroundColor);
+    background-color: var(--grey-300);
     padding: var(--padding-xs);
-    border-left: 5px solid var(--activeElement);
+    border-left: 5px solid var(--grey-400);
 }
 
 .section-mainArticle-metaInfo {
@@ -81,13 +89,13 @@ main {
     gap: var(--gap-m);
 }
 
-.table-of-content-nav {
+/* .table-of-content-nav {
     border-left: var(--grey-500) solid 3px;
 }
 
 .table-of-content-nav a {
     padding-left: var(--padding-xs);
-}
+} */
 
 .mobile-table-of-content,
 .mobile-table-of-content>div {
@@ -101,12 +109,15 @@ main {
     object-fit: cover;
 }
 
-.article-img-container span {
+.article-img-container p {
+    border-left: solid 3px var(--grey-300);
+    padding-left: 1rem;
+    margin-top: 1rem;
     color: var(--grey-600);
+
 }
 
 /*Sidebar_______________________________________________________________________*/
-
 aside {
     display: flex;
     flex-direction: column;
@@ -119,6 +130,23 @@ aside>:nth-child(2) {
     gap: var(--gap-s);
 }
 
+/*Related topics_______________________________________________________________*/
+.related-topics {
+    padding: var(--padding-s) 0;
+    border-top: 1px solid var(--grey-400);
+    border-bottom: 1px solid var(--grey-400);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+}
+
+/*You may also like*/
+.article-you-may-also-like {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+}
 
 /*Laptops and Desktops_________________________________________________________*/
 @media screen and (min-width: 768px) {
