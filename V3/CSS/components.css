@@ -76,26 +76,23 @@
     padding: var(--padding-xs);
 }
 
-.card-V1-content p {
-    padding-bottom: 1rem;
-}
 
+/*Card-2 har samma properties på mindre skärmar som card-V1
+men tanken är att på större skärmar ska card-V2 lägga bilden
+på vänster sida, medan innehållet kommer på vänster sida*/
 .card-V2 {
     display: flex;
-    height: 15rem;
+    flex-direction: column;
 }
 
 .card-V2-img-wrapper {
-    flex: 1.5;
+    flex: 2;
     overflow: hidden;
 }
 
 .card-V2-content {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: var(--gap-xs);
+    flex: 1;
+    padding: var(--padding-xs);
 }
 
 .card-V1:hover,
@@ -118,6 +115,27 @@
 .card-V2:hover img {
     /*Väljer img elementet när användaren hovrar över kortet*/
     transform: scale(1.2);
+}
+
+@media screen and (min-width: 481px) {
+    /*iPads, Tablets*/
+
+    .card-V2 {
+        flex-direction: row;
+        height: 15rem;
+    }
+
+    .card-V2-img-wrapper {
+        flex: 1.5;
+    }
+
+    .card-V2-content {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (min-width: 780px) {

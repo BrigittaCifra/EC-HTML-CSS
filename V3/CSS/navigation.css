@@ -43,13 +43,6 @@
     padding: 1.7rem;
 }
 
-/* .mobile-nav-top span:active,
-.mobile-nav li:active,
-.mobile-nav a:active {
-    background-color: var(--activeElement);
-    color: var(--white);
-} */
-
 .mobile-nav-top>a {
     margin-right: auto;
 }
@@ -77,6 +70,7 @@
 }
 
 .mobile-nav.menu-open {
+    /*När menyn är öppen då sätts höjden till 100vh*/
     height: 100vh;
     overflow: scroll;
 }
@@ -140,6 +134,10 @@
         padding-right: var(--padding-xs);
     }
 
+    .dekstop-nav-ham-menu-links ul {
+        padding: 2rem 0;
+    }
+
     .dekstop-nav-ham-menu {
         padding: var(--padding-xs);
     }
@@ -159,9 +157,13 @@
     .dekstop-nav-ham-menu li {
         /*Flex 1 gör så att alla li blir lika bredda*/
         flex: 1;
+        padding: 0 var(--padding-xs);
+
+        display: flex;
+        flex-direction: column;
         gap: var(--gap-xs);
 
-        padding: var(--padding-xs);
+        border-right: 1px solid var(--grey-400);
     }
 
     .dekstop-nav-ham-menu a {
