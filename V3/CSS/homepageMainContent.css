@@ -1,80 +1,104 @@
-/*Section - Hero _______________________________________________________________*/
-main {
-    /*Navbaren har fixed position vilket innebär att innehållet på sidan hamnar
-    under navbaren. Pga detta ställs in margin-top med en liten ofset*/
-    margin-top: 5.5rem;
+/*Hero section____________________________________________________________________*/
+.section-hero {
+    /* Skapar en "referenspunkt" för absolut positionerade barn element*/
+    position: relative;
+    overflow: hidden;
+
+
+    /*margin-top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));*/
+
+    height: 100vh;
 }
 
-.section-hero-wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: var(--padding-xs);
-}
-
-.section-hero-img-wrapper {
-    flex: 1;
-}
-
-.section-hero-img-wrapper img {
-    /*Bilden fyller hela bredden av sin behållare (parent element)*/
+.section-hero img {
     width: 100%;
-    /*Bilden fyller hela höjden av sin behållare*/
     height: 100%;
-    /*Bilden skalas för att täcka hela området samtidigt som dess proportioner 
-    bevaras. Om bildens proportioner inte matchar behållarens proportioner 
-    kommer delar av bilden att beskäras bort, men bilden blir aldrig förvräng 
-    eller sträckt*/
+
+    /* Om bildens proportioner inte matchar behållarens proportioner kommer delar av bilden att beskäras bort,
+    men bilden blir aldrig förvräng eller sträckt */
     object-fit: cover;
 }
 
-.section-hero-wrapper p {
+.section-hero-content {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+
+    color: var(--grey-50);
+    padding: 5rem var(--padding-xs);
+    max-width: 1200px;
+}
+
+.section-hero p {
+    display: none;
+    color: var(--grey-50);
+}
+
+/*Latest in space_____________________________________________________________________________*/
+#latest-in-space {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+}
+
+#latest-in-space>div>button {
     display: none;
 }
 
-.section-hero-card {
-    flex: 1;
+/*Mixed news__________________________________________________________________________________*/
+
+.card-V3-background {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(https://i.natgeofe.com/n/a93e9caf-290e-4902-9900-c0897cc888ef/CleopatrasFinalSecret_01_51_24_01.Still010-original.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-V3:hover .card-V3-background {
+    transform: scale(1.1);
+}
+
+.card-content {
+    /* Säkerställer att innehållet ligger ovanpå */
+    position: relative;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: var(--grey-300);
-    padding: var(--padding-xs);
-    /* grid-column: span 2; */
+    gap: var(--gap-s);
 }
 
-/*Section - senaste nytt ____________________________________________________________*/
-.section-senaste-nytt {
-    background-color: var(--backgroundColor);
-    padding: var(--padding-xs);
+.mixed-news .card-V3-background {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(https://i.natgeofe.com/n/f93bb9d4-5617-4255-b226-44f32e17bc7d/2025_Fiji_Leg_3_Expedition-Dan_OllieVelasco.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
+/*media queries ________________________________________________________________*/
 
-
-/*Laptops and Desktops_________________________________________________________*/
-@media screen and (min-width: 768px) {
-    main {
-        margin-top: 11.5em;
-    }
-
-    .section-hero-wrapper {
-        flex-direction: row;
-    }
-
-    .section-hero-wrapper p {
+@media screen and (min-width: 481px) {
+    .section-hero p {
         display: block;
     }
-}
 
-/*Monitors, Desktops_________________________________________________________*/
-@media screen and (min-width: 1200px) {
-    .section-hero-wrapper {
-        /*räknar ut skillnaden mellan halva fönstrets bredd och 720px och
-        läggertilldet som padding*/
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
+    #latest-in-space>div>button {
+        display: flex;
     }
 
-    .section-senaste-nytt {
+    #latest-in-space>button {
+        display: none;
+    }
+}
+
+
+/*Extra large devices (large desktops)*/
+@media screen and (min-width: 1200px) {
+    .section-hero-content {
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
+
+        padding-bottom: 7rem;
     }
 }

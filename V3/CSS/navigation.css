@@ -20,10 +20,12 @@
     display: flex;
     flex-direction: column;
     /* height: 100vh; */
-    background-color: var(--backgroundColor);
+    background-color: var(--grey-300);
     position: fixed;
     width: 100%;
     top: 0%;
+
+    z-index: 1;
 }
 
 .mobile-nav> :first-child {
@@ -39,12 +41,15 @@
     border-bottom: var(--border-bottom);
 }
 
-.mobile-nav-top span {
+.mobile-nav-top svg {
     padding: 1.7rem;
 }
 
 .mobile-nav-top>a {
     margin-right: auto;
+
+    display: flex;
+    align-items: center;
 }
 
 .mobile-nav-links,
@@ -55,18 +60,19 @@
 .mobile-nav-btn {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: var(--gap-xs);
     margin-top: auto;
 }
 
 .mobile-nav-links summary {
     /*Här skrivs över stylingen som sätts i filen generalStyles.CSS*/
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--grey50);
 }
 
 .mobile-nav-links details[open] {
     /*Här skrivs över stylingen som sätts i filen generalStyles.CSS*/
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--grey-50);
 }
 
 .mobile-nav.menu-open {
@@ -92,7 +98,6 @@
         /* Gör desktop navigationen synlig för större enheter */
         display: block;
         position: fixed;
-        background-color: var(--white);
         width: 100%;
         top: 0%;
         /*här används z-index för att överlappa sticky sidebaren*/
@@ -103,11 +108,17 @@
         display: flex;
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
+
+        background-color: var(--grey-50);
     }
 
     .dekstop-nav-top>a {
         padding: var(--padding-xs);
         margin-right: auto;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
     .dekstop-nav-top>div {
@@ -120,7 +131,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--backgroundColor);
+        background-color: var(--grey-300);
         border-bottom: var(--border-bottom);
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
@@ -212,7 +223,7 @@
     }
 
     .dropdown>a:hover {
-        background-color: var(--linkHover);
+        background-color: var(--grey-400);
     }
 
     .dropdown {
@@ -225,7 +236,7 @@
         display: none;
         position: absolute;
         min-width: 25rem;
-        background-color: var(--white);
+        background-color: var(--grey-50);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 1rem
     }

@@ -1,53 +1,64 @@
 /*Återkommande element - knappar_________________________________________________________*/
-.primary-btn {
-    padding: 0.5rem 2rem;
-    border-radius: var(--border-radius-s);
+.btn {
+    /*Alla knappar utgår från dessa värden*/
+    height: fit-content;
+    padding: var(--btn-padding);
+
     border: none;
-    background-color: rgb(225, 225, 225);
-    font-weight: lighter;
+    border-radius: var(--border-radius-m);
     transition: var(--transition-fast);
+
+    /*För ikoner inutti knappar*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xs);
+}
+
+/*Primary*/
+.primary-btn {
+    background-color: var(--grey-400);
 }
 
 .primary-btn:hover {
-    background-color: var(--grey-400);
-    color: var(--grey-900);
-    transition: var(--transition-fast);
+    background-color: var(--grey-500);
+    color: var(--grey-50);
 }
 
+/*Secondary*/
 .secondary-btn {
-    padding: 0.5rem 2rem;
-    border: none;
-    border-radius: var(--border-radius-s);
     background-color: transparent;
-
-    display: flex;
-    align-items: center;
-    gap: var(--gap-xs);
-
-    height: fit-content;
 }
 
-.secondary-btn-icon-hover {
+/*Outlined*/
+.outlined-btn {
+    border: var(--border-outlined);
+    background-color: transparent;
+}
+
+/*Knapp ikoner*/
+.btn-icon-hover {
     /* Döljer hover ikonen som default */
     display: none;
     fill: var(--grey-700);
 }
 
-.secondary-btn:hover .secondary-btn-icon-default {
+.btn:hover .btn-icon-default {
     /* Döljer default ikonen när man hovrar */
     display: none;
 }
 
-.secondary-btn:hover .secondary-btn-icon-hover {
+.btn:hover .btn-icon-hover {
     /* Visar hover ikonen istället */
     display: block;
 }
 
 /*Återkommande element - kort__________________________________________________________*/
+
+/*Containers*/
 .cards-container {
     /*För en gallery vy med flera kort på samma rad*/
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--gap-xs);
 }
@@ -56,9 +67,18 @@
     border: 1px solid var(--grey-400);
 }
 
+.cards-container-bentoGrid {
+    /*På större skärmar byts layouten ut för hur korten lägger sig*/
+    display: grid;
+    grid-template-columns: auto repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 1.2fr 1fr;
+    gap: var(--gap-xs);
+}
+
+/*Card V1*/
 .card-V1,
 .card-V2 {
-    background-color: var(--white);
+    background-color: var(--grey-50);
 }
 
 .card-V1 {
@@ -68,16 +88,32 @@
 
 .card-V1-img-wrapper {
     flex: 2;
+    position: relative;
     overflow: hidden;
 }
 
 .card-V1-content {
-    flex: 1;
     padding: var(--padding-xs);
+    /* max-height: 7rem; */
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+    justify-content: space-between;
+}
+
+.card-V1-content h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: var(--font-step-1);
 }
 
 
-/*Card-2 har samma properties på mindre skärmar som card-V1
+/*Card-V2 har samma properties på mindre skärmar som card-V1
 men tanken är att på större skärmar ska card-V2 lägga bilden
 på vänster sida, medan innehållet kommer på vänster sida*/
 .card-V2 {
@@ -95,66 +131,65 @@ på vänster sida, medan innehållet kommer på vänster sida*/
     padding: var(--padding-xs);
 }
 
+/*Card V3*/
+.card-V3 {
+    padding: var(--padding-xs);
+    color: var(--grey-50);
+
+    /* Skapar en "referenspunkt" för absolut positionerade barn element*/
+    position: relative;
+    overflow: hidden;
+}
+
+.card-V3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-V3 p {
+    display: none;
+}
+
+.card-V3-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: var(--padding-xs);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+
+/*Kort hover effekt*/
 .card-V1:hover,
 .card-V2:hover,
+.card-V3:hover,
 .card-outlined:hover {
     box-shadow: 0 8px 16px 0 rgba(169, 169, 169, 0.2);
-    transition: 0.3s;
+    transition: var(--transition-fast);
 }
 
 .card-V1 img,
 .card-V2 img,
+.card-V3 img,
 .card-outlined img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: var(--transition-fast);
 }
 
 .card-V1:hover img,
-.card-V2:hover img {
+.card-V2:hover img,
+.card-V3:hover img {
     /*Väljer img elementet när användaren hovrar över kortet*/
-    transform: scale(1.2);
-}
-
-@media screen and (min-width: 481px) {
-    /*iPads, Tablets*/
-
-    .card-V2 {
-        flex-direction: row;
-        height: 15rem;
-    }
-
-    .card-V2-img-wrapper {
-        flex: 1.5;
-    }
-
-    .card-V2-content {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-}
-
-@media screen and (min-width: 780px) {
-    .card-V2 {
-        height: 20rem;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .card-V2 {
-        height: 10rem;
-    }
-
-    .card-V2-content h3 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 15rem;
-    }
+    transform: scale(1.1);
 }
 
 /*Återkommande element - Modal________________________________________________*/
@@ -219,7 +254,7 @@ på vänster sida, medan innehållet kommer på vänster sida*/
     width: max-content;
     display: flex;
     align-items: center;
-    /* border-radius: 3rem; */
+    border-radius: var(--border-radius-s);
     padding: 0.5rem;
     gap: 0.5rem;
     background-color: var(--grey-50);
@@ -263,33 +298,165 @@ input[type="email"] {
     display: inline-block;
     border: 1px solid var(--grey-400);
     padding: 0.5rem 1rem;
-    transition: 0.2s;
+    transition: var(--transition-fast);
+    border-radius: var(--border-radius-s);
 }
 
 .chip:hover {
     border: 1px solid var(--grey-300);
     background-color: var(--grey-300);
+    color: var(--grey-900);
+}
+
+.chip-v2 {
+    position: absolute;
+    top: 0;
+    margin: var(--margin-xs);
+    padding: 0.5rem 1rem;
+
+    border-radius: var(--border-radius-s);
+    font-size: 12px;
+    color: white;
+    backdrop-filter: blur(10px);
+
 }
 
 /*Ikoner - sociala medier___________________________________________________________*/
 .socialMedia-icons {
     font-size: var(--icon-size);
-    color: var(--bodyCopyColor);
+    color: var(--grey-900);
     width: fit-content;
     height: fit-content;
 }
 
 .socialMedia-icons:hover {
-    color: var(--activeElement);
+    color: var(--grey-600);
 }
 
-/*Dekorativa element________________________________________________________________*/
-.decoration-container {
+/*Layout_____________________________________________________________________________*/
+
+/*Sektion komponenter*/
+.title-wrapper {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 2rem;
+}
+
+/*Flexbox*/
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+/*Gap*/
+.gap-xxs {
+    gap: var(--gap-xxs);
+}
+
+.gap-xs {
+    gap: var(--gap-xs);
+}
+
+.gap-s {
+    gap: var(--gap-s);
+}
+
+.gap-m {
+    gap: var(--gap-m);
+}
+
+/*Färger_____________________________________________________________________________*/
+.color-grey-50 {
+    color: var(--grey-50);
+}
+
+/*Media queries________________________________________________________________________*/
+@media screen and (min-width: 481px) {
+    /*iPads, Tablets*/
+
+    .card-V2 {
+        flex-direction: row;
+        height: 15rem;
+    }
+
+    .card-V2-img-wrapper {
+        flex: 1.5;
+    }
+
+    .card-V2-content {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
 }
 
-.decoration-container span {
-    color: var(--backgroundColor);
+@media screen and (min-width: 768px) {
+    .card-V1-content {
+        flex: 1;
+    }
+
+    .card-V2 {
+        height: 20rem;
+    }
+
+    .cards-container-bentoGrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "item1 item1"
+            "item2 item3"
+            "item4 item5";
+
+        gap: var(--gap-xs);
+    }
+
+    .card-V3 {
+        grid-area: item1;
+    }
+
+    .card-V3 p {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .card-V2 {
+        height: 10rem;
+    }
+
+    .card-V2-content h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 15rem;
+    }
+
+    .cards-container-bentoGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "item1 item1 item2"
+            "item3 item4 item5";
+
+    }
+
+    .card-V3 {
+        grid-area: item1;
+    }
 }

@@ -1,7 +1,9 @@
 /*Globala variabler_________________________________________________________________*/
 :root {
 
-    /*Färger - Gråskala_____________________________________________________________*/
+    /*Färger________________________________________________________________________*/
+
+    /*Gråskala*/
     --grey-50: #FAFAFA;
     --grey-100: #F5F5F5;
     --grey-200: #EEEEEE;
@@ -12,25 +14,68 @@
     --grey-700: #616161;
     --grey-800: #424242;
     --grey-900: #212121;
+    --grey-990: #0E0E0E;
 
-    --white: #ffffff;
-    --backgroundColor: #cccccc;
-    --bodyCopyColor: #1b1b1bdd;
-    --linkHover: #b5b5b5dd;
-    --activeElement: #7a7a7add;
+    /*Textstorlekar_________________________________________________________________*/
+    /*utopia.fyi användes för att ta fram dessa värden*/
 
+    /* Small text - minimum 14px for accessibility */
+    --font-step--2: clamp(0.875rem, 0.8523rem + 0.1136vw, 0.9375rem);
+    --font-step--1: clamp(0.9375rem, 0.9148rem + 0.1136vw, 1rem);
+
+    /* Body text - WCAG minimum 16px (1rem) */
+    --font-step-0: clamp(1rem, 0.9773rem + 0.1136vw, 1.0625rem);
+
+    /* Headings - progressive scale with good contrast ratios */
+    /* h6 */
+    --font-step-1: clamp(1.125rem, 1.1023rem + 0.1136vw, 1.1875rem);
+
+    /* h5 */
+    --font-step-2: clamp(1.25rem, 1.2045rem + 0.2273vw, 1.375rem);
+
+    /* h4 */
+    --font-step-3: clamp(1.375rem, 1.3068rem + 0.3409vw, 1.5625rem);
+
+    /* h3 */
+    --font-step-4: clamp(1.5625rem, 1.4773rem + 0.4261vw, 1.8125rem);
+
+    /* h2 */
+    --font-step-5: clamp(1.75rem, 1.6477rem + 0.5114vw, 2.0625rem);
+
+    /* h1 */
+    --font-step-6: clamp(2rem, 1.8636rem + 0.6818vw, 2.4375rem);
+
+    /* Display*/
+    --font-step-7: clamp(2.25rem, 2.0795rem + 0.8523vw, 2.8125rem);
+    --font-step-8: clamp(2.5rem, 2.2955rem + 1.0227vw, 3.1875rem);
+
+    /*Storlekar_____________________________________________________________________*/
+
+    /*Margin*/
     --margin-xs: 1rem;
     --margin-s: 2rem;
 
+    /*Padding*/
     --padding-xs: 2rem;
     --padding-s: 4rem;
 
+    --btn-padding: 0.5rem 2rem;
+
+    --gap-xxs: 0.5rem;
     --gap-xs: 1rem;
     --gap-s: 2rem;
     --gap-m: 4rem;
     --gap-l: 8rem;
+
+    /*Border radius*/
     --border-radius-xs: 0.2rem;
-    --border-radius-s: 2rem;
+    --border-radius-s: 0.3rem;
+    --border-radius-m: 0.5rem;
+    --border-radius-l: 0.7rem;
+    --border-radius-xl: 1rem;
+    --border-radius-full: 9999px;
+
+    --border-outlined: var(--grey-500) solid 1px;
 
     --border-bottom: var(--grey-50) solid 1px;
 
@@ -49,13 +94,19 @@ html {
 body {
     /*margin: 0 behövs för att <body> elementets default margin är 8px, det vill säga
     det kommer att finnas en liten glap mellan fönstrets kant och elementen såsom menyn*/
-    margin: 0;
-    /*"sans-serif" är fallback värdet*/
-    font-family: "Montserrat", sans-serif;
+    margin: var(--navbar-height) 0 0 0;
+
     color: var(--grey-900);
 
-    background-color: var(--white);
+    background-color: var(--grey-50);
     min-width: 320px;
+}
+
+body,
+button,
+p {
+    /*"sans-serif" är fallback värdet*/
+    font-family: "Montserrat", sans-serif;
 }
 
 summary {
@@ -101,90 +152,55 @@ a:active {
     transition: var(--transition-fast);
 }
 
+
+/*Section____________________________________________________________________________*/
+.section-padding {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--padding-xs);
+}
+
+.section-color {
+    background-color: var(--grey-300);
+}
+
 /*Typografy_________________________________________________________________________*/
 
-/* Tailwind CSS Typography Scale - Consolidated Classes */
-/* Based on official Tailwind CSS font-size utilities */
-
-
-/* Heading Styles - For section headings */
 h1 {
-    font-size: 3rem;
-    /* 48px - text-5xl */
+    font-size: var(--font-step-6);
     line-height: 1.3;
     font-weight: 700;
     /* font-bold */
     letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0 0 var(--margin-s) 0;
+    margin: 0;
 
     overflow-wrap: break-word;
     word-break: break-word;
 }
 
-h1.text-heading-lg {
-    font-size: 2.25rem;
-    /* 36px - text-4xl */
-    line-height: 2.5rem;
-    /* leading-10 */
-    font-weight: 600;
-    /* font-semibold */
-    letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0 0 var(--margin-s) 0;
-}
-
-h1.text-heading-md {
-    font-size: 1.875rem;
-    /* 30px - text-3xl */
-    line-height: 2.25rem;
-    /* leading-9 */
-    font-weight: 600;
-    /* font-semibold */
-    letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0 0 var(--margin-s) 0;
-}
-
-h1.text-heading-sm {
-    font-size: 1.5rem;
-    /* 24px - text-2xl */
-    line-height: 2rem;
-    /* leading-8 */
-    font-weight: 600;
-    /* font-semibold */
-    letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0 0 var(--margin-s) 0;
-}
-
-/* Title Styles - For subsections */
 h2 {
-    font-size: 1.25rem;
-    /* 20px - text-xl */
-    line-height: 1.75rem;
-    /* leading-7 */
+    font-size: var(--font-step-5);
+
     font-weight: 600;
-    /* font-semibold */
-    letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0;
+
+    /*letter-spacing: 0;
+    margin: 0; */
 }
 
 h3 {
-    font-size: 1.125rem;
-    /* 18px - text-lg */
-    line-height: 1.75rem;
-    /* leading-7 */
+    font-size: var(--font-step-4);
+
+
+    line-height: 1.9rem;
     font-weight: 500;
-    /* font-medium */
-    letter-spacing: 0.03rem;
-    /* tracking-normal */
-    margin: 0 0 var(--margin-xs) 0;
+    margin: 0;
+
+
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: var(--font-step-2);
     /* 16px - text-base */
     line-height: 1.5rem;
     /* leading-6 */
@@ -192,13 +208,13 @@ h4 {
     /* font-medium */
     letter-spacing: 0;
     /* tracking-normal */
-    margin: 0 0 var(--margin-xs) 0;
+    margin: 0;
 
     color: var(--grey-600);
 }
 
 h5 {
-    font-size: 0.875rem;
+    font-size: var(--font-step-1);
     /* 14px - text-sm */
     line-height: 1.25rem;
     /* leading-5 */
@@ -206,19 +222,19 @@ h5 {
     /* font-medium */
     letter-spacing: 0.03rem;
     /* tracking-wide */
-    margin: 0 0 var(--margin-xs) 0;
+    margin: 0;
 }
 
 /* Body Styles - For main content */
 a,
 p,
 ul,
-span,
 button,
+span,
 ::placeholder {
-    font-size: 1rem;
+    font-size: var(--font-step--1);
     /* 18px - text-lg */
-    line-height: 1.75rem;
+    line-height: 2rem;
     /* leading-7 */
     font-weight: 400;
     /* font-normal */
@@ -235,45 +251,9 @@ button,
     transition: var(--transition-fast);
 }
 
-.text-body-lg {
-    font-size: 1rem;
-    /* 16px - text-base */
-    line-height: 1.5rem;
-    /* leading-6 */
-    font-weight: 400;
-    /* font-normal */
-    letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0;
-}
-
-.text-body-md {
-    font-size: 0.875rem;
-    /* 14px - text-sm */
-    line-height: 1.25rem;
-    /* leading-5 */
-    font-weight: 400;
-    /* font-normal */
-    letter-spacing: 0;
-    /* tracking-normal */
-    margin: 0;
-}
-
-.text-body-sm {
-    font-size: 0.75rem;
-    /* 12px - text-xs */
-    line-height: 1rem;
-    /* leading-4 */
-    font-weight: 400;
-    /* font-normal */
-    letter-spacing: 0.025em;
-    /* tracking-wide */
-    margin: 0;
-}
-
 /* Caption & Label Styles - For small text, captions, labels */
 .text-caption-lg {
-    font-size: 0.875rem;
+    font-size: var(--font-step--2);
     /* 14px - text-sm */
     line-height: 1.25rem;
     /* leading-5 */
@@ -326,9 +306,31 @@ button,
     height: var(--icon-size);
 }
 
+/*Monitors, Desktops_________________________________________________________*/
+@media screen and (min-width: 1200px) {
+    .section-padding {
+        /*räknar ut skillnaden mellan halva fönstrets bredd och 720px och
+        läggertilldet som padding*/
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
+    }
+
+}
+
 @media screen and (min-width: 1024px) {
     :root {
         /*49 är fallback value*/
         --offsetHeight: calc(100vh - var(--navbarHeight, 49px));
     }
+}
+
+/*Bilder___________________________________________________________________*/
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-wrapper {
+    overflow: hidden;
 }

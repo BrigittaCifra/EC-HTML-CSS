@@ -1,46 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
-    //Väntar tills hela DOM-trädet är laddat innan koden körs
 
-    //MOBILMENY ELEMENT - skappar konstanter med HTML elementen
+    // ELEMENT REFERENSER
     const menuButton = document.getElementById('menu-toggle');
     const mobileNavLinks = document.querySelector('.mobile-nav-links');
     const mobileNavBtn = document.querySelector('.mobile-nav-btn');
     const mobileNav = document.querySelector('.mobile-nav');
-
-    //MODAL ELEMENT
     const open = document.getElementById('modal-btn-open');
     const modal_wrapper = document.getElementById('modal-wrapper');
     const close = document.getElementById('modal-btn-close');
 
-    /*______________________________________________________________*/
+    // DYNAMISK HEADER HÖJD
+    function setHeroHeight() {
+        const header = document.querySelector('header');
 
-    //OBILMENY FUNKTIONALITET
+        if (header) {
+            const headerHeight = header.offsetHeight;
 
-    /*Lägger till en eventlyssnare för 'click'-händelser på menuButton-elementet
-    (hamburgarikonen). Funktionen körs när användaren klickar på ikonen*/
-    menuButton.addEventListener('click', function () {
+            if (headerHeight > 0) {
+                document.documentElement.style.setProperty('--navbar-height', headerHeight + 'px');
+            }
+        }
+    }
 
-        /*Växlar synligheten på HTML elementen genom att lägga 
-        till/ta bort klassen hidden*/
-        mobileNavLinks.classList.toggle('hidden');
-        mobileNavBtn.classList.toggle('hidden');
-        /*Växlar klassen menu-open på mobileNav-elementet*/
-        mobileNav.classList.toggle('menu-open');
-    });
+    // MOBILMENY
+    if (menuButton) {
+        menuButton.addEventListener('click', function () {
+            mobileNavLinks.classList.toggle('hidden');
+            mobileNavBtn.classList.toggle('hidden');
+            mobileNav.classList.toggle('menu-open');
 
+            setTimeout(setHeroHeight, 100);
+        });
+    }
 
-    /*Modalen öppnas och stängs med olika knappar, därför behövs två olika 
-    eventlyssnare. Den här eventlyssnaren kommer att lyssna efter om 
-    användaren trycker på 'logga in' knappen. i menyn*/
-    open.addEventListener('click', () => {
-        modal_wrapper.classList.add('show');
-    });
+    // MODAL
+    if (open) {
+        open.addEventListener('click', () => {
+            modal_wrapper.classList.add('show');
+        });
+    }
 
-    /*Den här eventlyssnaren lyssnar efter om användaren trycker på
-    stänga knappen när modalen är synlig*/
-    close.addEventListener('click', () => {
-        modal_wrapper.classList.remove('show');
-    });
+    if (close) {
+        close.addEventListener('click', () => {
+            modal_wrapper.classList.remove('show');
+        });
+    }
 
-
+    // INITIALISERING
+    setTimeout(setHeroHeight, 100);
+    window.addEventListener('load', setHeroHeight);
+    window.addEventListener('resize', setHeroHeight);
 });

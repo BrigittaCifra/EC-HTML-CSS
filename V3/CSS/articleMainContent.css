@@ -10,17 +10,42 @@ main {
     display: none;
 }
 
-/*Sektion 1________________________________________________________________________*/
+/*Hero section____________________________________________________________________*/
+.section-hero {
+    /* Skapar en "referenspunkt" för absolut positionerade barn element*/
+    position: relative;
+    overflow: hidden;
 
-.mainContent {
-    /*Den här klassen styr layouten för både sidebaren och main innehållet.
-    På större skärmar byter klassen riktning på flex-direction för att lägga
-    sidbaren och main innehållet bredvid varandra*/
+    /*margin-top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));*/
+
+    height: 100vh;
+}
+
+.section-hero img {
+    width: 100%;
+    height: 100%;
+
+    /* Om bildens proportioner inte matchar behållarens proportioner kommer delar av bilden att beskäras bort,
+    men bilden blir aldrig förvräng eller sträckt */
+    object-fit: cover;
+}
+
+.section-hero-content {
+    position: absolute;
+    bottom: 0;
+
     display: flex;
     flex-direction: column;
-    gap: var(--gap-m);
-    margin-top: 6rem;
-    padding: var(--padding-xs);
+    gap: var(--gap-s);
+
+    color: var(--grey-50);
+    padding: 5rem var(--padding-xs);
+}
+
+.section-hero p {
+    display: none;
+    color: var(--grey-50);
 }
 
 .section-gap {
@@ -38,6 +63,20 @@ main {
     overflow: hidden;
 }
 
+/*Sektion 1________________________________________________________________________*/
+
+.mainContent {
+    /*Den här klassen styr layouten för både sidebaren och main innehållet.
+    På större skärmar byter klassen riktning på flex-direction för att lägga
+    sidbaren och main innehållet bredvid varandra*/
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+    padding: var(--padding-xs);
+    margin-top: var(--margin-s);
+}
+
+/* 
 .author {
     display: flex;
     align-items: center;
@@ -47,8 +86,8 @@ main {
 }
 
 .author img {
-    width: 6rem;
-    height: 6rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -74,7 +113,7 @@ main {
     display: flex;
     gap: var(--gap-xs);
     align-items: center;
-}
+} */
 
 .summary {
     background-color: var(--grey-300);
@@ -149,13 +188,18 @@ aside>:nth-child(2) {
 }
 
 /*Laptops and Desktops_________________________________________________________*/
+@media screen and (min-width: 481px) {
+    .section-hero p {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
     för att följa mobilefirst konceptet*/
 
     .mainContent {
-        margin-top: 14rem;
         margin-bottom: 7rem;
     }
 
@@ -165,6 +209,13 @@ aside>:nth-child(2) {
 @media screen and (min-width: 1200px) {
     .mobile-table-of-content {
         display: none;
+    }
+
+    .section-hero-content {
+        padding-left: calc(50vw - 720px);
+        padding-right: calc(50vw - 720px);
+
+        padding-bottom: 7rem;
     }
 
     .mainContent {
