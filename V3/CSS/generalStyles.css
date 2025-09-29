@@ -1,9 +1,9 @@
 /*Globala variabler_________________________________________________________________*/
 :root {
 
-    /*Färger________________________________________________________________________*/
+    /*Färger_________________________________________________________________________*/
 
-    /*Gråskala*/
+    /*Gråskala - raw values*/
     --grey-50: #FAFAFA;
     --grey-100: #F5F5F5;
     --grey-200: #EEEEEE;
@@ -13,41 +13,55 @@
     --grey-600: #757575;
     --grey-700: #616161;
     --grey-800: #424242;
+    --grey-850: #353535;
     --grey-900: #212121;
+    --grey-980: #1B1B1B;
     --grey-990: #0E0E0E;
+
+    /*Gul - raw values*/
+    --yellow-50: #E0DED3;
+    --yellow-500: #ffd700;
+    --yellow-550: #ccad00;
+    --yellow-600: #806c00;
+
+    /*Primary*/
+    --primary-50: var(--yellow-50);
+    --primary-500: var(--yellow-500);
+    --primary-550: var(--yellow-550);
+    --primary-600: var(--yellow-600);
 
     /*Textstorlekar_________________________________________________________________*/
     /*utopia.fyi användes för att ta fram dessa värden*/
 
-    /* Small text - minimum 14px for accessibility */
-    --font-step--2: clamp(0.875rem, 0.8523rem + 0.1136vw, 0.9375rem);
-    --font-step--1: clamp(0.9375rem, 0.9148rem + 0.1136vw, 1rem);
+    /* Small text - minimum 14px for accessibility 
+    0.73rem + 0.19% av skärmbredd (mellan 0.77-0.88rem)*/
+    --font-step--2: clamp(0.7686rem, 0.7304rem + 0.1909vw, 0.8784rem);
+    --font-step--1: clamp(0.8201rem, 0.7793rem + 0.2037vw, 0.9372rem);
 
     /* Body text - WCAG minimum 16px (1rem) */
-    --font-step-0: clamp(1rem, 0.9773rem + 0.1136vw, 1.0625rem);
+    --font-step-0: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
 
     /* Headings - progressive scale with good contrast ratios */
     /* h6 */
-    --font-step-1: clamp(1.125rem, 1.1023rem + 0.1136vw, 1.1875rem);
+    --font-step-1: clamp(0.9336rem, 0.8872rem + 0.232vw, 1.067rem);
 
     /* h5 */
-    --font-step-2: clamp(1.25rem, 1.2045rem + 0.2273vw, 1.375rem);
+    --font-step-2: clamp(0.9962rem, 0.9467rem + 0.2475vw, 1.1385rem);
 
     /* h4 */
-    --font-step-3: clamp(1.375rem, 1.3068rem + 0.3409vw, 1.5625rem);
+    --font-step-3: clamp(1.0629rem, 1.0101rem + 0.2641vw, 1.2148rem);
 
     /* h3 */
-    --font-step-4: clamp(1.5625rem, 1.4773rem + 0.4261vw, 1.8125rem);
+    --font-step-4: clamp(1.1341rem, 1.0778rem + 0.2818vw, 1.2962rem);
 
     /* h2 */
-    --font-step-5: clamp(1.75rem, 1.6477rem + 0.5114vw, 2.0625rem);
+    --font-step-5: clamp(1.2101rem, 1.15rem + 0.3007vw, 1.383rem);
 
     /* h1 */
-    --font-step-6: clamp(2rem, 1.8636rem + 0.6818vw, 2.4375rem);
+    --font-step-6: clamp(1.2912rem, 1.227rem + 0.3208vw, 1.4757rem);
 
     /* Display*/
     --font-step-7: clamp(2.25rem, 2.0795rem + 0.8523vw, 2.8125rem);
-    --font-step-8: clamp(2.5rem, 2.2955rem + 1.0227vw, 3.1875rem);
 
     /*Storlekar_____________________________________________________________________*/
 
@@ -56,11 +70,14 @@
     --margin-s: 2rem;
 
     /*Padding*/
+    --padding-xxs: 1rem;
     --padding-xs: 2rem;
     --padding-s: 4rem;
 
-    --btn-padding: 0.5rem 2rem;
+    --btn-padding: 0.5rem 1rem;
+    --desktop-nav-top-padding: 0rem 2rem;
 
+    /*gap*/
     --gap-xxs: 0.5rem;
     --gap-xs: 1rem;
     --gap-s: 2rem;
@@ -75,13 +92,15 @@
     --border-radius-xl: 1rem;
     --border-radius-full: 9999px;
 
-    --border-outlined: var(--grey-500) solid 1px;
+    --border-outlined: var(--grey-800) solid 1px;
 
     --border-bottom: var(--grey-50) solid 1px;
 
     --icon-size: 1.5rem;
 
     --transition-fast: 0.2s;
+
+    --opacity-50: 50%;
 
     /* --navigation-height: calc(100vh - var(--offsetHeight)); */
 }
@@ -142,16 +161,6 @@ li {
     color: var(--grey-500);
 }
 
-a,
-p {
-    color: var(--grey-900);
-}
-
-a:active {
-    text-decoration: underline;
-    transition: var(--transition-fast);
-}
-
 
 /*Section____________________________________________________________________________*/
 .section-padding {
@@ -162,7 +171,7 @@ a:active {
 }
 
 .section-color {
-    background-color: var(--grey-300);
+    background-color: var(--grey-980);
 }
 
 /*Typografy_________________________________________________________________________*/
@@ -177,15 +186,19 @@ h1 {
 
     overflow-wrap: break-word;
     word-break: break-word;
+
+    color: var(--grey-200);
 }
 
 h2 {
     font-size: var(--font-step-5);
 
-    font-weight: 600;
+    font-weight: 700;
 
     /*letter-spacing: 0;
     margin: 0; */
+
+    color: var(--grey-200);
 }
 
 h3 {
@@ -196,7 +209,7 @@ h3 {
     font-weight: 500;
     margin: 0;
 
-
+    color: var(--grey-200);
 }
 
 h4 {
@@ -210,7 +223,7 @@ h4 {
     /* tracking-normal */
     margin: 0;
 
-    color: var(--grey-600);
+    color: var(--grey-200);
 }
 
 h5 {
@@ -223,6 +236,8 @@ h5 {
     letter-spacing: 0.03rem;
     /* tracking-wide */
     margin: 0;
+
+    color: var(--grey-200);
 }
 
 /* Body Styles - For main content */
@@ -232,14 +247,10 @@ ul,
 button,
 span,
 ::placeholder {
+    font-family: "Montserrat", sans-serif;
     font-size: var(--font-step--1);
-    /* 18px - text-lg */
-    line-height: 2rem;
-    /* leading-7 */
     font-weight: 400;
-    /* font-normal */
     letter-spacing: 0.03rem;
-    /* tracking-normal */
     margin: 0;
 
     overflow-wrap: break-word;
@@ -248,7 +259,13 @@ span,
     text-decoration: none;
     list-style: none;
 
+    color: var(--grey-300);
+
     transition: var(--transition-fast);
+}
+
+p {
+    line-height: 2rem;
 }
 
 /* Caption & Label Styles - For small text, captions, labels */
@@ -291,17 +308,14 @@ span,
     margin: 0;
 }
 
-/* .caption {
-    font-size: 0.875rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: var(--grey-500);
-} */
+.display {
+    font-size: var(--font-step-7);
+}
+
 
 /*Ikoner__________________________________________________________________*/
 .icon {
-    fill: var(--grey-500);
+    fill: var(--grey-400);
     width: var(--icon-size);
     height: var(--icon-size);
 }

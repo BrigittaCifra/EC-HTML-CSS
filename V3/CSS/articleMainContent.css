@@ -33,15 +33,22 @@ main {
 
 .section-hero-content {
     position: absolute;
+    top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: var(--gap-s);
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
 
     color: var(--grey-50);
     padding: 5rem var(--padding-xs);
 }
+
 
 .section-hero p {
     display: none;
@@ -53,7 +60,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
-    scroll-margin-top: 15rem;
+    scroll-margin-top: 10rem;
     transition: 0.6s;
 }
 
@@ -74,51 +81,21 @@ main {
     gap: var(--gap-m);
     padding: var(--padding-xs);
     margin-top: var(--margin-s);
+    color: var(--grey-900);
 }
 
-/* 
-.author {
-    display: flex;
-    align-items: center;
-    gap: var(--padding-xs);
-    margin-right: 5rem;
-    flex-wrap: wrap-reverse;
+.mainContent p,
+.mainContent a,
+.mainContent h2,
+.mainContent h3,
+.mainContent h4 {
+    color: var(--grey-900);
 }
-
-.author img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.author>div {
-    display: grid;
-    grid-auto-flow: row;
-}
-
-.author h3 {
-    margin-top: 0;
-}
-
-.author h4 {
-    margin: 0;
-}
-
-.actions {
-    display: flex;
-}
-
-.actions>div {
-    display: flex;
-    gap: var(--gap-xs);
-    align-items: center;
-} */
 
 .summary {
-    background-color: var(--grey-300);
+    background-color: var(--primary-50);
     padding: var(--padding-xs);
-    border-left: 5px solid var(--grey-400);
+    border-left: 5px solid var(--primary-550);
 }
 
 .section-mainArticle-metaInfo {
@@ -146,13 +123,14 @@ main {
 .article-img-container img {
     width: 100%;
     object-fit: cover;
+    max-height: 80vh;
 }
 
 .article-img-container p {
-    border-left: solid 3px var(--grey-300);
+    border-left: solid 3px var(--primary-550);
     padding-left: 1rem;
     margin-top: 1rem;
-    color: var(--grey-600);
+    color: var(--grey-700);
 
 }
 
@@ -215,7 +193,7 @@ aside>:nth-child(2) {
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
 
-        padding-bottom: 7rem;
+        padding-bottom: 10rem;
     }
 
     .mainContent {
@@ -234,7 +212,7 @@ aside>:nth-child(2) {
         flex: 1;
 
         position: sticky;
-        top: 15rem;
+        top: 10rem;
         height: fit-content;
     }
 

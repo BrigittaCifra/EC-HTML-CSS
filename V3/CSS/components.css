@@ -5,7 +5,6 @@
     padding: var(--btn-padding);
 
     border: none;
-    border-radius: var(--border-radius-m);
     transition: var(--transition-fast);
 
     /*För ikoner inutti knappar*/
@@ -17,11 +16,12 @@
 
 /*Primary*/
 .primary-btn {
-    background-color: var(--grey-400);
+    background-color: var(--primary-500);
+    color: var(--grey-900);
 }
 
 .primary-btn:hover {
-    background-color: var(--grey-500);
+    background-color: var(--primary-600);
     color: var(--grey-50);
 }
 
@@ -75,24 +75,28 @@
     gap: var(--gap-xs);
 }
 
-/*Card V1*/
+/*Card V1 och V2*/
 .card-V1,
 .card-V2 {
     background-color: var(--grey-50);
 }
 
-.card-V1 {
+.card-V1,
+.card-V2 {
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
-.card-V1-img-wrapper {
+.card-V1-img-wrapper,
+.card-V2-img-wrapper {
     flex: 2;
     position: relative;
     overflow: hidden;
 }
 
-.card-V1-content {
+.card-V1-content,
+.card-V2-content {
     padding: var(--padding-xs);
     /* max-height: 7rem; */
 
@@ -102,7 +106,8 @@
     justify-content: space-between;
 }
 
-.card-V1-content h3 {
+.card-V1-content h3,
+.card-V2-content h3 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -110,25 +115,13 @@
     text-overflow: ellipsis;
 
     font-size: var(--font-step-1);
+    color: var(--grey-900);
 }
 
-
-/*Card-V2 har samma properties på mindre skärmar som card-V1
-men tanken är att på större skärmar ska card-V2 lägga bilden
-på vänster sida, medan innehållet kommer på vänster sida*/
-.card-V2 {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-V2-img-wrapper {
-    flex: 2;
-    overflow: hidden;
-}
-
-.card-V2-content {
-    flex: 1;
-    padding: var(--padding-xs);
+.card-V1-content span,
+.card-V2-content span,
+.card-V1-content .icon {
+    color: var(--grey-700);
 }
 
 /*Card V3*/
@@ -157,13 +150,17 @@ på vänster sida, medan innehållet kommer på vänster sida*/
 
 .card-V3-content {
     position: absolute;
+    top: 0;
     bottom: 0;
     left: 0;
     padding: var(--padding-xs);
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: var(--gap-xs);
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 /*Kort hover effekt*/
@@ -171,7 +168,6 @@ på vänster sida, medan innehållet kommer på vänster sida*/
 .card-V2:hover,
 .card-V3:hover,
 .card-outlined:hover {
-    box-shadow: 0 8px 16px 0 rgba(169, 169, 169, 0.2);
     transition: var(--transition-fast);
 }
 
@@ -183,6 +179,15 @@ på vänster sida, medan innehållet kommer på vänster sida*/
     height: 100%;
     object-fit: cover;
     transition: var(--transition-fast);
+
+    /*Den här delen av koden tar bort whitespcace under 
+    bilder. En källa påstår att det här händer pga att
+    "The gap under images in HTML often occurs due to default 
+    inline or inline-block display properties, which align 
+    images along the text baseline, leaving extra space as 
+    if accommodating text descenders."*/
+    display: block;
+    vertical-align: bottom;
 }
 
 .card-V1:hover img,
@@ -254,20 +259,20 @@ på vänster sida, medan innehållet kommer på vänster sida*/
     width: max-content;
     display: flex;
     align-items: center;
-    border-radius: var(--border-radius-s);
     padding: 0.5rem;
     gap: 0.5rem;
-    background-color: var(--grey-50);
+    border: var(--border-outlined);
 }
 
 
 .search:focus-within {
     /*När någonting inom search får fokus*/
-    border: 1px solid var(--grey-900);
+    border: 1px solid var(--grey-300);
+    color: var(--grey-300);
 }
 
 .search>span {
-    color: var(--grey-500);
+    color: var(--grey-600);
 }
 
 input[type="search"] {
@@ -275,6 +280,10 @@ input[type="search"] {
     border: none;
     background: transparent;
     width: 15rem;
+}
+
+input[type="search"]::placeholder {
+    color: var(--grey-600);
 }
 
 input[type="password"],
@@ -297,9 +306,10 @@ input[type="email"] {
 .chip {
     display: inline-block;
     border: 1px solid var(--grey-400);
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     transition: var(--transition-fast);
-    border-radius: var(--border-radius-s);
+
+    font-size: var(--font-step--1);
 }
 
 .chip:hover {
@@ -316,7 +326,8 @@ input[type="email"] {
 
     border-radius: var(--border-radius-s);
     font-size: 12px;
-    color: white;
+    color: var(--grey-50);
+    background-color: rgba(0, 0, 0, 0.551);
     backdrop-filter: blur(10px);
 
 }
@@ -324,13 +335,14 @@ input[type="email"] {
 /*Ikoner - sociala medier___________________________________________________________*/
 .socialMedia-icons {
     font-size: var(--icon-size);
-    color: var(--grey-900);
+    color: var(--grey-400);
     width: fit-content;
     height: fit-content;
 }
 
 .socialMedia-icons:hover {
-    color: var(--grey-600);
+    color: var(--grey-200);
+    transition: var(--transition-fast);
 }
 
 /*Layout_____________________________________________________________________________*/
@@ -384,34 +396,11 @@ input[type="email"] {
 }
 
 /*Media queries________________________________________________________________________*/
-@media screen and (min-width: 481px) {
-    /*iPads, Tablets*/
-
-    .card-V2 {
-        flex-direction: row;
-        height: 15rem;
-    }
-
-    .card-V2-img-wrapper {
-        flex: 1.5;
-    }
-
-    .card-V2-content {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-}
-
 @media screen and (min-width: 768px) {
-    .card-V1-content {
-        flex: 1;
-    }
 
-    .card-V2 {
-        height: 20rem;
+    .card-V1-content,
+    .card-V2-content {
+        flex: 1;
     }
 
     .cards-container-bentoGrid {
@@ -437,14 +426,32 @@ input[type="email"] {
 
 @media screen and (min-width: 1200px) {
     .card-V2 {
+        flex-direction: row;
         height: 10rem;
     }
 
+    .card-V2-img-wrapper {
+        flex: 1;
+    }
+
+    .card-V2-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-V2-content>div {
+        display: none;
+    }
+
     .card-V2-content h3 {
-        white-space: nowrap;
+        /*Kappar av all text somkommer efter rad 2*/
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 15rem;
     }
 
     .cards-container-bentoGrid {

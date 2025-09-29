@@ -9,7 +9,7 @@ footer {
 footer span {
     /*Display:block för att elementet ska ta upp hela skärmen på brädden*/
     display: block;
-    border-top: var(--grey-400) solid 1px;
+    border-top: var(--grey-800) solid 1px;
     padding-top: 1rem;
     padding-left: calc(50vw - 720px);
     padding-right: calc(50vw - 720px);
@@ -29,7 +29,7 @@ footer span {
 .footer-links-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    border-top: var(--grey-400) solid 1px;
+    border-top: var(--grey-800) solid 1px;
     padding-top: 1rem;
     padding-left: calc(50vw - 720px);
     padding-right: calc(50vw - 720px);
@@ -49,7 +49,7 @@ footer span {
 }
 
 .footer-dark {
-    background-color: var(--grey-300);
+    background-color: var(--grey-980);
 }
 
 /*Footer - PC/Större enheter_________________________________________________________*/

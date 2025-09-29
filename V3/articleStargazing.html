@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Typsnitt-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--Material icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!--Social Media icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--CSS Stylesheets-->
+
+    <!--Generella stylar-->
+    <link rel="stylesheet" href="CSS/generalStyles.css">
+    <!--Återkommande element-->
+    <link rel="stylesheet" href="CSS/components.css">
+    <!--Navigation för mobiler och desktop-->
+    <link rel="stylesheet" href="CSS/navigation.css">
+    <!--Sections och main innehåll-->
+    <link rel="stylesheet" href="CSS/articleMainContent.css">
+    <!--Footer-->
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <!--Javascript-->
+    <script src="javascript.js"></script>
+
+    <title>Stargazing Sites In North America | Jordens Eko</title>
+</head>
+
+<body>
+
+    <header>
+        <!--Nav för mobila enheter-->
+        <nav class="mobile-nav">
+            <div class="mobile-nav-top">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                        <path
+                            d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
+                    </svg>
+                    <span>Jordens Eko</span>
+                </a>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                        <path
+                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" id="menu-toggle">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="mobile-nav-links hidden">
+                <!--Menu alternativ-->
+                <ul>
+                    <li>
+                        <details>
+                            <summary>
+                                Djur
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </summary>
+                            <ul>
+                                <li>Djurupptäckter</li>
+                                <li>Utrotningshotade arter</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                Historia och kultur
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </summary>
+                            <ul>
+                                <li>Arkeologi</li>
+                                <li>Historiska platser</li>
+                                <li>Högtider och traditioner</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                Vetenskap och natur
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </summary>
+                            <ul>
+                                <li>Rymd och astronomi</li>
+                                <li>Dinosaurier och fossiler</li>
+                                <li>Hav</li>
+                                <li>Teknologi och innovation</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details>
+                            <summary>
+                                Om Jordens Eko
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </summary>
+                            <ul>
+                                <li>Om oss</li>
+                                <li>Författare</li>
+                                <li>Kontakta oss</li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-nav-btn hidden">
+                <button class="btn secondary-btn">Logga in</button>
+                <button class="btn primary-btn">Prenumera</button>
+            </div>
+        </nav>
+
+
+        <!--Nav för Desktop och PC (768px och större)-->
+        <nav class="desktop-nav">
+            <div class="dekstop-nav-top">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                        <path
+                            d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
+                    </svg>
+                    <span>Jordens Eko</span>
+                </a>
+                <div>
+                    <button id="modal-btn-open" class="btn secondary-btn">Logga in</button>
+                    <button class="btn primary-btn">Prenumera</button>
+                </div>
+            </div>
+            <div class="dekstop-nav-bottom">
+                <div class="dekstop-nav-ham-menu">
+                    <input type="checkbox" id="desktop-nav-toggle" class="desktop-nav-toggle">
+                    <label for="desktop-nav-toggle" class="-desktop-nav-toggle-label">
+                        <span class="material-symbols-outlined" id="menu-toggle">menu</span>
+                    </label>
+                    <div class="dekstop-nav-ham-menu-links">
+                        <ul>
+                            <li>
+                                <a id="#news" class="text-caption-lg">Djur</a>
+                                <div>
+                                    <a href="#">Djurupptäckter</a>
+                                    <a href="#">Utrotningshotade arter</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="#contact" class="text-caption-lg">Historia och kultur</a>
+                                <div>
+                                    <a href="#">Arkeologi</a>
+                                    <a href="#">Historiska platser</a>
+                                    <a href="#">Högtider och traditioner</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="#contact" class="text-caption-lg">Vetenskap och natur</a>
+                                <div>
+                                    <a href="#">Rymd och astronomi</a>
+                                    <a href="#">Dinosaurier och fossiler</a>
+                                    <a href="#">Hav</a>
+                                    <a href="">Teknologi och innovation</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a id="#about" class="text-caption-lg">Om Jordens Eko</a>
+                                <div>
+                                    <a href="#">Om oss</a>
+                                    <a href="#">Författare</a>
+                                    <a href="#">Kontakta oss</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="desktop-nav-links">
+                    <!--Menu alternativ-->
+                    <ul>
+                        <li class="dropdown">
+                            <a id="#news">Djur</a>
+                            <div class="dropdown-content">
+                                <a href="#">Djurupptäckter</a>
+                                <a href="#">Utrotningshotade arter</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a id="#contact">Historia och kultur</a>
+                            <div class="dropdown-content">
+                                <a href="#">Arkeologi</a>
+                                <a href="#">Historiska platser</a>
+                                <a href="#">Högtider och traditioner</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a id="#contact">Vetenskap och natur</a>
+                            <div class="dropdown-content">
+                                <a href="#">Rymd och astronomi</a>
+                                <a href="#">Dinosaurier och fossiler</a>
+                                <a href="#">Hav</a>
+                                <a href="">Teknologi och innovation</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a id="#about">Om Jordens Eko</a>
+                            <div class="dropdown-content">
+                                <a href="#">Om oss</a>
+                                <a href="#">Författare</a>
+                                <a href="#">Kontakta oss</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <form action="">
+                    <div class="search">
+                        <span class="search-icon material-symbols-outlined">search</span>
+                        <input type="search" placeholder="search...">
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <!--Login modal-->
+    <div class="modal-wrapper" id="modal-wrapper">
+        <div class="modal-content">
+            <div>
+                <h2>Logga in</h2>
+                <button id="modal-btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="input-field-container">
+                <div class="input-field-wrapper">
+                    <label for="">E-postadress</label>
+                    <input type="email" name="" id="">
+                </div>
+                <div class="input-field-wrapper">
+                    <label for="">Lösenord</label>
+                    <input type="password" name="" id="">
+                </div>
+            </div>
+            <button class="btn primary-btn">Logga in</button>
+        </div>
+    </div>
+
+    <!--Hero section-->
+
+    <section class="section-hero">
+        <img src="https://i.natgeofe.com/n/3e4e9675-3377-4fc5-9d33-0ab478cba3f1/NationalGeographic_2808329.jpg"
+            alt="Circular star trails fill the night sky above a cloud-filled valley in the Great Smoky Mountains.">
+        <div class="section-hero-content">
+
+
+            <div class="chip-wrapper">
+                <div class="chip">
+                    Travel
+                </div>
+            </div>
+            <h1 class="display">These are the best stargazing sites in North America</h1>
+            <p>These dark sky sanctuaries, reserves, parks, and trails invite you to immerse yourself in the wonders
+                of
+                our night skies. Here’s where to go.
+            </p>
+            <div class="flex-row flex-wrap gap-s">
+                <div class="flex-row gap-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg>
+                    <span>Amy Brecount White</span>
+                </div>
+                <div class="flex-row gap-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                        <path
+                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                    </svg>
+                    <span>May 28, 2025</span>
+                </div>
+                <div class="flex-row gap-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                        <path
+                            d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
+                    </svg>
+                    <span>15 min read</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="mainContent">
+
+        <!--Main content-->
+        <main>
+
+            <!--Sektion 1. Titel/Meta information-->
+            <section class="section-gap" id="article-section-1">
+
+                <div class="summary">
+                    <p>
+                        Ever looked up and wished you could see the night sky the way our ancestors once
+                        did—uninterrupted, impossibly vast, and alive with stars? Across North America, there are hidden
+                        pockets where the Milky Way stretches clear across the horizon, planets glow like lanterns, and
+                        the silence of nature makes every shooting star feel magical. From remote dark-sky reserves to
+                        iconic national parks, this guide reveals the best places to escape light pollution and
+                        experience the universe in all its brilliance
+                    </p>
+                </div>
+
+                <p>
+                    Travelers are increasingly lifting their eyes to nighttime skies in search of impressive celestial
+                    phenomena and, perhaps, more. “Looking up at the night sky is sort of what makes us human,” says
+                    Ruskin Hartley, the executive director of DarkSky International, a nonprofit group based in Tucson,
+                    Arizona. “We have done it for millennia. Every single culture has told their first stories in the
+                    stars overhead, and they found meaning in the stars. Today, the vast majority of people are robbed
+                    of that.”
+                </p>
+
+                <p>
+                    On a clear night last November, I spent over two hours in a dome atop nearly 7,000-foot-tall Kitt
+                    Peak, an hour outside of Tucson, peering through one of their 20-plus telescopes. The moonless night
+                    along with the high and dry climate enabled our guide to share bright and clear highlights,
+                    including the Andromeda galaxy, the ringed planet Saturn with several of its moons, and a globular
+                    cluster. Outside the dome, we simply marveled at the stunning clarity of our galaxy home, the Milky
+                    Way.
+                </p>
+
+                <p>
+                    In the United States, 99 percent of us live in areas impacted by artificial light pollution. While
+                    dark skies are essential for many nocturnal creatures and ecosystems, recent studies have also
+                    touted the health benefits of darkness for humans. To help preserve and better connect us with this
+                    at-risk natural resource, DarkSky International has designated 155 dark sky places across the United
+                    States, six in Canada, and two in Mexico for stellar stargazing and efforts to preserve darkness.
+                </p>
+            </section>
+
+            <div class="article-img-container">
+                <div class="article-img-wrapper">
+                    <img src="https://i.natgeofe.com/n/ea9478aa-092d-45fc-9181-982d49126bd3/PRJXMF.jpg"
+                        alt="The Milky Way stretching above mountains in the background and reflected in a lake in the foreground">
+                </div>
+                <p>The Waterton-Glacier International Peace Park is the first binational international Dark Sky Park.
+                    <br>Photograph by Alan Dyer, VWPics/Alamy Stock Photo
+                </p>
+            </div>
+
+            <div class="mobile-table-of-content">
+                <h2 class="text-caption-lg">On this page</h2>
+                <div class="table-of-content-nav">
+                    <a href="#article-section-2">In search of the darkest sanctuaries</a>
+                    <a href="#article-section-3">Southwest stargazing options</a>
+                    <a href="#article-section-4">Look to northern skies</a>
+                    <a href="#article-section-5">More easily accessed starry skies</a>
+                </div>
+            </div>
+
+            <!--Sektion 2-->
+            <section class="section-gap" id="article-section-2">
+                <h2>In search of the darkest sanctuaries</h2>
+                <p>
+                    Among the five categories of dark sky certification, sanctuaries meet the most stringent
+                    requirements, says Amber Harrison, DarkSky Places program manager, and many are in the western part
+                    of the continent in less populated areas. Designated in 2024, the world’s largest international
+                    sanctuary—half the size of New Jersey—is in the high desert of the Oregon Outback. This
+                    2.5-million-acre sanctuary includes broad and flat basins, mountain ranges with elevations from
+                    4,700 to 8,000 feet, and alkali lakes, says Dawn Nilson, a DarkSky delegate who consulted on the
+                    process.
+                </p>
+
+                <p>
+                    “With little or no light pollution, you see these celestial objects against an inky black, smooth
+                    canvas,” says Nilson. “What's particularly special about the Outback is you get to see all those
+                    stars reflected on flat, calm, alkali lakes.” Nilson usually doesn’t take her telescope along
+                    because there’s no need. “With your naked eye, you can see the many colors of the stars and
+                    star-making factories, like the Orion Nebula and the Lagoon Nebula.” In this pristine darkness, you
+                    might even spy your shadow cast by starlight.
+                </p>
+
+                <p>
+                    Astro adventurers should be experienced “remote travelers,” cautions Nilson, because there may be no
+                    cell service or facilities nearby. “Always bring more layers for warmth than you think are
+                    necessary,” she advises. Outfitters, such as Bend’s Wanderlust Tours, offer guided excursions, and
+                    Rose City Astronomers (partnered with the Oregon Museum of Science and Industry) hosts star parties.
+                    Oregon Astronomy will team you with telescopes and a NASA ambassador.
+                </p>
+
+                <p>
+                    Other U.S. sanctuaries include Minnesota’s Boundary Waters Canoe Area Wilderness, Beaver Island
+                    State Wildlife Refuge Area, and Maine’s Katahdin Woods and Water National Monument—all of which are
+                    east of the Mississippi.
+                </p>
+
+                <div class="article-img-container">
+                    <div class="article-img-wrapper">
+                        <img src="https://i.natgeofe.com/n/38cb998e-fe01-4896-91fc-37978d59cfe0/GettyImages-987832576.jpg"
+                            alt="The Milky Way above a natural stone arch.">
+                    </div>
+                    <p>
+                        Rainbow Bridge National Monument is one of Utah's 28 certified dark sky communities and
+                        parks.<br>
+                        Photograph by Ralph Ehoff, Getty Images</p>
+                </div>
+
+                <!--Sektion 3-->
+                <section class="section-gap" id="article-section-3">
+                    <h2>Southwest stargazing options</h2>
+                    <p>
+                        In the southwest, the Greater Big Bend International Dark Sky Reserve spreads 15,000 square
+                        miles
+                        across southwestern Texas and Mexico and is the largest Dark Sky reserve. You’ll find a
+                        constellation of guided options, from public telescope viewing at the McDonald Observatory (part
+                        of the University of Texas at Austin located in west Texas) to ranger-led night walks in Big
+                        Bend National Park to starry nights with DarkSky Texas.
+                    </p>
+
+                    <p>
+                        On any dark sky-focused adventures, we all carry “a superpower,” says Nilson: The human capacity
+                        for night vision. However, that scotopic, or low-level light vision, takes at least 30 minutes
+                        to activate fully and can be negated by a white flashlight or a glance at an illuminated screen.
+                        Seasoned stargazers recommend using red-light flashlights and scheduling your excursion during
+                        the new moon phase for optimal darkness.
+                    </p>
+
+                    <p>
+                        With 28 certified dark sky communities and parks, Utah has the highest concentration of
+                        certified skygazing options in North America. That includes Rainbow Bridge National Monument,
+                        one of the world’s largest natural bridges and also a sanctuary. The catch: Getting there
+                        requires a two-hour boat ride on Lake Powell followed by a one-hour hike. The site is considered
+                        sacred by many indigenous cultures, including the Pueblo of Zuni and the Hopi Tribe.
+                    </p>
+
+                    <div class="article-img-container">
+                        <div class="article-img-wrapper">
+                            <img src="https://i.natgeofe.com/n/22320399-909b-40c5-bf44-e4fe1f1622cc/h_15138946.jpg"
+                                alt="A star filled sky over a snowy mountain in the background and a river and waterfall in the foreground.">
+                        </div>
+                        <p>
+                            The Pleiades star cluster and the other stars of Taurus rising above Mount Kerkeslin in
+                            Jasper National Park.<br>
+                            Composite Photograph by Alan Dyer, VWPics/Redux
+                        </p>
+                    </div>
+
+                    <!--Sektion 4-->
+                    <section class="section-gap" id="article-section-4">
+                        <h2>Look to northern skies</h2>
+                        <p>
+                            Straddling the Canadian border, the Waterton-Glacier International Peace Park is the first
+                            binational international Dark Sky Park and includes Montana’s Glacier National Park and
+                            Canada’s Waterton Lakes National Park. Known for its mountainous scenery and rich
+                            biodiversity, the area is a UNESCO-designated World Heritage Site, and both parks are UNESCO
+                            Biosphere Reserves. Dark Sky Guides in Waterton Lakes will maximize your viewing, and you
+                            can join Glacier’s summertime ranger-led astronomy programs.
+                        </p>
+
+                        <p>
+                            In Quebec’s Eastern Townships, guided astronomy activities abound at Parc National du Mont
+                            Mégantic, including an aurora borealis show in the AstroLab museum and guided stargazing
+                            with telescopes. (Activities are in French.) To achieve reserve status, local municipalities
+                            replaced 2,500 light fixtures and reduced local light pollution by 25 percent. In the park,
+                            you can hike to three mountain summits and explore diverse forest ecosystems.
+                        </p>
+
+                        <p>
+                            In Alberta, Jasper National Park is designated a Dark Sky Preserve by the Royal Astronomical
+                            Society of Canada, one of 17 in the country. The town is actually within the preserve’s
+                            limits. Every October the Jasper Dark Sky Festival takes place, and features a planetarium
+                            and telescope viewing, Indigenous music and storytelling, and guided night hikes.
+                        </p>
+
+                        <div class="article-img-container">
+                            <div class="article-img-wrapper">
+                                <img src="https://i.natgeofe.com/n/6a2979a7-c83c-42de-b569-e9ee66794b69/NationalGeographic_1566189.jpg"
+                                    alt="">
+                            </div>
+                            <p>The Milky Way over the Kitt Peak National Observatory in Arizona.<br>
+                                Photograph by Babak Tafreshi, Nat Geo Image Collection
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="section-gap" id="article-section-5">
+                        <h2>More easily accessed starry skies</h2>
+                        <p>
+                            Lately, both urban and rural areas are darkening their skies to boost astrotourism. New
+                            Brunswick offers “easy access to dark skies,” says Stéphane Picard of Cliff Valley
+                            Astronomy. “Even in our cities, you’re no more than 15 minutes away from a very dark sky.”
+                            The province has three dark-sky preserves designated by the Royal Astronomical Society of
+                            Canada, including Fundy National Park, known for the highest tides in the world. Other parks
+                            and towns are applying for designations to create a coastal stargazing corridor.
+                        </p>
+
+                        <p>
+                            “When you're looking towards the Bay of Fundy from the New Brunswick coast, you're facing
+                            the southern half of the sky which is where mostly everything arises,” says Picard. “We call
+                            that the rising tides and rising stars region.” The province hosts star parties with
+                            telescopes throughout the year.
+                        </p>
+
+                        <p>
+                            Several jurisdictions have designed stargazing trails, including Tucson’s Astro Trail with
+                            11
+                            dark sky experiences and Montana’s Trail to the Stars with 45 recommended sites. With 12
+                            Dark Sky Parks and another dozen working toward certification, Colorado has a self-guided
+                            “Experience the Night” itinerary, chock full of daytime activities and night-gazing sites,
+                            including Great Sand Dunes National Park and Preserve. Mexico’s first urban night sky place,
+                            Joya-La Barreta Ecological Park, between Querétaro and San Miguel de Allende, focuses on
+                            educating the public about the value of darkness.
+                        </p>
+
+                        <p>
+                            East Coast residents seeking closer options can head to Pennsylvania’s Cherry Springs State
+                            Park, which is within the larger Susquehannock State Forest and has laser-guided night sky
+                            tours. West Virginia’s Watoga State Park’s name derives from the Cherokee name for “starry
+                            waters,” and travelers may spy abundant constellations here.
+                        </p>
+
+                        <p>
+                            As stargazing gains in popularity, DarkSky International has developed its principles of
+                            responsible astrotourism, which emphasizes respect for local cultures and environmental
+                            health, along with sustainable growth. Hartley hopes that immersive dark sky experiences
+                            will inspire people to “make some simple steps in and around your house and your
+                            neighborhood and your city to reclaim a little natural darkness.”
+                        </p>
+                    </section>
+
+                    <section class="related-topics">
+                        <h2>Related topics</h2>
+                        <div class="chip-wrapper">
+                            <div class="chip">
+                                Stars
+                            </div>
+                            <div class="chip">
+                                Astronomy
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="article-you-may-also-like">
+                        <h2>You may also like</h2>
+                        <div class="cards-container">
+
+                            <!--Kort 1-->
+
+                            <a href="articleStargazing.html">
+                                <article class="card-V1 card-outlined">
+                                    <div class="card-V1-img-wrapper">
+                                        <img src="https://i.natgeofe.com/n/3e4e9675-3377-4fc5-9d33-0ab478cba3f1/NationalGeographic_2808329.jpg"
+                                            alt="">
+                                        <div class="chip-v2">Travel</div>
+                                    </div>
+                                    <div class="card-V1-content">
+                                        <div>
+                                            <h3>These are the best stargazing sites in North America</h3>
+                                        </div>
+                                        <div class="flex-row flex-wrap gap-xs">
+                                            <div class="flex-row gap-xs">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                    class="icon">
+                                                    <path
+                                                        d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                                                </svg>
+                                                <span>May 28, 2025</span>
+                                            </div>
+                                            <div class="flex-row gap-xs">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                    class="icon">
+                                                    <path
+                                                        d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
+                                                </svg>
+                                                <span>15 min read</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </a>
+
+                            <!--Kort 2-->
+                            <a href="">
+                                <article class="card-V1 card-outlined">
+                                    <div class="card-V1-img-wrapper">
+                                        <img src="https://i.natgeofe.com/n/78a5560f-f2fa-4921-8fe8-f96effec344e/01-reference-moon-gettyimages-923240166.jpg"
+                                            alt="">
+                                        <div class="chip-v2">Travel</div>
+                                    </div>
+                                    <div class="card-V1-content">
+                                        <div>
+                                            <h3>Phases of the moon, explained</h3>
+                                        </div>
+                                        <div class="flex-row flex-wrap gap-xs">
+                                            <div class="flex-row gap-xs">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                    class="icon">
+                                                    <path
+                                                        d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                                                </svg>
+                                                <span>Sep 2, 2025</span>
+                                            </div>
+                                            <div class="flex-row gap-xs">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+                                                    class="icon">
+                                                    <path
+                                                        d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
+                                                </svg>
+                                                <span>15 min read</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </a>
+
+                        </div>
+                    </section>
+
+        </main>
+
+        <!--sidebar-->
+        <aside>
+            <div class="desktop-table-of-content">
+                <h2 class="text-caption-lg">On this page</h2>
+                <div class="table-of-content-nav">
+                    <a href="#article-section-2">In search of the darkest sanctuaries</a>
+                    <a href="#article-section-3">Southwest stargazing options</a>
+                    <a href="#article-section-4">Look to northern skies</a>
+                    <a href="#article-section-5">More easily accessed starry skies</a>
+                </div>
+            </div>
+
+            <div>
+                <!--Kort 1-->
+                <h2 class="text-caption-lg">Relaterade artiklar</h2>
+                <div class="cards-container">
+                    <a href="">
+                        <article class="card-V2 card-outlined">
+                            <div class="card-V2-img-wrapper">
+                                <img src="https://i.natgeofe.com/n/18acd679-1e02-44bf-ae48-4c338f0a2e4a/NSF-DOE_Rubin_Virgo_cluster_2_Im3crop2.jpg"
+                                    alt="A sky full of of galaxies, including two prominent spiral galaxies and three merging galaxies.">
+                                <div class="chip-v2">Science</div>
+                            </div>
+                            <div class="card-V2-content">
+                                <h3>These are the first images from Earth’s giant new telescope</h3>
+                                <div class="flex-row flex-wrap gap-xs">
+                                    <div class="flex-row gap-xs">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                                            <path
+                                                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                                        </svg>
+                                        <span>Sep 2, 2025</span>
+                                    </div>
+                                    <div class="flex-row gap-xs">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                                            <path
+                                                d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
+                                        </svg>
+                                        <span>15 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!--Kort 2-->
+                    <a href="">
+                        <article class="card-V2 card-outlined">
+                            <div class="card-V2-img-wrapper">
+                                <img src="https://i.natgeofe.com/n/6b79a7f1-b459-40e2-a8b7-739f16fa4d0b/coverstory_vancouverisland_GettyImages-1294877045_HR-Francesco-Riccardo-Iacomino.jpg"
+                                    alt="A grey whale peeks its tale out of the shores of Vancouver Island">
+                                <div class="chip-v2">Travel</div>
+                            </div>
+                            <div class="card-V2-content ">
+                                <h3>Is this Canadian festival the best place to see grey whales?</h3>
+                                <div class="flex-row flex-wrap gap-xs">
+                                    <div class="flex-row gap-xs">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                                            <path
+                                                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                                        </svg>
+                                        <span>Sep 2, 2025</span>
+                                    </div>
+                                    <div class="flex-row gap-xs">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                                            <path
+                                                d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
+                                        </svg>
+                                        <span>15 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!--Footer-->
+    <footer class="footer-dark">
+        <div class="footer-subscribe-wrapper">
+            <div>
+                <h2>Prenumerera Lorem ipsum</h2>
+                <p>Sign up for more inspiring photos, stories, and special offers from</p>
+            </div>
+            <button class="btn primary-btn">Prenumera</button>
+        </div>
+        <div class="footer-links-wrapper">
+            <div>
+                <h3 class="text-caption-lg">Legal</h3>
+                <a href="">Terms of use</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Cookie Policy</a>
+                <a href="">Manage Privacy Policy</a>
+            </div>
+            <div>
+                <h3 class="text-caption-lg">Titel</h3>
+            </div>
+            <div>
+                <h3 class="text-caption-lg">Om Jordens Eko</h3>
+                <a href="">Kontakta oss</a>
+                <a href="">Tipsa Jordens Eko</a>
+                <a href="">Jobba på Jordens Eko</a>
+            </div>
+
+            <!--Social media ikoner-->
+            <div id="footer-socialmedia-container">
+                <h3 class="text-caption-lg">Follow Us</h3>
+                <div>
+                    <i class="bi bi-instagram socialMedia-icons"></i>
+                    <i class="bi bi-youtube socialMedia-icons"></i>
+                    <i class="bi bi-facebook socialMedia-icons"></i>
+                    <i class="bi bi-linkedin socialMedia-icons"></i>
+                    <i class="bi bi-tiktok socialMedia-icons"></i>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span>&copy;Jordens Eko 2025</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

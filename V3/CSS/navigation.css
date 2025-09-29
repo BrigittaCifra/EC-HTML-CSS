@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     /* height: 100vh; */
-    background-color: var(--grey-300);
+    background-color: var(--grey-990);
     position: fixed;
     width: 100%;
     top: 0%;
@@ -38,11 +38,11 @@
 }
 
 .mobile-nav-top {
-    border-bottom: var(--border-bottom);
+    border-bottom: 1px solid var(--grey-990);
 }
 
 .mobile-nav-top svg {
-    padding: 1.7rem;
+    padding: var(--padding-xxs);
 }
 
 .mobile-nav-top>a {
@@ -67,12 +67,12 @@
 
 .mobile-nav-links summary {
     /*Här skrivs över stylingen som sätts i filen generalStyles.CSS*/
-    border-bottom: 1px solid var(--grey50);
+    border-bottom: 1px solid var(--grey-800);
 }
 
 .mobile-nav-links details[open] {
     /*Här skrivs över stylingen som sätts i filen generalStyles.CSS*/
-    border-bottom: 1px solid var(--grey-50);
+    border-bottom: 1px solid var(--grey-800);
 }
 
 .mobile-nav.menu-open {
@@ -88,6 +88,12 @@
 }
 
 /*Navigation - Laptops_________________________________________________________*/
+@media screen and (min-width: 481px) {
+    .mobile-nav-top svg {
+        padding: 1.7rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .mobile-nav {
         /*Döljer navigationen för mobila enhter*/
@@ -109,11 +115,11 @@
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
 
-        background-color: var(--grey-50);
+        background-color: var(--grey-990);
     }
 
     .dekstop-nav-top>a {
-        padding: var(--padding-xs);
+        padding: var(--desktop-nav-top-padding);
         margin-right: auto;
 
         display: flex;
@@ -124,15 +130,19 @@
     .dekstop-nav-top>div {
         display: flex;
         gap: var(--gap-xs);
-        padding: var(--padding-xs);
+        padding: var(--desktop-nav-top-padding);
+    }
+
+    .dekstop-nav-top button {
+        border-radius: 0;
     }
 
     .dekstop-nav-bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--grey-300);
-        border-bottom: var(--border-bottom);
+        background-color: var(--grey-980);
+        border-bottom: 1px solid var(--grey-990);
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
     }
@@ -205,7 +215,9 @@
 }
 
 /*Navigation - Desktop och större_________________________________________________________*/
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1200px) {
+
+    /*Gömmer hamburgar menyn*/
     .dekstop-nav-ham-menu {
         display: none;
     }
@@ -223,7 +235,7 @@
     }
 
     .dropdown>a:hover {
-        background-color: var(--grey-400);
+        background-color: var(--grey-990);
     }
 
     .dropdown {
@@ -232,11 +244,11 @@
     }
 
     .dropdown-content {
-        /*Här göms klassen dropdown-content genom displa*/
+        /*Här göms klassen dropdown-content genom display:none*/
         display: none;
         position: absolute;
         min-width: 25rem;
-        background-color: var(--grey-50);
+        background-color: var(--grey-980);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 1rem
     }
@@ -247,7 +259,7 @@
     }
 
     .dropdown-content a:hover {
-        color: rgb(138, 138, 138);
+        color: var(--grey-50);
     }
 
     .dropdown:hover .dropdown-content {

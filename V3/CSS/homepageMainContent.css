@@ -22,15 +22,18 @@
 
 .section-hero-content {
     position: absolute;
+    top: 0;
     bottom: 0;
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: var(--gap-s);
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
 
     color: var(--grey-50);
     padding: 5rem var(--padding-xs);
-    max-width: 1200px;
 }
 
 .section-hero p {
@@ -70,6 +73,10 @@
     gap: var(--gap-s);
 }
 
+.mixed-news {
+    background-color: var(--grey-900);
+}
+
 .mixed-news .card-V3-background {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(https://i.natgeofe.com/n/f93bb9d4-5617-4255-b226-44f32e17bc7d/2025_Fiji_Leg_3_Expedition-Dan_OllieVelasco.jpg);
     background-size: cover;
@@ -83,6 +90,9 @@
         display: block;
     }
 
+}
+
+@media screen and (min-width: 768px) {
     #latest-in-space>div>button {
         display: flex;
     }
@@ -99,6 +109,6 @@
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
 
-        padding-bottom: 7rem;
+        /*   padding-bottom: 10rem; */
     }
 }
