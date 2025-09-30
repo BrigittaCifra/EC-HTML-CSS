@@ -141,7 +141,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: var(--grey-980);
+        background-color: var(--grey-950);
         border-bottom: 1px solid var(--grey-990);
         padding-left: calc(50vw - 720px);
         padding-right: calc(50vw - 720px);
@@ -171,8 +171,7 @@
         top: 100%;
         z-index: 1;
 
-        background-color: var(--grey-50);
-        border-bottom: 1px solid var(--grey-400);
+        background-color: var(--grey-950);
     }
 
     .dekstop-nav-ham-menu li {
@@ -184,12 +183,13 @@
         flex-direction: column;
         gap: var(--gap-xs);
 
-        border-right: 1px solid var(--grey-400);
+        border-right: 1px solid var(--grey-800);
     }
 
-    .dekstop-nav-ham-menu a {
+    .dekstop-nav-ham-menu div {
         display: flex;
         flex-direction: column;
+        gap: var(--gap-xs);
     }
 
     .desktop-nav-toggle {
@@ -248,7 +248,7 @@
         display: none;
         position: absolute;
         min-width: 25rem;
-        background-color: var(--grey-980);
+        background-color: var(--grey-950);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 1rem
     }
