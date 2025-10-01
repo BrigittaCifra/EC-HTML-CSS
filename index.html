@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--beskrivning av sidan när användaren från fram sidan som sökresultat i sin webbläsare-->
-    <meta name="description" content="">
+    <!--beskrivning av sidan när användaren får fram sidan som sökresultat i sin webbläsare-->
+    <meta name="description"
+        content="TerraScope brings you inspiring news and articles on nature, wildlife, science, culture, and discoveries. Explore the wonders of our world." />
+    <!--Nyckelord för webcrawlers. Mer välkända sökmotorer använder inte <meta name="keywords"> men mindre sökmotorer kan fortfaren använda sig av den-->
+    <meta name="keywords" content="nature, animals, science, culture, discoveries">
     <!--Vilken som är huvudsidan-->
     <link rel="canonical" href="">
 
@@ -36,7 +39,8 @@
     <!--Javascript-->
     <script src="javascript.js"></script>
 
-    <title>Jordens Eko</title>
+    <!--"Nature, Animals, Science & Culture News" finns med i titeln för en bättre SEO-->
+    <title>TerraScope | Nature, Animals, Science & Culture News</title>
 </head>
 
 <body>
@@ -50,7 +54,7 @@
                         <path
                             d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
                     </svg>
-                    <span>Jordens Eko</span>
+                    <span>TerraScope</span>
                 </a>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
@@ -68,68 +72,69 @@
                     <li>
                         <details>
                             <summary>
-                                Djur
+                                <!--href="#" är en placeholder som gör att ett <a>-element beter sig som en länk, men som inte leder någonstans särskilt-->
+                                <a href="#">Animals</a>
                                 <span class="material-symbols-outlined">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Djurupptäckter</li>
-                                <li>Utrotningshotade arter</li>
+                                <li><a href="#">Animal Discoveries</a></li>
+                                <li><a href="#">Endangered Species</a></li>
                             </ul>
                         </details>
                     </li>
                     <li>
                         <details>
                             <summary>
-                                Historia och kultur
+                                <a href="#">History & Culture</a>
                                 <span class="material-symbols-outlined">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Arkeologi</li>
-                                <li>Historiska platser</li>
-                                <li>Högtider och traditioner</li>
+                                <li><a href="#">Archaeology</a></li>
+                                <li><a href="#">Historic Sites</a></li>
+                                <li><a href="#">Holidays & Traditions</a></li>
                             </ul>
                         </details>
                     </li>
                     <li>
                         <details>
                             <summary>
-                                Vetenskap och natur
+                                <a href="#">Science & Nature</a>
                                 <span class="material-symbols-outlined">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Rymd och astronomi</li>
-                                <li>Dinosaurier och fossiler</li>
-                                <li>Hav</li>
-                                <li>Teknologi och innovation</li>
+                                <li><a href="#">Space & Astronomy</a></li>
+                                <li><a href="#">Dinosaurs & Fossils</a></li>
+                                <li><a href="#">Oceans</a></li>
+                                <li><a href="#">Technology & Innovation</a></li>
                             </ul>
                         </details>
                     </li>
                     <li>
                         <details>
                             <summary>
-                                Om Jordens Eko
+                                <a href="#">About</a>
                                 <span class="material-symbols-outlined">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Om oss</li>
-                                <li>Författare</li>
-                                <li>Kontakta oss</li>
+                                <li><a href="#">About TerraScope</a></li>
+                                <li><a href="#">Authors</a></li>
+                                <li><a href="#">Contact TerraScope</a></li>
                             </ul>
                         </details>
                     </li>
                 </ul>
             </div>
             <div class="mobile-nav-btn hidden">
-                <button class="btn secondary-btn">Logga in</button>
-                <button class="btn primary-btn">Prenumera</button>
+                <button class="btn secondary-btn">Log in</button>
+                <button class="btn primary-btn">Subscribe</button>
             </div>
         </nav>
 
@@ -142,11 +147,11 @@
                         <path
                             d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
                     </svg>
-                    <span>Jordens Eko</span>
+                    <span>TerraScope</span>
                 </a>
                 <div>
-                    <button id="modal-btn-open" class="btn secondary-btn">Logga in</button>
-                    <button class="btn primary-btn">Prenumera</button>
+                    <button id="modal-btn-open" class="btn secondary-btn">Log in</button>
+                    <button class="btn primary-btn">Subscribe</button>
                 </div>
             </div>
             <div class="dekstop-nav-bottom">
@@ -158,35 +163,35 @@
                     <div class="dekstop-nav-ham-menu-links">
                         <ul>
                             <li>
-                                <a class="text-caption-lg">Djur</a>
+                                <a class="text-caption-lg">Animals</a>
                                 <div>
-                                    <a href="">Djurupptäckter</a>
-                                    <a href="">Utrotningshotade arter</a>
+                                    <a href="#">Animal Discoveries</a>
+                                    <a href="#">Endangered Species</a>
                                 </div>
                             </li>
                             <li>
-                                <a class="text-caption-lg">Historia och kultur</a>
+                                <a class="text-caption-lg">History & Culture</a>
                                 <div>
-                                    <a href="">Arkeologi</a>
-                                    <a href="">Historiska platser</a>
-                                    <a href="">Högtider och traditioner</a>
+                                    <a href="#">Archaeology</a>
+                                    <a href="#">Historic Sites</a>
+                                    <a href="#">Holidays & Traditions</a>
                                 </div>
                             </li>
                             <li>
-                                <a class="text-caption-lg">Vetenskap och natur</a>
+                                <a class="text-caption-lg">Science & Nature</a>
                                 <div>
-                                    <a href="">Rymd och astronomi</a>
-                                    <a href="">Dinosaurier och fossiler</a>
-                                    <a href="">Hav</a>
-                                    <a href="">Teknologi och innovation</a>
+                                    <a href="#">Space & Astronomy</a>
+                                    <a href="#">Dinosaurs & Fossils</a>
+                                    <a href="#">Oceans</a>
+                                    <a href="#">Technology & Innovation</a>
                                 </div>
                             </li>
                             <li>
-                                <a class="text-caption-lg">Om Jordens Eko</a>
+                                <a class="text-caption-lg">About</a>
                                 <div>
-                                    <a href="">Om oss</a>
-                                    <a href="">Författare</a>
-                                    <a href="">Kontakta oss</a>
+                                    <a href="#">About TerraScope</a>
+                                    <a href="#">Authors</a>
+                                    <a href="#">Contact TerraScope</a>
                                 </div>
                             </li>
                         </ul>
@@ -196,35 +201,35 @@
                     <!--Menu alternativ-->
                     <ul>
                         <li class="dropdown">
-                            <a id="#news">Djur</a>
+                            <a>Animals</a>
                             <div class="dropdown-content">
-                                <a href="#">Djurupptäckter</a>
-                                <a href="#">Utrotningshotade arter</a>
+                                <a href="#">Animal Discoveries</a>
+                                <a href="#">Endangered Species</a>
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a id="#contact">Historia och kultur</a>
+                            <a>History & Culture</a>
                             <div class="dropdown-content">
-                                <a href="#">Arkeologi</a>
-                                <a href="#">Historiska platser</a>
-                                <a href="#">Högtider och traditioner</a>
+                                <a href="#">Archaeology</a>
+                                <a href="#">Historic Sites</a>
+                                <a href="#">Holidays & Traditions</a>
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a id="#contact">Vetenskap och natur</a>
+                            <a>Science & Nature</a>
                             <div class="dropdown-content">
-                                <a href="#">Rymd och astronomi</a>
-                                <a href="#">Dinosaurier och fossiler</a>
-                                <a href="#">Hav</a>
-                                <a href="">Teknologi och innovation</a>
+                                <a href="#">Space & Astronomy</a>
+                                <a href="#">Dinosaurs & Fossils</a>
+                                <a href="#">Oceans</a>
+                                <a href="#">Technology & Innovation</a>
                             </div>
                         </li>
                         <li class="dropdown">
-                            <a id="#about">Om Jordens Eko</a>
+                            <a>About</a>
                             <div class="dropdown-content">
-                                <a href="#">Om oss</a>
-                                <a href="#">Författare</a>
-                                <a href="#">Kontakta oss</a>
+                                <a href="#">About TerraScope</a>
+                                <a href="#">Authors</a>
+                                <a href="#">Contact TerraScope</a>
                             </div>
                         </li>
                     </ul>
@@ -243,7 +248,7 @@
     <div class="modal-wrapper" id="modal-wrapper">
         <div class="modal-content">
             <div>
-                <h2>Logga in</h2>
+                <h2>Log in</h2>
                 <button id="modal-btn-close">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                         <path
@@ -253,66 +258,66 @@
             </div>
             <div class="input-field-container">
                 <div class="input-field-wrapper">
-                    <label for="">E-postadress</label>
+                    <label for="">Email</label>
                     <input type="email" name="" id="">
                 </div>
                 <div class="input-field-wrapper">
-                    <label for="">Lösenord</label>
+                    <label for="">Password</label>
                     <input type="password" name="" id="">
                 </div>
             </div>
-            <button class="btn primary-btn">Logga in</button>
+            <button class="btn primary-btn">Log in</button>
         </div>
     </div>
 
-    <!--Main content-->
-    <main>
-
-        <!--Hero section-->
-        <section class="section-hero">
-            <a href="">
-                <img src="https://i.natgeofe.com/n/a93e9caf-290e-4902-9900-c0897cc888ef/CleopatrasFinalSecret_01_51_24_01.Still010-original.jpg"
-                    alt="">
-                <div class="section-hero-content">
-                    <div class="chip-wrapper">
-                        <div class="chip">
-                            History
-                        </div>
-                        <div class="chip">
-                            culture
-                        </div>
+    <!--Hero section-->
+    <section class="section-hero">
+        <a href="#">
+            <img src="https://i.natgeofe.com/n/a93e9caf-290e-4902-9900-c0897cc888ef/CleopatrasFinalSecret_01_51_24_01.Still010-original.jpg"
+                alt="Two divers with underwater camera equipment investigating underwater towers">
+            <div class="section-hero-content">
+                <div class="chip-wrapper">
+                    <div class="chip">
+                        History
                     </div>
-                    <h1 class="display">Ancient port from Cleopatra’s time found underwater in Egypt</h1>
-                    <p>During her hunt for the Egyptian queen’s lost tomb, National Geographic
-                        Explorer Kathleen
-                        Martínez uncovered the sunken landscape near the ruins of Taposiris Magna.
-                    </p>
-                    <div class="flex-row flex-wrap gap-s">
-                        <div class="flex-row gap-xs">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
-                                <path
-                                    d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
-                            </svg>
-                            <span>Erika Hayasaki</span>
-                        </div>
-                        <div class="flex-row gap-xs">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
-                                <path
-                                    d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
-                            </svg>
-                            <span>Sep 18, 2025</span>
-                        </div>
-                        <div class="flex-row gap-xs">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
-                                <path
-                                    d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
-                            </svg>
-                            <span>15 min read</span>
-                        </div>
+                    <div class="chip">
+                        culture
                     </div>
                 </div>
-            </a>
-        </section>
+                <h1 class="display">Ancient port from Cleopatra’s time found underwater in Egypt</h1>
+                <p>During her hunt for the Egyptian queen’s lost tomb, National Geographic
+                    Explorer Kathleen
+                    Martínez uncovered the sunken landscape near the ruins of Taposiris Magna.
+                </p>
+                <div class="flex-row flex-wrap gap-s">
+                    <div class="flex-row gap-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                            <path
+                                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                        </svg>
+                        <span>Erika Hayasaki</span>
+                    </div>
+                    <div class="flex-row gap-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                            <path
+                                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
+                        </svg>
+                        <span>Sep 18, 2025</span>
+                    </div>
+                    <div class="flex-row gap-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                            <path
+                                d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
+                        </svg>
+                        <span>15 min read</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!--Main content-->
+    <main>
 
 
         <!--Latest in space - title-->
@@ -320,8 +325,8 @@
 
             <div class="title-wrapper">
                 <h2 class="text-heading-md">Latest in space</h2>
-                <button class="btn outlined-btn">Se alla<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                        class="icon">
+                <button class="btn outlined-btn">More space news<svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960" class="icon">
                         <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
                     </svg>
                 </button>
@@ -336,7 +341,7 @@
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/3e4e9675-3377-4fc5-9d33-0ab478cba3f1/NationalGeographic_2808329.jpg"
-                                alt="">
+                                alt="Circular star trails fill the night sky above a cloud-filled valley in the Great Smoky Mountains.">
                             <div class="chip-v2">Travel</div>
                         </div>
                         <div class="card-V1-content">
@@ -364,11 +369,11 @@
                 </a>
 
                 <!--Kort 2-->
-                <a href="">
+                <a href="#">
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/78a5560f-f2fa-4921-8fe8-f96effec344e/01-reference-moon-gettyimages-923240166.jpg"
-                                alt="">
+                                alt="waxing crescent">
                             <div class="chip-v2">Science</div>
                         </div>
                         <div class="card-V1-content">
@@ -396,7 +401,7 @@
                 </a>
 
                 <!--Kort 3-->
-                <a href="">
+                <a href="#">
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/bf89a1aa-d64e-4470-a05d-cb35a25b5c22/leadstargazing1.png"
@@ -430,8 +435,8 @@
             </div>
 
             <!--Den här knappen syns bara på mobila enheter-->
-            <button class="btn outlined-btn">Se alla<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-                    class="icon">
+            <button class="btn outlined-btn">More space news<svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -960 960 960" class="icon">
                     <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
                 </svg>
             </button>
@@ -445,7 +450,7 @@
             <div class="cards-container-bentoGrid">
 
                 <!--Kort 1-->
-                <a href="" class="card-V3">
+                <a href="#" class="card-V3">
                     <article>
 
                         <img src="https://i.natgeofe.com/n/f84a6d8e-436b-42dc-88bf-acd775013c5f/NGPS25FIJ_20250807_VACALEA_CMB_DJIM_003_DJI_20250806203737_0065_D.jpg"
@@ -490,7 +495,7 @@
                 </a>
 
                 <!--Kort 2-->
-                <a href="">
+                <a href="#">
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/1681b595-6612-474f-aa58-2bed5d25730b/_82A3665-2.jpg"
@@ -520,11 +525,11 @@
                 </a>
 
                 <!--Kort 3-->
-                <a href="">
+                <a href="#">
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/69646170-7842-48d4-bca8-3845a29e5c0c/naturepl_01545645.jpg"
-                                alt="">
+                                alt="Two whales swim underwater near a dolphin">
                             <div class="chip-v2">Animals</div>
                         </div>
                         <div class="card-V1-content">
@@ -550,11 +555,11 @@
                 </a>
 
                 <!--Kort 4-->
-                <a href="">
+                <a href="#">
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/0fb5d51e-3363-4881-8f7b-2da2de0d5c5c/NationalGeographic_1550529.jpg"
-                                alt="">
+                                alt="Morning mist above the canopy in Yasuni National Park">
                             <div class="chip-v2">Travel</div>
                         </div>
                         <div class="card-V1-content">
@@ -580,7 +585,7 @@
                 </a>
 
                 <!--Kort 5-->
-                <a href="">
+                <a href="#">
                     <article class="card-V1">
                         <div class="card-V1-img-wrapper">
                             <img src="https://i.natgeofe.com/n/5b6ed6d6-5566-4f36-9dca-054cc04e8064/resized-GettyImages-1400065452.jpg"
@@ -618,29 +623,28 @@
     <footer class="footer-dark">
         <div class="footer-subscribe-wrapper">
             <div>
-                <h2>Prenumerera Lorem ipsum</h2>
-                <p>Sign up for more inspiring photos, stories, and special offers from</p>
+                <h2>Subscribe Lorem ipsum</h2>
+                <p>Subscribe for more inspiring photos, stories, and special offers from TerraScope</p>
             </div>
-            <button class="btn primary-btn">Prenumera</button>
+            <button class="btn primary-btn">Subscribe</button>
         </div>
         <div class="footer-links-wrapper">
             <div>
                 <h3 class="text-caption-lg">Legal</h3>
-                <a href="">Terms of use</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Cookie Policy</a>
-                <a href="">Manage Privacy Policy</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Manage Privacy Policy</a>
             </div>
             <div>
                 <h3 class="text-caption-lg">Titel</h3>
             </div>
             <div>
-                <h3 class="text-caption-lg">Om Jordens Eko</h3>
-                <a href="">Om oss</a>
-                <a href="">Författare</a>
-                <a href="">Kontakta oss</a>
-                <a href="">Tipsa Jordens Eko</a>
-                <a href="">Jobba på Jordens Eko</a>
+                <h3 class="text-caption-lg">About</h3>
+                <a href="#">About TerraScope</a>
+                <a href="#">Authors</a>
+                <a href="#">Contact TerraScope</a>
+                <a href="#">Work at TerraScope</a>
             </div>
 
             <!--Social media ikoner-->
@@ -656,7 +660,7 @@
             </div>
         </div>
         <div>
-            <span>&copy;Jordens Eko 2025</span>
+            <span>Copyright &copy;TerraScope 2025</span>
         </div>
     </footer>
 </body>
