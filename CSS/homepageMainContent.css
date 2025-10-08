@@ -1,46 +1,3 @@
-/*Hero section____________________________________________________________________*/
-.section-hero {
-    /* Skapar en "referenspunkt" för absolut positionerade barn element*/
-    position: relative;
-    overflow: hidden;
-
-
-    /*margin-top: var(--navbar-height);
-    height: calc(100vh - var(--navbar-height));*/
-
-    height: 100vh;
-}
-
-.section-hero img {
-    width: 100%;
-    height: 100%;
-
-    /* Om bildens proportioner inte matchar behållarens proportioner kommer delar av bilden att beskäras bort,
-    men bilden blir aldrig förvräng eller sträckt */
-    object-fit: cover;
-}
-
-.section-hero-content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: var(--gap-s);
-
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
-
-    color: var(--grey-50);
-    padding: 5rem var(--padding-xs);
-}
-
-.section-hero p {
-    display: none;
-    color: var(--grey-50);
-}
-
 /*Latest in space_____________________________________________________________________________*/
 #latest-in-space {
     display: flex;
@@ -53,26 +10,6 @@
 }
 
 /*Mixed news__________________________________________________________________________________*/
-
-.card-V3-background {
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(https://i.natgeofe.com/n/a93e9caf-290e-4902-9900-c0897cc888ef/CleopatrasFinalSecret_01_51_24_01.Still010-original.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.card-V3:hover .card-V3-background {
-    transform: scale(1.1);
-}
-
-.card-content {
-    /* Säkerställer att innehållet ligger ovanpå */
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-s);
-}
-
 .mixed-news {
     background-color: var(--grey-850);
 }
@@ -99,16 +36,5 @@
 
     #latest-in-space>button {
         display: none;
-    }
-}
-
-
-/*Extra large devices (large desktops)*/
-@media screen and (min-width: 1200px) {
-    .section-hero-content {
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
-
-        /*   padding-bottom: 10rem; */
     }
 }

@@ -30,30 +30,31 @@
     <link rel="stylesheet" href="CSS/footer.css">
 
     <!--Javascript-->
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 
     <title>Stargazing Sites In North America | TerraScope</title>
 </head>
 
 <body>
-
     <header>
         <!--Nav för mobila enheter-->
         <nav class="mobile-nav">
             <div class="mobile-nav-top">
                 <a href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" role="img"
+                        aria-label="TerraScope logo">
                         <path
                             d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
                     </svg>
                     <span>TerraScope</span>
                 </a>
                 <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" aria-label="Search">
                         <path
                             d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" id="menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon"
+                        id="mobile-menu-toggle" aria-label="Open menu">
                         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
                     </svg>
                 </div>
@@ -64,60 +65,62 @@
                     <li>
                         <details>
                             <summary>
-                                Animals
-                                <span class="material-symbols-outlined">
+                                <!--href="#" är en placeholder som gör att ett <a>-element beter sig som en länk, men som inte leder någonstans särskilt-->
+                                <a href="#">Animals</a>
+                                <!--Pilarna är dekorativa och tillför inte extra funktionalitet för skärmläsare. Därför göms de med aria-hidden="true"-->
+                                <span class="material-symbols-outlined" aria-hidden="true">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Animal Discoveries</li>
-                                <li>Endangered Species</li>
+                                <li><a href="#">Animal Discoveries</a></li>
+                                <li><a href="#">Endangered Species</a></li>
                             </ul>
                         </details>
                     </li>
                     <li>
                         <details>
                             <summary>
-                                History & Culture
-                                <span class="material-symbols-outlined">
+                                <a href="#">History & Culture</a>
+                                <span class="material-symbols-outlined" aria-hidden="true">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Archaeology</li>
-                                <li>Historic Sites</li>
-                                <li>Holidays & Traditions</li>
+                                <li><a href="#">Archaeology</a></li>
+                                <li><a href="#">Historic Sites</a></li>
+                                <li><a href="#">Holidays & Traditions</a></li>
                             </ul>
                         </details>
                     </li>
                     <li>
                         <details>
                             <summary>
-                                Science & Nature
-                                <span class="material-symbols-outlined">
+                                <a href="#">Science & Nature</a>
+                                <span class="material-symbols-outlined" aria-hidden="true">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>Space & Astronomy</li>
-                                <li>Dinosaurs & Fossils</li>
-                                <li>Oceans</li>
-                                <li>Technology & Innovation</li>
+                                <li><a href="#">Space & Astronomy</a></li>
+                                <li><a href="#">Dinosaurs & Fossils</a></li>
+                                <li><a href="#">Oceans</a></li>
+                                <li><a href="#">Technology & Innovation</a></li>
                             </ul>
                         </details>
                     </li>
                     <li>
                         <details>
                             <summary>
-                                About
-                                <span class="material-symbols-outlined">
+                                <a href="#">About</a>
+                                <span class="material-symbols-outlined" aria-hidden="true">
                                     keyboard_arrow_down
                                 </span>
                             </summary>
                             <ul>
-                                <li>About TerraScope</li>
-                                <li>Authors</li>
-                                <li>Contact TerraScope</li>
+                                <li><a href="#">About TerraScope</a></li>
+                                <li><a href="#">Authors</a></li>
+                                <li><a href="#">Contact TerraScope</a></li>
                             </ul>
                         </details>
                     </li>
@@ -134,7 +137,8 @@
         <nav class="desktop-nav">
             <div class="dekstop-nav-top">
                 <a href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" role="img"
+                        aria-label="TerraScope logo">
                         <path
                             d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 82-31.5 155t-86 127.5q-54.5 54.5-127 86T480-80Zm0-82q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
                     </svg>
@@ -146,102 +150,122 @@
                 </div>
             </div>
             <div class="dekstop-nav-bottom">
+
+                <div class="desktop-nav-links">
+                    <!--Menu alternativ-->
+                    <ul>
+                        <li>
+                            <!--<Button> används här för att justera tabordningen på sidan.
+                                Id "padding-none" används här för att överskriva paddingen i btn klassen-->
+                            <button class="btn secondary-btn dropdown" id="padding-none">
+                                <a>Animals</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Animal Discoveries</a>
+                                    <a href="#">Endangered Species</a>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn secondary-btn dropdown" id="padding-none">
+                                <a>History & Culture</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Archaeology</a>
+                                    <a href="#">Historic Sites</a>
+                                    <a href="#">Holidays & Traditions</a>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn secondary-btn dropdown" id="padding-none">
+                                <a>Science & Nature</a>
+                                <div class="dropdown-content">
+                                    <a href="#">Space & Astronomy</a>
+                                    <a href="#">Dinosaurs & Fossils</a>
+                                    <a href="#">Oceans</a>
+                                    <a href="#">Technology & Innovation</a>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn secondary-btn dropdown" id="padding-none">
+                                <a>About</a>
+                                <div class="dropdown-content">
+                                    <a href="#">About TerraScope</a>
+                                    <a href="#">Authors</a>
+                                    <a href="#">Contact TerraScope</a>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <form action="">
+                    <div class="search">
+                        <span class="search-icon material-symbols-outlined" aria-hidden="true">search</span>
+                        <input type="search" placeholder="search..." aria-label="Enter search term">
+                    </div>
+                </form>
+
                 <div class="dekstop-nav-ham-menu">
                     <input type="checkbox" id="desktop-nav-toggle" class="desktop-nav-toggle">
                     <label for="desktop-nav-toggle" class="-desktop-nav-toggle-label">
-                        <span class="material-symbols-outlined" id="menu-toggle">menu</span>
+                        <span class="material-symbols-outlined">menu</span>
                     </label>
                     <div class="dekstop-nav-ham-menu-links">
                         <ul>
-                            <li>
+                            <li class="test">
+
                                 <a class="text-caption-lg">Animals</a>
                                 <div>
-                                    <a href="">Animal Discoveries</a>
-                                    <a href="">Endangered Species</a>
+                                    <a href="#">Animal Discoveries</a>
+                                    <a href="#">Endangered Species</a>
                                 </div>
+
                             </li>
                             <li>
                                 <a class="text-caption-lg">History & Culture</a>
                                 <div>
-                                    <a href="">Archaeology</a>
-                                    <a href="">Historic Sites</a>
-                                    <a href="">Holidays & Traditions</a>
+                                    <a href="#">Archaeology</a>
+                                    <a href="#">Historic Sites</a>
+                                    <a href="#">Holidays & Traditions</a>
                                 </div>
                             </li>
                             <li>
                                 <a class="text-caption-lg">Science & Nature</a>
                                 <div>
-                                    <a href="">Space & Astronomy</a>
-                                    <a href="">Dinosaurs & Fossils</a>
-                                    <a href="">Oceans</a>
-                                    <a href="">Technology & Innovation</a>
+                                    <a href="#">Space & Astronomy</a>
+                                    <a href="#">Dinosaurs & Fossils</a>
+                                    <a href="#">Oceans</a>
+                                    <a href="#">Technology & Innovation</a>
                                 </div>
                             </li>
                             <li>
                                 <a class="text-caption-lg">About</a>
                                 <div>
-                                    <a href="">About TerraScope</a>
-                                    <a href="">Authors</a>
-                                    <a href="">Contact TerraScope</a>
+                                    <a href="#">About TerraScope</a>
+                                    <a href="#">Authors</a>
+                                    <a href="#">Contact TerraScope</a>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="desktop-nav-links">
-                    <!--Menu alternativ-->
-                    <ul>
-                        <li class="dropdown">
-                            <a>Animals</a>
-                            <div class="dropdown-content">
-                                <a href="">Animal Discoveries</a>
-                                <a href="">Endangered Species</a>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a>History & Culture</a>
-                            <div class="dropdown-content">
-                                <a href="">Archaeology</a>
-                                <a href="">Historic Sites</a>
-                                <a href="">Holidays & Traditions</a>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a>Science & Nature</a>
-                            <div class="dropdown-content">
-                                <a href="">Space & Astronomy</a>
-                                <a href="">Dinosaurs & Fossils</a>
-                                <a href="">Oceans</a>
-                                <a href="">Technology & Innovation</a>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a>About</a>
-                            <div class="dropdown-content">
-                                <a href="">About TerraScope</a>
-                                <a href="">Authors</a>
-                                <a href="">Contact TerraScope</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <form action="">
-                    <div class="search">
-                        <span class="search-icon material-symbols-outlined">search</span>
-                        <input type="search" placeholder="search...">
-                    </div>
-                </form>
             </div>
         </nav>
     </header>
 
     <!--Login modal-->
-    <div class="modal-wrapper" id="modal-wrapper">
+
+    <!--role="dialog" - talar om att detta är en dialog
+    aria-modal="true" - indikerar att innehållet bakom modalen är inaktivt
+    aria-labelledby="modal-title" - kopplar modalen till h2 modal rubriken-->
+    <div class="modal-wrapper" id="modal-wrapper" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <div>
-                <h2>Logga in</h2>
-                <button id="modal-btn-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <!--Den här id:n kopplar ihop den med attributen aria-labelledby-->
+                <h2 id="modal-title">Log in</h2>
+                <button id="modal-btn-close" aria-label="Close login dialog" class="btn secondary-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" aria-hidden="true">
                         <path
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg>
@@ -249,63 +273,63 @@
             </div>
             <div class="input-field-container">
                 <div class="input-field-wrapper">
-                    <label for="">E-postadress</label>
-                    <input type="email" name="" id="">
+                    <label for="email-input">Email</label>
+                    <input type="email" name="email" id="email-input">
                 </div>
                 <div class="input-field-wrapper">
-                    <label for="">Lösenord</label>
-                    <input type="password" name="" id="">
+                    <label for="password-input">Password</label>
+                    <input type="password" name="password" id="password-input">
                 </div>
             </div>
-            <button class="btn primary-btn">Logga in</button>
+            <button class="btn disabled">Log in</button>
         </div>
     </div>
 
     <!--Hero section-->
-
     <section class="section-hero">
         <img src="https://i.natgeofe.com/n/3e4e9675-3377-4fc5-9d33-0ab478cba3f1/NationalGeographic_2808329.jpg"
             alt="Circular star trails fill the night sky above a cloud-filled valley in the Great Smoky Mountains.">
         <div class="section-hero-content">
-
-
-            <div class="chip-wrapper">
-                <div class="chip">
+            <div class="chip-wrapper" aria-label="Kategorier">
+                <a href="#" class="chip">
                     Travel
-                </div>
+                </a>
             </div>
-            <h1 class="display">These are the best stargazing sites in North America</h1>
+            <h1 class="display">
+                <a href="#">These are the best stargazing sites in North America</a>
+            </h1>
             <p>These dark sky sanctuaries, reserves, parks, and trails invite you to immerse yourself in the wonders
-                of
-                our night skies. Here’s where to go.
+                of our night skies. Here’s where to go.
             </p>
             <div class="flex-row flex-wrap gap-s">
                 <div class="flex-row gap-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" aria-hidden="true">
                         <path
                             d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
                     </svg>
+                    <span class="visually-hidden">Author:</span>
                     <span>Amy Brecount White</span>
                 </div>
                 <div class="flex-row gap-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" aria-hidden="true">
                         <path
                             d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Z" />
                     </svg>
+                    <span class="visually-hidden">Date:</span>
                     <span>May 28, 2025</span>
                 </div>
                 <div class="flex-row gap-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon" aria-hidden="true">
                         <path
                             d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-440q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Zm0-360Zm112 168 56-56-128-128v-184h-80v216l152 152ZM224-866l56 56-170 170-56-56 170-170Zm512 0 170 170-56 56-170-170 56-56ZM480-160q117 0 198.5-81.5T760-440q0-117-81.5-198.5T480-720q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160Z" />
                     </svg>
+                    <span class="visually-hidden">Article length:</span>
                     <span>15 min read</span>
                 </div>
             </div>
-
-
         </div>
     </section>
+
 
     <div class="mainContent">
 
@@ -545,13 +569,13 @@
 
                     <section class="related-topics">
                         <h2>Related topics</h2>
-                        <div class="chip-wrapper">
-                            <div class="chip">
+                        <div class="chip-wrapper" aria-label="Kategorier">
+                            <a href="#" class="chip">
                                 Stars
-                            </div>
-                            <div class="chip">
+                            </a>
+                            <a href="#" class="chip">
                                 Astronomy
-                            </div>
+                            </a>
                         </div>
                     </section>
 
@@ -647,7 +671,7 @@
 
             <div>
                 <!--Kort 1-->
-                <h2 class="text-caption-lg">Relaterade artiklar</h2>
+                <h2 class="text-caption-lg">Related articles</h2>
                 <div class="cards-container">
                     <a href="">
                         <article class="card-V2 card-outlined">
@@ -720,38 +744,49 @@
         <div class="footer-subscribe-wrapper">
             <div>
                 <h2>Subscribe Lorem ipsum</h2>
-                <p>Subscribe for more inspiring photos, stories, and special offers from TerraScope</p>
+                <p>Subscribe for more inspiring photos, stories, and special offers from TerraScope
+                </p>
             </div>
             <button class="btn primary-btn">Subscribe</button>
         </div>
         <div class="footer-links-wrapper">
             <div>
                 <h3 class="text-caption-lg">Legal</h3>
-                <a href="">Terms of use</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Cookie Policy</a>
-                <a href="">Manage Privacy Policy</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Manage Privacy Policy</a>
             </div>
             <div>
                 <h3 class="text-caption-lg">Titel</h3>
             </div>
             <div>
                 <h3 class="text-caption-lg">About</h3>
-                <a href="">About TerraScope</a>
-                <a href="">Authors</a>
-                <a href="">Contact TerraScope</a>
-                <a href="">Work at TerraScope</a>
+                <a href="#">About TerraScope</a>
+                <a href="#">Authors</a>
+                <a href="#">Contact TerraScope</a>
+                <a href="#">Work at TerraScope</a>
             </div>
 
             <!--Social media ikoner-->
             <div id="footer-socialmedia-container">
                 <h3 class="text-caption-lg">Follow Us</h3>
                 <div>
-                    <i class="bi bi-instagram socialMedia-icons"></i>
-                    <i class="bi bi-youtube socialMedia-icons"></i>
-                    <i class="bi bi-facebook socialMedia-icons"></i>
-                    <i class="bi bi-linkedin socialMedia-icons"></i>
-                    <i class="bi bi-tiktok socialMedia-icons"></i>
+                    <a href="https://www.instagram.com/" aria-label="Instagram">
+                        <i class="bi bi-instagram socialMedia-icons" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" aria-label="Youtube">
+                        <i class="bi bi-youtube socialMedia-icons" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" aria-label="Facebook">
+                        <i class="bi bi-facebook socialMedia-icons" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="Linkedin">
+                        <i class="bi bi-linkedin socialMedia-icons" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/" aria-label="Tiktok">
+                        <i class="bi bi-tiktok socialMedia-icons" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>

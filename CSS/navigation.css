@@ -6,6 +6,7 @@
 }
 
 .desktop-nav-toggle {
+    /*Döljer checkboxen*/
     display: none;
 }
 
@@ -25,7 +26,8 @@
     width: 100%;
     top: 0%;
 
-    z-index: 1;
+    /*Z-index 3 eftersom hero-sectionerna använder z-index 1 och 2 i sin styling*/
+    z-index: 3;
 }
 
 .mobile-nav> :first-child {
@@ -107,7 +109,7 @@
         width: 100%;
         top: 0%;
         /*här används z-index för att överlappa sticky sidebaren*/
-        z-index: 1;
+        z-index: 3;
     }
 
     .dekstop-nav-top {
@@ -139,7 +141,7 @@
 
     .dekstop-nav-bottom {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
         background-color: var(--grey-950);
         border-bottom: 1px solid var(--grey-990);
@@ -169,7 +171,9 @@
         left: 0;
         right: 0;
         top: 100%;
-        z-index: 1;
+
+        /*Z-index 3 eftersom hero-sectionerna använder z-index 1 och 2 i sin styling*/
+        z-index: 3;
 
         background-color: var(--grey-950);
     }
@@ -190,11 +194,6 @@
         display: flex;
         flex-direction: column;
         gap: var(--gap-xs);
-    }
-
-    .desktop-nav-toggle {
-        /*Döljer checkboxen*/
-        display: none;
     }
 
     .desktop-nav-toggle~div {
@@ -220,6 +219,10 @@
     /*Gömmer hamburgar menyn*/
     .dekstop-nav-ham-menu {
         display: none;
+    }
+
+    .dekstop-nav-bottom {
+        justify-content: space-between;
     }
 
     .desktop-nav-links {
@@ -250,16 +253,16 @@
         min-width: 25rem;
         background-color: var(--grey-950);
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        padding: 1rem
     }
 
     .dropdown-content a {
         display: block;
-        padding-bottom: 1rem;
+
+        text-align: left;
     }
 
     .dropdown-content a:hover {
-        color: var(--grey-50);
+        background-color: var(--grey-990);
     }
 
     .dropdown:hover .dropdown-content {

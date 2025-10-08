@@ -20,7 +20,7 @@
 
     /*Gul - raw values*/
     --yellow-50: #E0DED3;
-    --yellow-500: #ffd700;
+    --yellow-500: #FFCC00;
     --yellow-550: #ccad00;
     --yellow-600: #806c00;
 
@@ -107,7 +107,7 @@
 
 /*Element___________________________________________________________________________*/
 html {
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 body,
@@ -303,7 +303,7 @@ p {
     margin: 0;
 
     text-transform: uppercase;
-    color: var(--grey-600)
+    color: var(--grey-500)
 }
 
 .text-caption-md {
@@ -353,13 +353,41 @@ p {
     overflow: hidden;
 }
 
+/*Element som endast finns för skärmläsare*/
+.visually-hidden {
+    /* Ta bort från dokumentflödet */
+    position: absolute;
+
+    /* Minimal storlek */
+    width: 1px;
+    height: 1px;
+
+    /* Ingen padding */
+    padding: 0;
+
+    /* Dra utanför synligt område */
+    margin: -1px;
+
+    /* Dölj innehåll */
+    overflow: hidden;
+
+    /* Klipp bort synligt område */
+    clip: rect(0, 0, 0, 0);
+
+    /* Förhindra radbrytning */
+    white-space: nowrap;
+
+    /* Ingen border */
+    border: 0;
+}
+
 /*Monitors, Desktops_________________________________________________________*/
 @media screen and (min-width: 1200px) {
     .section-padding {
         /*räknar ut skillnaden mellan halva fönstrets bredd och 720px och
         läggertilldet som padding*/
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
+        padding-left: max(2rem, calc(50vw - 720px));
+        padding-right: max(2rem, calc(50vw - 720px));
     }
 
 }

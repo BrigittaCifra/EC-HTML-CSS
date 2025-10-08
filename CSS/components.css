@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
     gap: var(--gap-xs);
+
+    font-family: 'Montserrat';
+
+    cursor: pointer;
 }
 
 /*Primary*/
@@ -34,6 +38,16 @@
 .outlined-btn {
     border: var(--border-outlined);
     background-color: transparent;
+}
+
+.outlined-btn:hover {
+    background-color: var(--grey-900);
+}
+
+/*Disabled*/
+.disabled {
+    background-color: var(--grey-300);
+    color: var(--grey-700);
 }
 
 /*Knapp ikoner*/
@@ -110,6 +124,7 @@
 .card-V2-content h3 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -208,7 +223,7 @@
 
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    z-index: 3;
     display: none;
 }
 
@@ -230,6 +245,10 @@
 
     height: fit-content;
     width: 20rem;
+}
+
+.modal-content h2 {
+    color: var(--grey-900);
 }
 
 .modal-content div {
@@ -290,6 +309,9 @@
     transition: var(--transition-fast);
 
     font-size: var(--font-step--1);
+
+    z-index: 2;
+    /* Ligger ovanför hero-länkens overlay (z-index: 1) för att vara klickbara */
 }
 
 .chip:hover {
@@ -326,6 +348,70 @@
 }
 
 /*Layout_____________________________________________________________________________*/
+
+/*Hero section*/
+.section-hero {
+    /* Skapar en "referenspunkt" för absolut positionerade barn element*/
+    position: relative;
+    overflow: hidden;
+
+
+    /*margin-top: var(--navbar-height);
+    height: calc(100vh - var(--navbar-height));*/
+
+    height: 100vh;
+}
+
+.section-hero img {
+    width: 100%;
+    height: 100%;
+
+    /* Om bildens proportioner inte matchar behållarens proportioner kommer delar av bilden att beskäras bort,
+    men bilden blir aldrig förvräng eller sträckt */
+    object-fit: cover;
+}
+
+.section-hero h1 a {
+    /* Länkar kan överskriva rubrikens storlek och utseende.
+       inherit säkerställer att länken ser ut som sin förälder <h1> */
+
+    /* Ärver ALL font-styling från föräldern */
+    font: inherit;
+}
+
+.section-hero h1 a::after {
+    /*Gör hela hero-sectionen klickbar via pseudo-elementet ::after*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.section-hero-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: var(--gap-s);
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
+
+    color: var(--grey-50);
+    padding: 5rem var(--padding-xs);
+}
+
+.section-hero p {
+    display: none;
+}
+
 
 /*Sektion komponenter*/
 .title-wrapper {
@@ -370,6 +456,11 @@
     gap: var(--gap-m);
 }
 
+/*Padding*/
+#padding-none {
+    padding: 0;
+}
+
 /*Färger_____________________________________________________________________________*/
 .color-grey-50 {
     color: var(--grey-50);
@@ -405,6 +496,17 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .section-hero-content {
+        /* Responsiv padding som centrerar innehållet:
+        - Beräkningen calc(50vw - 720px) centrerar innehållet genom en dynamisk padding
+        - Calc skapar dynamisk padding genom att ta halva skärmens bredd och subtrahera 720px
+        - max() funktionen säkerställer att paddingen aldrig blir mindre än 2rem eftersom
+        max() tar alltid det större värdet av de alternativen som finns*/
+
+        padding-left: max(2rem, calc(50vw - 720px));
+        padding-right: max(2rem, calc(50vw - 720px));
+    }
+
     .card-V2 {
         flex-direction: row;
         height: 10rem;
@@ -429,6 +531,7 @@
         /*Kappar av all text somkommer efter rad 2*/
         display: -webkit-box;
         -webkit-line-clamp: 2;
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;

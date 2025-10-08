@@ -10,66 +10,6 @@ main {
     display: none;
 }
 
-/*Hero section____________________________________________________________________*/
-.section-hero {
-    /* Skapar en "referenspunkt" för absolut positionerade barn element*/
-    position: relative;
-    overflow: hidden;
-
-    /*margin-top: var(--navbar-height);
-    height: calc(100vh - var(--navbar-height));*/
-
-    height: 100vh;
-}
-
-.section-hero img {
-    width: 100%;
-    height: 100%;
-
-    /* Om bildens proportioner inte matchar behållarens proportioner kommer delar av bilden att beskäras bort,
-    men bilden blir aldrig förvräng eller sträckt */
-    object-fit: cover;
-}
-
-.section-hero-content {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: var(--gap-s);
-
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59) 0%, rgba(0, 0, 0, 0) 100%);
-
-    color: var(--grey-50);
-    padding: 5rem var(--padding-xs);
-}
-
-
-.section-hero p {
-    display: none;
-    color: var(--grey-50);
-}
-
-.section-gap {
-    /*Den här klassen är tillför att göra gaps INOM sektionerna*/
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-m);
-    scroll-margin-top: 10rem;
-    transition: 0.6s;
-}
-
-.article-hero-img-wrapper img {
-    width: 100%;
-    object-fit: cover;
-    overflow: hidden;
-}
-
 /*Sektion 1________________________________________________________________________*/
 
 .mainContent {
@@ -105,13 +45,13 @@ main {
     gap: var(--gap-m);
 }
 
-/* .table-of-content-nav {
-    border-left: var(--grey-500) solid 3px;
-}
+.section-gap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
 
-.table-of-content-nav a {
-    padding-left: var(--padding-xs);
-} */
+    scroll-margin-top: 10rem;
+}
 
 .mobile-table-of-content,
 .mobile-table-of-content>div {
@@ -189,19 +129,12 @@ aside>:nth-child(2) {
         display: none;
     }
 
-    .section-hero-content {
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
-
-        padding-bottom: 10rem;
-    }
-
     .mainContent {
         /*anledningen till att breakpointen är här för sidebaren, är för att öka 
         läsbarheten genom att låta brödtexten ta upp mer plats på mindre skärmar*/
         flex-direction: row;
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
+        padding-left: max(2rem, calc(50vw - 720px));
+        padding-right: max(2rem, calc(50vw - 720px));
     }
 
     main {

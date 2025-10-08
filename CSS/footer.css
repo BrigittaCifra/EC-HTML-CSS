@@ -62,4 +62,8 @@ footer span {
     .footer-subscribe-wrapper>div {
         text-align: center;
     }
+
+    footer span {
+        text-align: center;
+    }
 }

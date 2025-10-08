@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // ELEMENT REFERENSER
-    const menuButton = document.getElementById('menu-toggle');
+    const menuButton = document.getElementById('mobile-menu-toggle');
     const mobileNavLinks = document.querySelector('.mobile-nav-links');
     const mobileNavBtn = document.querySelector('.mobile-nav-btn');
     const mobileNav = document.querySelector('.mobile-nav');
