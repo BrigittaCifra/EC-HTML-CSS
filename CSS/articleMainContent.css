@@ -1,25 +1,21 @@
-/*mobila enheter__________________________________________________________________*/
+/*mobila enheter och allmän styling________________________________________________________*/
+.desktop-table-of-content {
+    /*Här gömns innehållsförteckningen som visas på större skärmar*/
+    display: none;
+}
+
 main {
+    /*Den här klassen styr artikell huvudinnehållet*/
     display: flex;
     flex-direction: column;
     gap: var(--gap-l);
 }
 
-/*Här gömns innehållsförteckningen som visas på större skärmar*/
-.desktop-table-of-content {
-    display: none;
-}
-
-/*Sektion 1________________________________________________________________________*/
-
 .mainContent {
     /*Den här klassen styr layouten för både sidebaren och main innehållet.
     På större skärmar byter klassen riktning på flex-direction för att lägga
     sidbaren och main innehållet bredvid varandra*/
-    display: flex;
-    flex-direction: column;
     gap: var(--gap-m);
-    padding: var(--padding-xs);
     margin-top: var(--margin-s);
     color: var(--grey-900);
 }
@@ -32,27 +28,7 @@ main {
     color: var(--grey-900);
 }
 
-.summary {
-    background-color: var(--primary-50);
-    padding: var(--padding-xs);
-    border-left: 5px solid var(--primary-550);
-}
-
-.section-mainArticle-metaInfo {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--gap-m);
-}
-
-.section-gap {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-m);
-
-    scroll-margin-top: 10rem;
-}
-
+/*Mobil innehållsförtekning_______________________________________________________*/
 .mobile-table-of-content,
 .mobile-table-of-content>div {
     display: flex;
@@ -60,6 +36,23 @@ main {
     gap: var(--gap-xs);
 }
 
+/*Sektion 1________________________________________________________________________*/
+.summary {
+    background-color: var(--primary-50);
+    padding: var(--padding-xs);
+    border-left: 5px solid var(--primary-550);
+}
+
+.section-gap {
+    /*Klassen styr hur mycket avstånd det ska vara mellan de olika stycken inom sektionerna*/
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+
+    scroll-margin-top: 10rem;
+}
+
+/*Artikel bild mall ____________________________________________________________*/
 .article-img-container img {
     width: 100%;
     object-fit: cover;
@@ -71,7 +64,6 @@ main {
     padding-left: 1rem;
     margin-top: 1rem;
     color: var(--grey-700);
-
 }
 
 /*Sidebar_______________________________________________________________________*/
@@ -106,12 +98,6 @@ aside>:nth-child(2) {
 }
 
 /*Laptops and Desktops_________________________________________________________*/
-@media screen and (min-width: 481px) {
-    .section-hero p {
-        display: block;
-    }
-}
-
 @media screen and (min-width: 768px) {
 
     /*Här anpassas innehållet förstörre skärmar. Detta kommer längst ner
@@ -126,6 +112,7 @@ aside>:nth-child(2) {
 /*Monitors, Desktops_________________________________________________________*/
 @media screen and (min-width: 1200px) {
     .mobile-table-of-content {
+        /*Här göms mobil innehållsförteckning*/
         display: none;
     }
 
@@ -133,8 +120,6 @@ aside>:nth-child(2) {
         /*anledningen till att breakpointen är här för sidebaren, är för att öka 
         läsbarheten genom att låta brödtexten ta upp mer plats på mindre skärmar*/
         flex-direction: row;
-        padding-left: max(2rem, calc(50vw - 720px));
-        padding-right: max(2rem, calc(50vw - 720px));
     }
 
     main {
@@ -154,10 +139,6 @@ aside>:nth-child(2) {
         display: flex;
         flex-direction: column;
         gap: var(--gap-xs);
-    }
-
-    .desktop-table-of-content {
-        gap: var(--gap-s);
     }
 
 }

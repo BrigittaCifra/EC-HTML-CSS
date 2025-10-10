@@ -1,11 +1,11 @@
 /*Latest in space_____________________________________________________________________________*/
-#latest-in-space {
+.latest-in-space {
     display: flex;
     flex-direction: column;
     gap: var(--gap-s);
 }
 
-#latest-in-space>div>button {
+.latest-in-space>div>button {
     display: none;
 }
 
@@ -14,27 +14,13 @@
     background-color: var(--grey-850);
 }
 
-.mixed-news .card-V3-background {
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url(https://i.natgeofe.com/n/f93bb9d4-5617-4255-b226-44f32e17bc7d/2025_Fiji_Leg_3_Expedition-Dan_OllieVelasco.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
 /*media queries ________________________________________________________________*/
-
-@media screen and (min-width: 481px) {
-    .section-hero p {
-        display: block;
-    }
-
-}
-
 @media screen and (min-width: 768px) {
-    #latest-in-space>div>button {
+    .latest-in-space>div>button {
         display: flex;
     }
 
-    #latest-in-space>button {
+    .latest-in-space>button {
         display: none;
     }
 }

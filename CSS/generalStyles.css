@@ -182,19 +182,6 @@ input[type="email"] {
     color: var(--grey-500);
 }
 
-
-/*Section____________________________________________________________________________*/
-.section-padding {
-    display: flex;
-    flex-direction: column;
-
-    padding: var(--padding-xs);
-}
-
-.section-color {
-    background-color: var(--grey-950);
-}
-
 /*Typografy_________________________________________________________________________*/
 
 h1 {
@@ -379,13 +366,44 @@ p {
     border: 0;
 }
 
-/*Monitors, Desktops_________________________________________________________*/
-@media screen and (min-width: 1200px) {
-    .section-padding {
-        /*räknar ut skillnaden mellan halva fönstrets bredd och 720px och
-        läggertilldet som padding*/
-        padding-left: max(2rem, calc(50vw - 720px));
-        padding-right: max(2rem, calc(50vw - 720px));
-    }
+/*Flexbox___________________________________________________________________________________*/
+.flex-row {
+    display: flex;
+    align-items: center;
+}
 
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+/*Gap____________________________________________________________________________________*/
+.gap-xxs {
+    gap: var(--gap-xxs);
+}
+
+.gap-xs {
+    gap: var(--gap-xs);
+}
+
+.gap-s {
+    gap: var(--gap-s);
+}
+
+.gap-m {
+    gap: var(--gap-m);
+}
+
+/*Padding_____________________________________________________________________________*/
+#padding-none {
+    padding: 0;
+}
+
+/*Färger______________________________________________________________________________*/
+.color-grey-50 {
+    color: var(--grey-50);
 }

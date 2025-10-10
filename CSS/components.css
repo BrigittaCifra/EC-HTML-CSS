@@ -221,7 +221,6 @@
     height: 100vh;
     width: 100vw;
 
-    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 3;
     display: none;
@@ -349,7 +348,20 @@
 
 /*Layout_____________________________________________________________________________*/
 
-/*Hero section*/
+/*Padding*/
+.section-padding {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--padding-xs) var(--padding-xs) 7rem var(--padding-xs);
+}
+
+/*Color*/
+.section-color {
+    background-color: var(--grey-950);
+}
+
+/*Hero*/
 .section-hero {
     /* Skapar en "referenspunkt" för absolut positionerade barn element*/
     position: relative;
@@ -409,7 +421,7 @@
 }
 
 
-/*Sektion komponenter*/
+/*Sektion komponenter____________________________________________________________________*/
 .title-wrapper {
     display: flex;
     align-items: center;
@@ -420,49 +432,13 @@
     gap: 2rem;
 }
 
-/*Flexbox*/
-.flex-row {
-    display: flex;
-    align-items: center;
-}
-
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.justify-content-space-between {
-    justify-content: space-between;
-}
-
-/*Gap*/
-.gap-xxs {
-    gap: var(--gap-xxs);
-}
-
-.gap-xs {
-    gap: var(--gap-xs);
-}
-
-.gap-s {
-    gap: var(--gap-s);
-}
-
-.gap-m {
-    gap: var(--gap-m);
-}
-
-/*Padding*/
-#padding-none {
-    padding: 0;
-}
-
-/*Färger_____________________________________________________________________________*/
-.color-grey-50 {
-    color: var(--grey-50);
-}
-
 /*Media queries________________________________________________________________________*/
+@media screen and (min-width: 481px) {
+    .section-hero p {
+        display: block;
+    }
+}
+
 @media screen and (min-width: 768px) {
 
     .card-V1-content,
@@ -499,6 +475,14 @@
         - max() funktionen säkerställer att paddingen aldrig blir mindre än 2rem eftersom
         max() tar alltid det större värdet av de alternativen som finns*/
 
+        padding-left: max(2rem, calc(50vw - 720px));
+        padding-right: max(2rem, calc(50vw - 720px));
+        padding-bottom: 7rem;
+    }
+
+    .section-padding {
+        /*räknar ut skillnaden mellan halva fönstrets bredd och 720px och
+        läggertilldet som padding*/
         padding-left: max(2rem, calc(50vw - 720px));
         padding-right: max(2rem, calc(50vw - 720px));
     }
