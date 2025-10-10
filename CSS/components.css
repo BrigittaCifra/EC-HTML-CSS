@@ -355,10 +355,6 @@
     position: relative;
     overflow: hidden;
 
-
-    /*margin-top: var(--navbar-height);
-    height: calc(100vh - var(--navbar-height));*/
-
     height: 100vh;
 }
 

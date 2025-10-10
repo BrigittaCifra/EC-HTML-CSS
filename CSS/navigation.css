@@ -114,14 +114,13 @@
 
     .dekstop-nav-top {
         display: flex;
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
+        padding-left: max(2rem, calc(50vw - 720px));
+        padding-right: max(2rem, calc(50vw - 720px));
 
         background-color: var(--grey-990);
     }
 
     .dekstop-nav-top>a {
-        padding: var(--desktop-nav-top-padding);
         margin-right: auto;
 
         display: flex;
@@ -132,7 +131,6 @@
     .dekstop-nav-top>div {
         display: flex;
         gap: var(--gap-xs);
-        padding: var(--desktop-nav-top-padding);
     }
 
     .dekstop-nav-top button {
@@ -145,16 +143,12 @@
         align-items: center;
         background-color: var(--grey-950);
         border-bottom: 1px solid var(--grey-990);
-        padding-left: calc(50vw - 720px);
-        padding-right: calc(50vw - 720px);
+        padding-left: max(2rem, calc(50vw - 720px));
+        padding-right: max(2rem, calc(50vw - 720px));
     }
 
     .dekstop-nav-bottom ul {
         display: flex;
-    }
-
-    .dekstop-nav-bottom>form {
-        padding-right: var(--padding-xs);
     }
 
     .dekstop-nav-ham-menu-links ul {
@@ -231,10 +225,7 @@
 
     .desktop-nav-links a {
         padding: var(--padding-xs);
-    }
-
-    .desktop-nav-links a {
-        display: inline-block;
+        display: block;
     }
 
     .dropdown>a:hover {

@@ -101,8 +101,6 @@
     --transition-fast: 0.2s;
 
     --opacity-50: 50%;
-
-    /* --navigation-height: calc(100vh - var(--offsetHeight)); */
 }
 
 /*Element___________________________________________________________________________*/
@@ -390,11 +388,4 @@ p {
         padding-right: max(2rem, calc(50vw - 720px));
     }
 
-}
-
-@media screen and (min-width: 1024px) {
-    :root {
-        /*49 är fallback value*/
-        --offsetHeight: calc(100vh - var(--navbarHeight, 49px));
-    }
 }

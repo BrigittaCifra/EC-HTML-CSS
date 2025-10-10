@@ -1,7 +1,7 @@
 # 🌍 TerraScope
 
 **En fiktiv nyhetssida inspirerad av National Geographic**  
-Projekt skapat inom kursen *Webbutveckling* (HT 2025). 
+Projekt skapat inom kursen *HTML & CSS*. 
 
 
 ## 📖 Beskrivning  
@@ -27,6 +27,5 @@ Webbsidan innehåller:
 September – Oktober 2025
 
 ## 📝 Lärdomar
-- Bättre förståelse för SEO
 - Träning i responsiv design för olika enheter
 - Förbättrad vana med Git och versionskontroll

@@ -11,8 +11,8 @@ footer span {
     display: block;
     border-top: var(--grey-800) solid 1px;
     padding-top: 1rem;
-    padding-left: calc(50vw - 720px);
-    padding-right: calc(50vw - 720px);
+    padding-left: max(2rem, calc(50vw - 720px));
+    padding-right: max(2rem, calc(50vw - 720px));
 }
 
 .footer-subscribe-wrapper {
@@ -31,8 +31,8 @@ footer span {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     border-top: var(--grey-800) solid 1px;
     padding-top: 1rem;
-    padding-left: calc(50vw - 720px);
-    padding-right: calc(50vw - 720px);
+    padding-left: max(2rem, calc(50vw - 720px));
+    padding-right: max(2rem, calc(50vw - 720px));
     gap: var(--gap-s);
 }
 
