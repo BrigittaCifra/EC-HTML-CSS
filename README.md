@@ -3,6 +3,7 @@
 **En fiktiv nyhetssida inspirerad av National Geographic**  
 Projekt skapat inom kursen *HTML & CSS*. 
 
+För att se sidan tryck på  [länken](https://brigittacifra.github.io/EC-HTML-CSS/)
 
 ## 📖 Beskrivning  
 TerraScope är en responsiv nyhetssida med fokus på djur, natur, kultur och vetenskap. Projektet utvecklades med **HTML och CSS** (samt enklare JavaScript vid behov) i syfte att träna:
